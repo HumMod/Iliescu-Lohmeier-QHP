@@ -1,0 +1,60 @@
+QHP 2008 / Glycerol
+
+Created : 29-Mar-08
+Last Modified : 29-Mar-08
+Author : Tom Coleman
+Copyright : 2008-2008
+By : University of Mississippi Medical Center
+Solver : DES 2005
+Schema : 2005.0
+
+<structure><name> GlycerolPool </name>
+
+<variables>
+
+<var><name> Gain </name></var>
+<var><name> Loss </name></var>
+
+<var><name> [Glycerol] </name></var>
+<var><name> [Glycerol(mG/dL)] </name></var>
+<var><name> [Glycerol(mMol/L)] </name></var>
+
+<constant><name> PER_ML_TO_PER_DL </name><val> 100.0 </val></constant>
+<constant><name> MG_TO_MMOL </name><val> 10.86 </val></constant>
+
+</variables>
+
+<equations>
+
+<diffeq>
+  <name> Mass </name>
+  <integralname> Mass </integralname>
+  <initialval> 150 </initialval>
+  <dervname> Change </dervname>
+  <errorlim> 1.5 </errorlim>
+</diffeq>
+
+</equations>
+
+<definitions>
+<block><name> CalcConc </name>
+
+<def><name> [Glycerol] </name><val> Mass / ECFV.Vol </val></def>
+<def><name> [Glycerol(mG/dL)] </name><val> PER_ML_TO_PER_DL * [Glycerol] </val></def>
+<def><name> [Glycerol(mMol/L)] </name><val> MG_TO_MMOL * [Glycerol] </val></def>
+
+</block>
+
+<block><name> Dervs </name>
+
+<def><name> Gain </name><val> 0.0 </val></def>
+<def><name> Loss </name><val> 0.0 </val></def>
+
+<def><name> Change </name><val> Gain - Loss </val></def>
+
+</block>
+
+</definitions>
+</structure>
+
+End

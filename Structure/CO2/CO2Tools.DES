@@ -1,0 +1,28 @@
+QHP 2008 / CO2Tools
+
+Created : 02-Apr-05
+Last Modified : 13-May-05
+Author : Tom Coleman
+Copyright Status : In Public Domain
+Solver : QHP 2008
+Schema : 2008.0
+
+<structure><name> CO2Tools </name>
+
+<variables>
+
+<constant>
+  <name> MolsToLiters </name>
+  <val> 22.4 </val>
+</constant>
+
+<constant>
+  <name> LitersToMols </name>
+  <val> 0.0446 </val>
+</constant>
+
+</variables>
+
+</structure>
+
+End

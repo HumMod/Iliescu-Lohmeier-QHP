@@ -1,0 +1,35 @@
+QHP 2008 / Hemodialysis
+
+Created : 24-Apr-05
+Last Modified : 03-Mar-08
+Author : Tom Coleman
+Copyright : 2005-2008
+By : University of Mississippi Medical Center
+Solver : DES 2005
+Schema : 2005.0
+
+<panel><name> Clinic_Hemodialysis </name>
+
+<label>
+  <row> 0.3 </row><col> 1.0 </col>
+  <text> Clinic - Hemodialysis </text>
+</label>
+
+<showclock>
+  <row> 0.3 </row><col> 32.0 </col>
+  <name> System.X </name>
+  <ampm/>
+  <secs/>
+  <days/>
+</showclock>
+
+<?path Display\Clinic\Hemodialysis\ ?>
+
+<?include DialysisShunt.DES ?>
+<?include DialyzerControl.DES ?>
+<?include DialysateComposition.DES ?>
+<?include DialyzerActivity.DES ?>
+
+</panel>
+
+End

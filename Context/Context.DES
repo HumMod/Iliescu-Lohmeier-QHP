@@ -1,0 +1,28 @@
+QHP 2008 / Context.DES
+
+Created : 07-Sep-08
+Last Modified : 20-Oct-08
+Author : Tom Coleman
+Copyright : 2008-2008
+By : University of Mississippi Medical Center
+Solver : DES 2008
+Schema : 2008.0
+
+<structure><name> Context </name>
+
+<definitions>
+<block><name> Math </name>
+
+<?path Context\ ?>
+
+<?include Gender\Gender.DES ?>
+<?include Age\Age.DES ?>
+<?include BodySize\BodySize.DES ?>
+<?include Adiposity\Adiposity.DES ?>
+
+</block>
+
+</definitions>
+</structure>
+
+End

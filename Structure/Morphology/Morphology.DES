@@ -1,0 +1,31 @@
+QHP 2008 / Morphology DES
+
+Created : 03-Apr-05
+Last Modified : 02-Oct-08
+Author : Tom Coleman
+Copyright : 2008-2008
+By : University of Mississippi Medical Center
+Solver : DES 2008
+Schema : 2008.0
+
+<?path Structure\Morphology\ ?>
+
+<?include Age\Age.DES ?>
+<?include Gender\Gender.DES ?>
+<?include Height\Height.DES ?>
+
+<?include Weight.DES ?>
+<?include BMI.DES ?>
+<?include SurfaceArea.DES ?>
+
+<structure><name> Morphology </name>
+
+<definitions>
+
+<block><name> Parms </name>
+</block>
+
+</definitions>
+</structure>
+
+End

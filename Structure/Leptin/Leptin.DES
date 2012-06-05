@@ -1,0 +1,41 @@
+QHP 2008 / Leptin
+
+Created : 15-Aug-08
+Last Modified : 15-Aug-08
+Author : Tom Coleman
+Copyright : 2008-2008
+By : University of Mississippi Medical Center
+Solver : DES 2008
+Schema : 2008.0
+
+<?path Structure\Leptin\ ?>
+
+<?include LeptinPool.DES ?>
+<?include LeptinClearance.DES ?>
+<?include LeptinSecretion.DES ?>
+<?include LeptinPump.DES ?>
+
+<structure><name> Leptin </name>
+
+<definitions>
+
+<block><name> Parms </name>
+  <call> LeptinPump.Parms </call>
+</block>
+
+<block><name> Conc </name>
+  <call> LeptinPool.Conc </call>
+</block>
+
+<block><name> Dervs </name>
+
+  <call> LeptinSecretion.Dervs </call>
+  <call> LeptinClearance.Dervs </call>
+  <call> LeptinPool.Dervs </call>
+
+</block>
+
+</definitions>
+</structure>
+
+End

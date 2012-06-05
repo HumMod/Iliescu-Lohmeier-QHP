@@ -1,0 +1,42 @@
+QHP 2008 / Stiffness
+
+Created : 11-Aug-08
+Last Modified : 12-Aug-08
+Author : Tom Coleman
+Copyright : 2008-2008
+By : University of Mississippi Medical Center
+Solver : DES 2008
+Schema : 2008.0
+
+<groupbox>
+   <row> 2.0 </row>
+   <col> 32.0 </col>
+   <high> 3.4 </high>
+   <wide> 30.0 </wide>
+   <title> Stiffness </title>
+
+<structurename> RightVentricle-Diastole </structurename>
+
+<repeatlist>
+  <name> Stiffness </name>
+  <firstval> 0.1 </firstval>
+  <repeat><reps> 29 </reps><stepsize>  0.1 </stepsize></repeat>
+</repeatlist>
+
+<slidebar>
+  <row> 1.6 </row><col> 1.0 </col>
+  <name> Stiffness </name>
+  <listname> Stiffness </listname>
+  <label> Stiffness </label>
+</slidebar>
+
+<infobutton>
+  <row> 1.2 </row>
+  <col> 26.0 </col>
+
+  <line>  </line>
+</infobutton>
+
+</groupbox>
+
+End

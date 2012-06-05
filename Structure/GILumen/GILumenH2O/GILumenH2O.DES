@@ -1,0 +1,33 @@
+QHP 2008 / GILumenH2O
+
+Created : 13-Mar-08
+Last Modified : 13-Mar-08
+Author : Tom Coleman
+Copyright : 2008-2008
+By : University of Mississippi Medical Center
+Solver : QHP 2008
+Schema : 2008.0
+
+<?path Structure\GILumen\GILumenH2O ?>
+
+<?include GILumenVolume.DES ?>
+<?include GILumenTemperature.DES ?>
+
+<structure><name> GILumenH2O </name>
+
+<definitions>
+
+<block><name> Conc </name>
+  <call> GILumenVolume.Conc </call>
+  <call> GILumenTemperature.Conc </call>
+</block>
+
+<block><name> Dervs </name>
+  <call> GILumenVolume.Dervs </call>
+  <call> GILumenTemperature.Dervs </call>
+</block>
+
+</definitions>
+</structure>
+
+End

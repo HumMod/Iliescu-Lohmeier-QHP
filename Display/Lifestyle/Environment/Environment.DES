@@ -1,0 +1,44 @@
+QHP 2008 / Environment
+
+Created : 24-Apr-05
+Last Modified : 24-Apr-05
+Author : Tom Coleman
+Copyright Status : In Public Domain
+Solver : QHP 2008
+Schema : 2008.0
+
+<panel><name> LifestyleEnvironment </name>
+
+<showbitmap>
+  <row> 0.3 </row>
+  <col> 1.0 </col>
+  <name> Environment </name>
+</showbitmap>
+
+<label>
+  <row> 0.3 </row>
+  <col> 4.5 </col>
+  <text> Environment </text>
+</label>
+
+<showclock>
+  <row> 0.3 </row><col> 32.0 </col>
+  <name> System.X </name>
+  <ampm/>
+  <secs/>
+  <days/>
+</showclock>
+
+<?path Display\Lifestyle\Environment\ ?>
+
+<?include Altitude.DES ?>
+<?include Barometer.DES ?>
+
+<?include AmbientTemperature.DES ?>
+<?include RelativeHumidity.DES ?>
+<?include Wind.DES ?>
+<?include Clothes.DES ?>
+
+</panel>
+
+End

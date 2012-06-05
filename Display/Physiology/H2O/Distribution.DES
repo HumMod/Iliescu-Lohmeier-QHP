@@ -1,0 +1,155 @@
+QHP 2008 / Summary
+
+Created : 31-May-05
+Last Modified : 25-Mar-08
+Author : Tom Coleman
+Copyright : 2005-2008
+By : University of Mississippi Medical Center
+Solver : DES 2005
+Schema : 2005.0
+
+<groupbox>
+   <row> 2.0 </row>
+   <col> 1.0 </col>
+   <high> 23.6 </high>
+   <wide> 30.0 </wide>
+   <title> Distribution </title>
+
+<structurename> BodyH2O </structurename>
+
+<showvalue>
+   <row> 1.4 </row><col> 1.0 </col>
+   <name> Vol(L) </name>
+   <format><decimal> 2 </decimal></format>
+   <label> Total Body H2O </label>
+</showvalue>
+
+<showgraph>
+  <row> 2.4 </row><col> 1.0 </col><high> 7 </high><wide> 28 </wide>
+  <leftmargin> 6 </leftmargin>
+  <xaxis>
+    <name> System.X </name>
+    <label> Time </label>
+    <scale><min> 0 </min><max> 2 </max></scale>
+  </xaxis>
+  <yaxis>
+    <yvar>
+      <name> Vol(L) </name>
+      <nolabel/>
+      <linecolor> BLUE </linecolor>
+    </yvar>
+    <scale>
+      <min> 40 </min><max> 50 </max>
+    </scale>
+  </yaxis>
+</showgraph>
+
+<showvalue>
+   <row> 9.8 </row><col> 1.0 </col>
+   <name> Change </name>
+   <format><decimal> 2 </decimal></format>
+   <label> Change </label>
+</showvalue>
+
+<showvalue>
+   <row> 10.8 </row><col> 3 </col>
+   <name> Gain </name>
+   <format><decimal> 2 </decimal></format>
+   <label> Gain </label>
+</showvalue>
+
+<showvalue>
+   <row> 11.8 </row><col> 3 </col>
+   <name> Loss </name>
+   <format><decimal> 2 </decimal></format>
+   <label> Loss </label>
+</showvalue>
+
+<showvalue>
+   <row> 13.2 </row><col> 1.0 </col>
+   <name> ECFV.Vol(L) </name>
+   <format><decimal> 2 </decimal></format>
+   <label> ECFV </label>
+</showvalue>
+
+<showvalue>
+   <row> 14.2 </row><col> 3 </col>
+   <name> PlasmaVol.Vol(L) </name>
+   <format><decimal> 2 </decimal></format>
+   <label> Plasma </label>
+</showvalue>
+
+<showvalue>
+   <row> 15.2 </row><col> 3 </col>
+   <name> InterstitialWater.Vol(L) </name>
+   <format><decimal> 2 </decimal></format>
+   <label> Interstitium </label>
+</showvalue>
+
+<showvalue>
+   <row> 16.6 </row><col> 1.0 </col>
+   <name> ICFV.Vol(L) </name>
+   <format><decimal> 2 </decimal></format>
+   <label> ICFV </label>
+</showvalue>
+
+<showvalue>
+   <row> 17.6 </row><col> 3 </col>
+   <name> CellH2O.Vol(L) </name>
+   <format><decimal> 2 </decimal></format>
+   <label> Cells </label>
+</showvalue>
+
+<showvalue>
+   <row> 18.6 </row><col> 3 </col>
+   <name> RBCH2O.Vol(L) </name>
+   <format><decimal> 2 </decimal></format>
+   <label> Red Cells </label>
+</showvalue>
+
+<showvalue>
+   <row> 20.0 </row><col> 1.0 </col>
+   <name> Vol(L) </name>
+   <format><decimal> 2 </decimal></format>
+   <label> Total </label>
+</showvalue>
+
+<showvalue>
+   <row> 21.0 </row><col> 3.0 </col>
+   <name> IntravascularVol(L) </name>
+   <format><decimal> 2 </decimal></format>
+   <label> Intravascular </label>
+</showvalue>
+
+<showvalue>
+   <row> 22.0 </row><col> 3.0 </col>
+   <name> ExtravascularVol(L) </name>
+   <format><decimal> 2 </decimal></format>
+   <label> Extravascular </label>
+</showvalue>
+
+<infobutton>
+  <row> 1.2 </row>
+  <col> 26.0 </col>
+  <line> Units are L and mL/Min. </line>
+  <line> Typical values are </line>
+  <line>  </line>
+  <line> Total Body H2O = 43.7 </line>
+  <line>  </line>
+  <line> Extracellular = 15.0 </line>
+  <line>  </line>
+  <line> Plasma = 3.0 </line>
+  <line> Interstitium = 12.0 </line>
+  <line>  </line>
+  <line> Intracellular = 28.7 </line>
+  <line>  </line>
+  <line> Cells (less RBC's) = 27.1 </line>
+  <line> RBC's = 1.6 </line>
+  <line>  </line>
+  <line> Intravascular = 4.6 </line>
+  <line> Extravascular = 39.1 </line>
+</infobutton>
+
+</groupbox>
+
+End

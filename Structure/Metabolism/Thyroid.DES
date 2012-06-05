@@ -1,0 +1,44 @@
+QHP 2008 / Thyroid
+
+Created : 01-Apr-05
+Last Modified : 01-Apr-05
+Author : Tom Coleman
+Copyright Status : In Public Domain
+Solver : QHP 2008
+Schema : 2008.0
+
+<structure><name> Thyroid </name>
+
+<variables>
+
+<var>
+  <name> Effect </name>
+</var>
+
+</variables>
+
+<functions>
+
+<curve>
+  <name> Effect </name>
+  <point><x>  0 </x><y> 0.7 </y><slope> 0 </slope></point>
+  <point><x>  8 </x><y> 1.0 </y><slope> 0.4 </slope></point>
+  <point><x> 40 </x><y> 1.5 </y><slope> 0 </slope></point>
+</curve>
+
+</functions>
+
+<definitions>
+<block><name> CalcEffect </name>
+
+<def>
+  <name> Effect </name>
+  <val> Effect [ ThyroidPool.[Total_T4-T3] ] </val>
+</def>
+
+</block>
+
+</definitions>
+</structure>
+
+End

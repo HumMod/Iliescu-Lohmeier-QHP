@@ -1,0 +1,71 @@
+QHP 2008 / O2Veins
+
+Created : 14-May-05
+Last Modified : 08-Jan-07
+Author : Tom Coleman
+Copyright : 2006
+By : University of Mississippi Medical Center
+Solver : QHP 2008
+Schema : 2008.0
+
+<structure><name> O2Veins </name>
+
+<variables>
+
+<var>
+  <name> Mass </name>
+</var>
+
+</variables>
+
+<equations>
+
+<stabledelay>
+  <name> [O2] </name>
+  <outputname> [O2] </outputname>
+  <initialval> 0.15 </initialval>
+  <inputname> [O2-SteadyState] </inputname>
+  <rateconstname> K </rateconstname>
+  <dervname> Change </dervname>
+  <errorlim> 0.0015 </errorlim>
+  <dxmaxname> DxMax </dxmaxname>
+</stabledelay>
+
+</equations>
+
+<definitions>
+
+<block><name> CalcConc </name>
+
+<def>
+  <name> Mass </name>
+  <val> [O2] * VeinsVol.Vol </val>
+</def>
+
+</block>
+
+<block><name> Dervs </name>
+
+<def>
+  <name> K </name>
+  <val> 5.0 </val>
+</def>
+
+<def>
+  <name> DxMax </name>
+  <val> 0.5 * ( INVERT K ) </val>
+</def>
+
+<conditional>
+  <name> [O2-SteadyState] </name>
+  <test> CardiacOutput.Flow GT 0.0 </test>
+  <true> O2Artys.[O2] - ( O2Total.Outflow / CardiacOutput.Flow ) </true>
+  <false> 0.0 </false>
+</conditional>
+
+</block>
+
+</definitions>
+</structure>
+
+End

@@ -1,0 +1,37 @@
+QHP 2008 / Muscle
+
+Created : 19-Apr-05
+Last Modified : 10-Apr-08
+Author : Tom Coleman
+Copyright : 2005-2008
+By : University of Mississippi Medical Center
+Solver : DES 2005
+Schema : 2005.0
+
+<panel><name> LeftHeart-Muscle </name>
+
+<showbitmap>
+  <row> 0.3 </row>
+  <col> 1.0 </col>
+  <name> LeftHeart </name>
+</showbitmap>
+
+<label>
+  <row> 0.3 </row>
+  <col> 4.5 </col>
+  <text> Left Heart - Muscle </text>
+</label>
+
+<showclock>
+  <row> 0.3 </row><col> 32.0 </col>
+  <name> System.X </name>
+  <ampm/>
+  <secs/>
+  <days/>
+</showclock>
+
+<?path Display\Organs\LeftHeart\Muscle\ ?>
+
+</panel>
+
+End

@@ -1,0 +1,30 @@
+QHP 2008 / Heart-Rate DES
+
+Created : 21-Oct-04
+Last Modified : 10-Apr-08
+Author : Tom Coleman
+Copyright : 2004-2008
+By : University of Mississippi Medical Center
+Solver : DES 2005
+Schema : 2005.0
+
+<structure><name> Heart-Rate </name>
+
+<variables>
+
+<var><name> Rate </name></var>
+
+</variables>
+
+<definitions>
+
+<block><name> CalcRate </name>
+
+<def><name> Rate </name><val> SANode-Rate.TotalRate </val></def>
+
+</block>
+
+</definitions>
+</structure>
+
+End

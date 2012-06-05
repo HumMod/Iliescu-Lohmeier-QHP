@@ -1,0 +1,23 @@
+QHP 2008 / LowerExternalPressure
+
+Created : 19-Jun-05
+Last Modified : 19-Jun-05
+Author : Tom Coleman
+Copyright Status : In Public Domain
+Solver : QHP 2008
+Schema : 2008.0
+
+<structure><name> LowerExternalPressure </name>
+
+<variables>
+
+<parm>
+  <name> Pressure </name>
+  <val> 0.0 </val>
+</parm>
+
+</variables>
+
+</structure>
+
+End

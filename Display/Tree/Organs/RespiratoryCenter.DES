@@ -1,0 +1,42 @@
+QHP 2008 / RespiratoryCenter
+
+Created : 03-Aug-08
+Last Modified : 03-Aug-08
+Author : Tom Coleman
+Copyright : 2008-2008
+By : University of Mississippi Medical Center
+Solver : DES 2008
+Schema : 2008.0
+
+<branch>
+  <name> RespiratoryCenter </name>
+  <label> Respiratory Center </label>
+  <parent> ORGANS </parent>
+</branch>
+
+<leaf>
+  <name> RespiratoryCenter-Output </name>
+  <label> Output </label>
+  <parent> RespiratoryCenter </parent>
+</leaf>
+
+<leaf>
+  <name> RespiratoryCenter-Integration </name>
+  <label> Integration </label>
+  <parent> RespiratoryCenter </parent>
+</leaf>
+
+<leaf>
+  <name> RespiratoryCenter-ChemicalDrive </name>
+  <label> Chemical Drive </label>
+  <parent> RespiratoryCenter </parent>
+</leaf>
+
+<leaf>
+  <name> RespiratoryCenter-ExerciseDrive </name>
+  <label> Exercise Drive </label>
+  <parent> RespiratoryCenter </parent>
+</leaf>
+
+
+End

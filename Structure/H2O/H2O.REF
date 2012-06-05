@@ -1,0 +1,88 @@
+QHP 2008 / H2O Reference
+
+Created : 26-Jun-06
+Last Modified : 24-Mar-08
+Author : Tom Coleman
+Copyright : 2008-2008
+By : University of Mississippi Medical Center
+Solver : DES 2005
+Schema : 2005.0
+
+There are several different ways to describe the body's
+water compartments while implementing mass balance.
+
+Water compartments can initially be divided into two
+basic types: intracellular (ICFV) and extracellular (ECFV).
+
+Intracellular compartments are red blood cells and
+(all other) cells.
+
+Extracellular compartments are plasma and interstitium.
+
+Red Cells     =  1.6
+Cells         = 26.4
+                -----
+ICFV          = 28.0
+
+Interstitium  = 12.0
+Plasma        =  3.0
+                -----
+ECFV          = 15.0
+
+Total         = 43.0
+
+The problem with this scheme is that water cannot move
+freely between plasma and interstitium but it can move
+freely between interstitium and cell H2O.
+
+So, we'll divide the body's water compartments into
+vascular and extravascular. The vascular compartment
+is futher subdivided into RBC water and plasma.
+
+Red Cells     =  1.6
+Plasma        =  3.0
+                 ---
+Vascular      =  4.6
+
+Cells         = 26.4 (ICFV less RBC's H2O)
+Interstitium  = 12.0
+                ----
+Extravascular = 38.4
+
+Total         = 43.0
+
+To relax the nomenclature a bit, extravascular water
+is referred to as tissue H2O.
+
+This scheme is implemented using three integrals: plasma,
+RBC and extravascular.
+
+Exchanges are internal and external.
+
+Internal exchanges are capillary
+filtration and lymph flow.
+
+External exchanges are many: absorption
+from gut, urine, IV drip, transfusion,
+hemorrhage ...
+
+External exchanges influence the derivative
+of either plasma or extravasular H2O.
+
+Traditional compartments are also
+represented here.
+
+Red Cell H2O  =  1584
+Organ H2O     = 26428
+                -----
+Cell H2O      = 28012
+
+IFV           = 11988
+Plasma        =  3000
+                -----
+Extracellular = 14988
+
+Total         = 43000
+
+
+End

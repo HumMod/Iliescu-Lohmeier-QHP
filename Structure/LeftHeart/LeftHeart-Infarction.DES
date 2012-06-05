@@ -1,0 +1,107 @@
+QHP 2008 / LeftHeart-Infarction
+
+Created : 19-Dec-05
+Last Modified : 19-Dec-05
+Author : Tom Coleman
+Copyright Status : In Public Domain
+Solver : QHP 2008
+Schema : 2008.0
+
+<structure><name> LeftHeart-Infarction </name>
+
+<variables>
+
+<parm>
+  <name> Area(%) </name>
+  <val> 0.0 </val>
+</parm>
+
+<var>
+  <name> Effect </name>
+</var>
+
+<var>
+  <name> IschemicFraction </name>
+</var>
+
+<var>
+  <name> IsIschemic </name>
+  <val> FALSE </val>
+</var>
+
+</variables>
+
+<equations>
+
+<delay>
+  <name> DeadTissueFraction </name>
+  <outputname> DeadTissueFraction </outputname>
+  <initialval> 0.0 </initialval>
+  <inputname> DamagedFraction </inputname>
+  <rateconstname> DeadTissueK </rateconstname>
+  <errorlim> 0.01 </errorlim>
+</delay>
+
+</equations>
+
+<definitions>
+<block><name> Parms </name>
+
+<def>
+  <name> DamagedFraction </name>
+  <val> Area(%) / 100.0 </val>
+</def>
+
+<def>
+  <name> Effect </name>
+  <val> 1.0 - DamagedFraction </val>
+</def>
+
+<def>
+  <name> DeadTissueK </name>
+  <val> 0.004 </val>
+</def>
+
+</block>
+
+<block><name> Calc </name>
+
+<def>
+  <name> IschemicFraction </name>
+  <val> DamagedFraction - DeadTissueFraction </val>
+</def>
+
+<if>
+  <test> IsIschemic </test>
+
+  <true>
+  <andif>
+    <test> IschemicFraction LE 0.03 </test>
+    <true>
+    <def>
+      <name> IsIschemic </name>
+      <val> FALSE </val>
+    </def>
+    </true>
+  </andif>
+  </true>
+
+  <false>
+  <andif>
+    <test> IschemicFraction GE 0.05 </test>
+    <true>
+    <def>
+      <name> IsIschemic </name>
+      <val> TRUE </val>
+    </def>
+    </true>
+  </andif>
+  </false>
+
+</if>
+
+</block>
+</definitions>
+</structure>
+
+End

@@ -1,0 +1,80 @@
+QHP 2008 / AAPool
+
+Created : 07-Apr-05
+Last Modified : 07-Apr-05
+Author : Tom Coleman
+Copyright Status : In Public Domain
+Solver : QHP 2008
+Schema : 2008.0
+
+<structure><name> AAPool </name>
+
+<variables>
+
+<var><name> Gain </name></var>
+<var><name> Loss </name></var>
+
+<var><name> [AA] </name></var>
+<var><name> [AA(mG/dL)] </name></var>
+<var><name> [AA(mMol/L)] </name></var>
+
+<constant><name> PER_ML_TO_PER_DL </name><val> 100.0 </val></constant>
+<constant><name> MG_TO_MMOL </name><val> 10.0 </val></constant>
+
+<constant><name> InitialConc </name><val> 0.5 </val></constant>
+
+</variables>
+
+<equations>
+
+<diffeq>
+  <name> Mass </name>
+  <integralname> Mass </integralname>
+  <initialval> -1 </initialval>
+  <dervname> Change </dervname>
+  <errorlim> 75.0 </errorlim>
+</diffeq>
+
+</equations>
+
+<definitions>
+<block><name> Initialize </name>
+
+<def><name> Mass </name><val> InitialConc * ECFV.Vol </val></def>
+
+</block>
+
+<block><name> CalcConc </name>
+
+<def><name> [AA] </name><val> Mass / ECFV.Vol </val></def>
+<def><name> [AA(mG/dL)] </name><val> PER_ML_TO_PER_DL * [AA] </val></def>
+<def><name> [AA(mMol/L)] </name><val> MG_TO_MMOL * [AA] </val></def>
+
+</block>
+
+<block><name> CalcDervs </name>
+
+<def>
+  <name> Gain </name>
+  <val>
+     GILumenProtein.Absorption
+   + CellProtein.Outflow
+  </val>
+</def>
+
+<def>
+  <name> Loss </name>
+  <val>
+     CellProtein.Inflow
+   + LM_AminoAcids.Uptake
+  </val>
+</def>
+
+<def><name> Change </name><val> Gain - Loss </val></def>
+
+</block>
+
+</definitions>
+</structure>
+
+End

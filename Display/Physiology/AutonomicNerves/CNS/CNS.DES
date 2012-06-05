@@ -1,0 +1,21 @@
+QHP 2008 / CNS
+
+Created : 24-Apr-05
+Last Modified : 26-Jun-05
+Author : Tom Coleman
+Copyright Status : In Public Domain
+Solver : QHP 2008
+Schema : 2008.0
+
+<?path Display\Physiology\AutonomicNerves\CNS\ ?>
+
+<?include Baroreflex\Baroreflex.DES ?>
+<?include Chemoreceptors\Chemoreceptors.DES ?>
+<?include Cushing\Cushing.DES ?>
+<?include Exercise\Exercise.DES ?>
+<?include Integration\Integration.DES ?>
+<?include LowPressureReceptors\LowPressureReceptors.DES ?>
+<?include PituitaryNerve\PituitaryNerve.DES ?>
+<?include TrophicFactor\TrophicFactor.DES ?>
+
+End

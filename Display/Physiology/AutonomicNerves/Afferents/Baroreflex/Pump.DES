@@ -1,0 +1,43 @@
+QHP 2008 / Pump
+
+Created : 26-Jun-05
+Last Modified : 26-Jun-05
+Author : Tom Coleman
+Copyright Status : In Public Domain
+Solver : QHP 2008
+Schema : 2008.0
+
+<groupbox>
+   <row> 7.4 </row>
+   <col> 1.0 </col>
+   <high> 4.4 </high>
+   <wide> 30.0 </wide>
+   <title> Carotid Perfusion Pump </title>
+
+<radiobuttons>
+  <row> 1.4 </row><col> 1.0 </col>
+  <name> CarotidSinus.Switch </name>
+  <listname> Common.Switch </listname>
+  <label> Switch </label>
+</radiobuttons>
+
+<slidebar>
+  <row> 2.8 </row><col> 1.0 </col>
+  <name> CarotidSinus.Level </name>
+  <listname> Common.PerfusionPump </listname>
+  <label> Pressure </label>
+</slidebar>
+
+<infobutton>
+  <row> 1.2 </row>
+  <col> 26.0 </col>
+
+  <line> This is a constant pressure </line>
+  <line> system. </line>
+  <line>  </line>
+  <line> Pressure units are mmHg. </line>
+</infobutton>
+
+</groupbox>
+
+End

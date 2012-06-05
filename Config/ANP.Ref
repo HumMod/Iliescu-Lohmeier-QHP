@@ -1,0 +1,25 @@
+QHP 2006 / ANP Reference
+
+Created : 30-Sep-06
+Last Modified : 30-Sep-06
+Author : Tom Coleman
+Copyright : 2006
+By : University of Mississippi Medical Center
+Solver : DES 2005
+Schema : 2005.0
+
+The basic ANP structure defines pool [ANP] as
+a function of right atrium TMP.
+
+# Structure. There are ANP calls to Parms, CalcConc
+  and Dervs. Only the CalcConc call is needed in
+  basic ANP.
+
+  The CalcConc call in basic ANP uses RAP TMP, so the
+  call must occur after RightAtrium.CalcPressure.
+
+# Display. There are two ANP panels: BasicANP
+  and DetailedANP. Basic ANP has a summary box while
+  detailed ANP has secretion, pump, pool and clearance.
+
+End

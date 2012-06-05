@@ -1,0 +1,185 @@
+QHP 2008 / VascularCompartments
+
+Created : 09-Apr-08
+Last Modified : 26-Aug-08
+Author : Tom Coleman
+Copyright : 2008-2008
+By : University of Mississippi Medical Center
+Solver : DES 2008
+Schema : 2008.0
+
+<branch>
+  <name> VascularCompartments </name>
+  <label> Vascular Compartments </label>
+  <parent> PHYSIOLOGY </parent>
+</branch>
+
+<leaf>
+  <name> VascularCompartments_SystemicArteries </name>
+  <label> Systemic Arteries </label>
+  <parent> VascularCompartments </parent>
+</leaf>
+
+<branch>
+  <name> SystemicVeins </name>
+  <label> Systemic Veins </label>
+  <parent> VascularCompartments </parent>
+</branch>
+
+<leaf>
+  <name> SystemicVeins-Summary </name>
+  <label> Summary </label>
+  <parent> SystemicVeins </parent>
+</leaf>
+
+<leaf>
+  <name> SystemicVeins-MusclePump </name>
+  <label> Muscle Pump </label>
+  <parent> SystemicVeins </parent>
+</leaf>
+
+<leaf>
+  <name> VascularCompartments_SplanchnicVeins </name>
+  <label> Splanchnic Veins </label>
+  <parent> VascularCompartments </parent>
+</leaf>
+
+<leaf>
+  <name> VascularCompartments_RightAtrium </name>
+  <label> Right Atrium </label>
+  <parent> VascularCompartments </parent>
+</leaf>
+
+<branch>
+  <name> RightVentricle </name>
+  <label> Right Ventricle </label>
+  <parent> VascularCompartments </parent>
+</branch>
+
+<leaf>
+  <name> RightVentricle-Compartment </name>
+  <label> Compartment </label>
+  <parent> RightVentricle </parent>
+</leaf>
+
+<leaf>
+  <name> RightVentricle-Pumping </name>
+  <label> Pumping </label>
+  <parent> RightVentricle </parent>
+</leaf>
+
+<leaf>
+  <name> RightVentricle-Systole </name>
+  <label> Systole </label>
+  <parent> RightVentricle </parent>
+</leaf>
+
+<leaf>
+  <name> RightVentricle-Diastole </name>
+  <label> Diastole </label>
+  <parent> RightVentricle </parent>
+</leaf>
+
+<leaf>
+  <name> RightVentricle-Cardiopathy </name>
+  <label> Cardiopathy </label>
+  <parent> RightVentricle </parent>
+</leaf>
+
+<branch>
+  <name> RightVentricle-Valves </name>
+  <label> Valves </label>
+  <parent> RightVentricle </parent>
+</branch>
+
+<leaf>
+  <name> RightVentricle-Pulmonic </name>
+  <label> Pulmonic </label>
+  <parent> RightVentricle-Valves </parent>
+</leaf>
+
+<leaf>
+  <name> RightVentricle-Tricuspid </name>
+  <label> Tricuspid </label>
+  <parent> RightVentricle-Valves </parent>
+</leaf>
+
+<leaf>
+  <name> VascularCompartments_PulmonaryArtery </name>
+  <label> Pulmonary Artery </label>
+  <parent> VascularCompartments </parent>
+</leaf>
+
+<leaf>
+  <name> VascularCompartments_PulmonaryCapillaries </name>
+  <label> Pulmonary Capillaries </label>
+  <parent> VascularCompartments </parent>
+</leaf>
+
+<leaf>
+  <name> VascularCompartments_PulmonaryVeins </name>
+  <label> Pulmonary Veins </label>
+  <parent> VascularCompartments </parent>
+</leaf>
+
+<leaf>
+  <name> VascularCompartments_LeftAtrium </name>
+  <label> Left Atrium </label>
+  <parent> VascularCompartments </parent>
+</leaf>
+
+<branch>
+  <name> LeftVentricle </name>
+  <label> Left Ventricle </label>
+  <parent> VascularCompartments </parent>
+</branch>
+
+<leaf>
+  <name> LeftVentricle-Compartment </name>
+  <label> Compartment </label>
+  <parent> LeftVentricle </parent>
+</leaf>
+
+<leaf>
+  <name> LeftVentricle-Pumping </name>
+  <label> Pumping </label>
+  <parent> LeftVentricle </parent>
+</leaf>
+
+<leaf>
+  <name> LeftVentricle-Systole </name>
+  <label> Systole </label>
+  <parent> LeftVentricle </parent>
+</leaf>
+
+<leaf>
+  <name> LeftVentricle-Diastole </name>
+  <label> Diastole </label>
+  <parent> LeftVentricle </parent>
+</leaf>
+
+<leaf>
+  <name> LeftVentricle-Cardiopathy </name>
+  <label> Cardiopathy </label>
+  <parent> LeftVentricle </parent>
+</leaf>
+
+<branch>
+  <name> LeftVentricle-Valves </name>
+  <label> Valves </label>
+  <parent> LeftVentricle </parent>
+</branch>
+
+<leaf>
+  <name> LeftVentricle-Aortic </name>
+  <label> Aortic </label>
+  <parent> LeftVentricle-Valves </parent>
+</leaf>
+
+<leaf>
+  <name> LeftVentricle-Mitral </name>
+  <label> Mitral </label>
+  <parent> LeftVentricle-Valves </parent>
+</leaf>
+
+End

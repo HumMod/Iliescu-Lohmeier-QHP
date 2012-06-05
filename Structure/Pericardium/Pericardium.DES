@@ -1,0 +1,39 @@
+QHP 2008 / Pericardium
+
+Created : 16-May-05
+Last Modified : 16-May-05
+Author : Tom Coleman
+Copyright Status : In Public Domain
+Solver : QHP 2008
+Schema : 2008.0
+
+<?path Structure\Pericardium\ ?>
+
+<?include Pericardium-Hemorrhage.DES ?>
+<?include Pericardium-Drain.DES ?>
+
+<structure><name> Pericardium </name>
+
+<variables>
+
+<var><name> Pressure </name></var>
+
+</variables>
+
+<definitions>
+
+<block><name> CalcPressure </name>
+
+<def><name> Pressure </name><val> -3.0 </val></def>
+
+</block>
+
+<block><name> Dervs </name>
+
+
+</block>
+
+</definitions>
+</structure>
+
+End

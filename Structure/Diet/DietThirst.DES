@@ -1,0 +1,43 @@
+QHP 2008 / DietThirst
+
+Created : 24-Jun-06
+Last Modified : 14-Aug-08
+Author : Tom Coleman
+Copyright : 2008-2008
+By : University of Mississippi Medical Center
+Solver : DES 2008
+Schema : 2008.0
+
+<structure><name> DietThirst </name>
+
+<variables>
+
+<var><name> Rate(L/Day) </name></var>
+
+</variables>
+
+<functions>
+
+<curve>
+  <name> Rate(L/Day) </name>
+  <point><x> 233 </x><y>  0.0 </y><slope> 0 </slope></point>
+  <point><x> 253 </x><y>  2.0 </y><slope> 0.2 </slope></point>
+  <point><x> 313 </x><y> 30.0 </y><slope> 0 </slope></point>
+</curve>
+
+</functions>
+
+<definitions>
+<block><name> Dervs </name>
+
+<def>
+  <name> Rate(L/Day) </name>
+  <val> Rate(L/Day) [ OsmBody.[Osm(mOsm/L)]-Osmoreceptors ] </val>
+</def>
+
+</block>
+
+</definitions>
+</structure>
+
+End

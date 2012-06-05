@@ -1,0 +1,36 @@
+QHP 2008 / CardiacOutput DES
+
+Created : 21-Oct-04
+Last Modified : 13-Aug-08
+Author : Tom Coleman
+Copyright : 2008-2008
+By : University of Mississippi Medical Center
+Solver : DES 2008
+Schema : 2008.0
+
+<structure><name> CardiacOutput </name>
+
+<variables>
+
+<var><name> Flow </name></var>
+<var><name> StrokeVolume </name></var>
+<var><name> Flow(L/Min) </name></var>
+<var><name> CardiacIndex </name></var>
+
+</variables>
+
+<definitions>
+
+<block><name> Calc </name>
+
+<def><name> StrokeVolume </name><val> LeftVentricle-Pumping.StrokeVolume </val></def>
+<def><name> Flow </name><val> LeftVentricle-Pumping.BloodFlow </val></def>
+<def><name> Flow(L/Min) </name><val> Flow / 1000.0 </val></def>
+<def><name> CardiacIndex </name><val> Flow(L/Min) / SurfaceArea.Area </val></def>
+
+</block>
+
+</definitions>
+</structure>
+
+End

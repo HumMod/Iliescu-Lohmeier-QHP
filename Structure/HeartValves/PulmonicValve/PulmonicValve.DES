@@ -1,0 +1,28 @@
+QHP 2008 / PulmonicValve
+
+Created : 23-Aug-08
+Last Modified : 23-Aug-08
+Author : Tom Coleman
+Copyright : 2008-2008
+By : University of Mississippi Medical Center
+Solver : DES 2008
+Schema : 2008.0
+
+<?path Structure\HeartValves\PulmonicValve\ ?>
+
+<?include PulmonicValve-Stenosis.DES ?>
+<?include PulmonicValve-Regurgitation.DES ?>
+
+<structure><name> PulmonicValve </name>
+
+<definitions>
+<block><name> Parms </name>
+
+<call> PulmonicValve-Stenosis.Parms </call>
+<call> PulmonicValve-Regurgitation.Parms </call>
+
+</block>
+</definitions>
+</structure>
+
+End

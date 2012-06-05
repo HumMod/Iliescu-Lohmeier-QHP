@@ -1,0 +1,40 @@
+QHP 2008 / Tree-Pharmacokinetics
+
+Created : 08-Dec-05
+Last Modified : 08-Dec-05
+Author : Tom Coleman
+Copyright Status : In Public Domain
+Solver : QHP 2008
+Schema : 2008.0
+
+<branch>
+  <name> PKs </name>
+  <label> Pharmacokinetics </label>
+  <parent> PHYSIOLOGY </parent>
+</branch>
+
+<leaf>
+  <name> PKsChlorothiazide </name>
+  <label> Chlorothiazide </label>
+  <parent> PKs </parent>
+</leaf>
+
+<leaf>
+  <name> PKsDigoxin </name>
+  <label> Digoxin </label>
+  <parent> PKs </parent>
+</leaf>
+
+<leaf>
+  <name> PKsFurosemide </name>
+  <label> Furosemide </label>
+  <parent> PKs </parent>
+</leaf>
+
+<leaf>
+  <name> PKsMidodrine </name>
+  <label> Midodrine </label>
+  <parent> PKs </parent>
+</leaf>
+
+End

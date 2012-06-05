@@ -1,0 +1,40 @@
+QHP 2008 / Lungs
+
+Created : 21-Oct-04
+Last Modified : 01-Mar-07
+Author : Tom Coleman
+Copyright : 2006-2008
+By : University of Mississippi Medical Center
+Solver : QHP 2008
+Schema : 2008.0
+
+<?path Structure\Lungs\ ?>
+
+<?include GasTools\GasTools.DES ?>
+
+<?include Bronchi.DES ?>
+
+<?include Thorax.DES ?>
+<?include RightHemithorax.DES ?>
+<?include LeftHemithorax.DES ?>
+
+<?include ExcessLungWater.DES ?>
+<?include LungBloodFlow.DES ?>
+
+<?include LungArtyO2.DES ?>
+
+<?include Breathing.DES ?>
+
+<?include LungO2.DES ?>
+<?include LungVeinO2.DES ?>
+
+<?include GasExchangeRatio.DES ?>
+
+<?include Ventilator.DES ?>
+<?include CO.DES ?>
+
+<?include LungArtyCO2.DES ?>
+<?include LungCO2.DES ?>
+<?include LungVeinCO2.DES ?>
+
+End

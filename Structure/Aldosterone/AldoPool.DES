@@ -1,0 +1,116 @@
+QHP 2008 / AldoPool
+
+Created : 07-Apr-05
+Last Modified : 07-Apr-05
+Author : Tom Coleman
+Copyright Status : In Public Domain
+Solver : QHP 2008
+Schema : 2008.0
+
+<structure><name> AldoPool </name>
+
+<variables>
+
+<var><name> [Aldo] </name></var>
+<var><name> [Aldo(pMol/L)] </name></var>
+<var><name> [Aldo(nG/dL)] </name></var>
+<constant><name> PMOLTONG </name><val> 0.0360 </val></constant>
+<var><name> Gain </name></var>
+<var><name> Loss </name></var>
+<var><name> Clearance </name></var>
+<parm><name> ExtractK </name><val> 0.78 </val></parm>
+<var><name> Degradation </name></var>
+<parm><name> DegradeK </name><val> 0.0007 </val></parm>
+<parm>
+  <name> Switch </name>
+  <val> 0.0 </val>
+</parm>
+
+<parm> 
+  <name> Clamp </name>
+  <val> 0.0 </val>
+</parm>
+
+
+<constant><name> InitialConc </name><val> 0.33 </val></constant>
+
+</variables>
+
+<equations>
+
+<diffeq>
+  <name> Mass </name>
+  <integralname> Mass </integralname>
+  <initialval> 14190.0 </initialval>
+  <dervname> Change </dervname>
+  <errorlim> 142.0 </errorlim>
+</diffeq>
+
+</equations>
+
+<definitions>
+<block><name> Initialize </name>
+
+<def><name> Mass </name><val> InitialConc * BodyH2O.Vol </val></def>
+
+</block>
+
+<block><name> CalcConc </name>
+
+<def>
+  <name> [Aldo] </name>
+  <val> Mass / BodyH2O.Vol </val>
+</def>
+
+<if><test> Switch </test>
+    <true><def><name> [Aldo(pMol/L)] </name><val> Clamp </val></def></true>
+    <false>
+
+<def>
+  <name> [Aldo(pMol/L)] </name>
+  <val> 1000.0 * [Aldo] </val>
+</def>
+    </false>
+</if>
+
+
+<def>
+  <name> [Aldo(nG/dL)] </name>
+  <val> PMOLTONG * [Aldo(pMol/L)] </val>
+</def>
+
+</block>
+
+<block><name> Dervs </name>
+
+<def>
+  <name> Clearance </name>
+  <val> ExtractK * [Aldo] * OrganFlow.SplanchnicFlow </val>
+</def>
+
+<def>
+  <name> Degradation </name>
+  <val> DegradeK * Mass </val>
+</def>
+
+<def>
+  <name> Gain </name>
+  <val> AldoSecretion.Rate + AldoPump.Rate </val>
+</def>
+
+<def>
+  <name> Loss </name>
+  <val> Clearance + Degradation </val>
+</def>
+
+<def>
+  <name> Change </name>
+  <val> Gain - Loss </val>
+</def>
+
+</block>
+
+</definitions>
+</structure>
+
+End

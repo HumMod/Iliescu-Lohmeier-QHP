@@ -1,0 +1,54 @@
+QHP 2008 / CircyProtein
+
+Created : 16-Aug-08
+Last Modified : 16-Aug-08
+Author : Tom Coleman
+Copyright : 2008-2008
+By : University of Mississippi Medical Center
+Solver : DES 2008
+Schema : 2008.0
+
+<branch>
+  <name> CircyProtein </name>
+  <label> Circulatory Protein </label>
+  <parent> PHYSIOLOGY </parent>
+</branch>
+
+<leaf>
+  <name> PlasmaProtein </name>
+  <label> Plasma </label>
+  <parent> CircyProtein </parent>
+</leaf>
+
+<branch>
+  <name> InterstitialProtein </name>
+  <label> Interstitium </label>
+  <parent> CircyProtein </parent>
+</branch>
+
+<leaf>
+  <name> InterstitialProtein-Summary </name>
+  <label> Summary </label>
+  <parent> InterstitialProtein </parent>
+</leaf>
+
+<leaf>
+  <name> InterstitialProtein-UpperTorso </name>
+  <label> Upper Torso </label>
+  <parent> InterstitialProtein </parent>
+</leaf>
+
+<leaf>
+  <name> InterstitialProtein-MiddleTorso </name>
+  <label> Middle Torso </label>
+  <parent> InterstitialProtein </parent>
+</leaf>
+
+<leaf>
+  <name> InterstitialProtein-LowerTorso </name>
+  <label> Lower Torso </label>
+  <parent> InterstitialProtein </parent>
+</leaf>
+
+
+End

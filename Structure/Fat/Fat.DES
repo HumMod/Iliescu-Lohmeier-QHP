@@ -1,0 +1,28 @@
+QHP 2008 / Fat
+
+Created : 21-Oct-04
+Last Modified : 30-Mar-08
+Author : Tom Coleman
+Copyright : 2004-2008
+By : University of Mississippi Medical Center
+Solver : DES 2005
+Schema : 2005.0
+
+<?path Structure\Fat\ ?>
+
+<?include Fat-Flow.DES ?>
+<?include Fat-Pressure.DES ?>
+<?include Fat-Size.DES ?>
+
+<?include Fat-CO2.DES ?>
+<?include Fat-Lactate.DES ?>
+<?include Fat-Ph.DES ?>
+
+<?include Fat-Fuel.DES ?>
+<?include Fat-Function.DES ?>
+<?include Fat-Metabolism.DES ?>
+<?include Fat-AlphaReceptors.DES ?>
+<?include Fat-Structure.DES ?>
+<?include Fat-Vasculature.DES ?>
+
+End

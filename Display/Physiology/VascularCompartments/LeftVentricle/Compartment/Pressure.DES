@@ -1,0 +1,88 @@
+QHP 2008 / Pressure
+
+Created : 13-Aug-08
+Last Modified : 13-Aug-08
+Author : Tom Coleman
+Copyright : 2008-2008
+By : University of Mississippi Medical Center
+Solver : DES 2008
+Schema : 2008.0
+
+<groupbox>
+   <row> 2.0 </row>
+   <col> 32.0 </col>
+   <high> 15.4 </high>
+   <wide> 30.0 </wide>
+   <title> Blood Pressure </title>
+
+<structurename> LeftVentricle-Compartment </structurename>
+
+<showvalue>
+   <row> 1.4 </row><col> 1.0 </col>
+   <name> Pressure </name>
+   <format><decimal> 1 </decimal></format>
+   <label> Pressure </label>
+</showvalue>
+
+<showgraph>
+  <row> 2.4 </row><col> 1.0 </col><high> 7 </high><wide> 28 </wide>
+  <leftmargin> 4 </leftmargin>
+  <xaxis>
+    <name> System.X </name>
+    <label> Time </label>
+    <scale><min> 0 </min><max> 2 </max></scale>
+  </xaxis>
+  <yaxis>
+    <yvar>
+      <name> Pressure </name>
+      <nolabel/>
+      <linecolor> BLUE </linecolor>
+    </yvar>
+    <scale><min> 0 </min><max> 4 </max><inc> 2 </inc></scale>
+  </yaxis>
+</showgraph>
+
+<showvalue>
+   <row> 9.8 </row><col> 1.0 </col>
+   <name> Compliance </name>
+   <format><decimal> 1 </decimal></format>
+   <label> Compliance </label>
+</showvalue>
+
+<showvalue>
+   <row> 10.8 </row><col> 3.0 </col>
+   <name> LeftVentricle-Diastole.Stiffness </name>
+   <format><decimal> 1 </decimal></format>
+   <label> Stiffness </label>
+</showvalue>
+
+<showvalue>
+   <row> 11.8 </row><col> 3.0 </col>
+   <name> BasicCompliance </name>
+   <format><decimal> 1 </decimal></format>
+   <label> Basic Compliance </label>
+</showvalue>
+
+<showvalue>
+   <row> 12.8 </row><col> 1.0 </col>
+   <name> StressedVol </name>
+   <format><decimal> 1 </decimal></format>
+   <label> Stressed Volume </label>
+</showvalue>
+
+<showvalue>
+   <row> 13.8 </row><col> 1.0 </col>
+   <name> ExternalPressure </name>
+   <format><decimal> 1 </decimal></format>
+   <label> External Pressure </label>
+</showvalue>
+
+<infobutton>
+  <row> 1.2 </row>
+  <col> 26.0 </col>
+  <line>  </line>
+</infobutton>
+
+</groupbox>
+
+End

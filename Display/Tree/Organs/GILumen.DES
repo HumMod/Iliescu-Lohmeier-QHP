@@ -1,0 +1,40 @@
+QHP 2008 / GILumen
+
+Created : 08-Dec-05
+Last Modified : 28-Jun-06
+Author : Tom Coleman
+Copyright Status : In Public Domain
+Solver : QHP 2008
+Schema : 2008.0
+
+<branch>
+  <name> GILumen </name>
+  <label> GI Lumen </label>
+  <parent> ORGANS </parent>
+</branch>
+
+<leaf>
+  <name> GILumenElectrolytes </name>
+  <label> Electrolytes </label>
+  <parent> GILumen </parent>
+</leaf>
+
+<leaf>
+  <name> GILumenFood </name>
+  <label> Food </label>
+  <parent> GILumen </parent>
+</leaf>
+
+<leaf>
+  <name> GILumenH2O </name>
+  <label> H2O </label>
+  <parent> GILumen </parent>
+</leaf>
+
+<leaf>
+  <name> GILumenOther </name>
+  <label> Other </label>
+  <parent> GILumen </parent>
+</leaf>
+
+End

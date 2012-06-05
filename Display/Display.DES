@@ -1,0 +1,27 @@
+QHP 2008 / Display
+
+Created : 05-Apr-05
+Last Modified : 28-Feb-08
+Author : Tom Coleman
+Copyright : 2008-2008
+By : University of Mississippi Medical Center
+Solver : QHP 2008
+Schema : 2008.0
+
+<?path Display\ ?>
+
+<common>
+
+<?include Tree\Tree.DES ?>
+<?include Common.DES ?>
+
+</common>
+
+<?include Clinic\Chart\Chart.DES ?>
+
+<?include Physiology\Physiology.DES ?>
+<?include Organs\Organs.DES ?>
+<?include Lifestyle\Lifestyle.DES ?>
+<?include Clinic\Clinic.DES ?>
+
+End

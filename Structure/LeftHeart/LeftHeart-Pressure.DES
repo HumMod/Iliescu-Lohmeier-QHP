@@ -1,0 +1,62 @@
+QHP 2008 / LeftHeart-Pressure
+
+Created : 23-May-05
+Last Modified : 23-May-05
+Author : Tom Coleman
+Copyright Status : In Public Domain
+Solver : QHP 2008
+Schema : 2008.0
+
+<structure><name> LeftHeart-Pressure </name>
+
+<variables>
+
+<var>
+  <name> ArtyPressure </name>
+</var>
+
+<var>
+  <name> VeinPressure </name>
+</var>
+
+<var>
+  <name> PressureGradient </name>
+</var>
+
+<parm>
+  <name> PumpSwitch </name>
+  <val> FALSE </val>
+</parm>
+
+<parm>
+  <name> PumpSetting </name>
+  <val> 0.0 </val>
+</parm>
+
+</variables>
+
+<definitions>
+<block><name> Calc </name>
+
+<conditional>
+  <name> ArtyPressure </name>
+  <test> PumpSwitch </test>
+  <true> PumpSetting </true>
+  <false> SystemicArtys.Pressure </false>
+</conditional>
+
+<def>
+  <name> VeinPressure </name>
+  <val> SystemicVeins.Pressure </val>
+</def>
+
+<def>
+  <name> PressureGradient </name>
+  <val> ( ArtyPressure - VeinPressure ) MAX 0.0 </val>
+</def>
+
+</block>
+</definitions>
+</structure>
+
+End

@@ -1,0 +1,85 @@
+QHP 2008 / Weight
+
+Created : 21-May-05
+Last Modified : 21-May-05
+Author : Tom Coleman
+Copyright Status : In Public Domain
+Solver : QHP 2008
+Schema : 2008.0
+
+<structure><name> Weight </name>
+
+<variables>
+
+<var>
+  <name> Weight </name>
+</var>
+
+<var>
+  <name> Weight(kG) </name>
+</var>
+
+<var>
+  <name> Weight(Lb) </name>
+</var>
+
+<var>
+  <name> Core </name>
+</var>
+
+<var>
+  <name> Core(kG) </name>
+</var>
+
+</variables>
+
+<definitions>
+<block><name> Calc </name>
+
+<def>
+  <name> Core </name>
+  <val>
+      Bone-Size.Mass
+    + Brain-Size.Mass
+    + Fat-Size.Mass
+    + GITract-Size.Mass
+    + Kidney-Size.Mass
+    + LeftHeart-Size.Mass
+    + Liver-Size.Mass
+    + OtherTissue-Size.Mass
+    + RespiratoryMuscle-Size.Mass
+    + RightHeart-Size.Mass
+
+    + BloodVol.Vol
+  </val>
+</def>
+
+<def>
+  <name> Core(kG) </name>
+  <val> Core / 1000.0 </val>
+</def>
+
+<def>
+  <name> Weight </name>
+  <val>
+      Core
+    + SkeletalMuscle-Size.Mass
+    + Skin-Size.Mass
+  </val>
+</def>
+
+<def>
+  <name> Weight(kG) </name>
+  <val> Weight / 1000.0 </val>
+</def>
+
+<def>
+  <name> Weight(Lb) </name>
+  <val> 2.2 * Weight(kG) </val>
+</def>
+
+</block>
+</definitions>
+</structure>
+
+End

@@ -1,0 +1,31 @@
+QHP 2008 / VascularCompliance
+
+Created : 28-Apr-05
+Last Modified : 19-Jun-06
+Author : Tom Coleman
+Copyright Status : In Public Domain
+Solver : QHP 2008
+Schema : 2008.0
+
+<panel><name> Circulation_VascularCompliance </name>
+
+<label>
+  <row> 0.3 </row><col> 1.0 </col>
+  <text> Vascular Compliance </text>
+</label>
+
+<showclock>
+  <row> 0.3 </row><col> 32.0 </col>
+  <name> System.X </name>
+  <ampm/>
+  <secs/>
+  <days/>
+</showclock>
+
+<?path Display\Physiology\Circulation\VascularCompliance\ ?>
+
+<?include Summary.DES ?>
+
+</panel>
+
+End

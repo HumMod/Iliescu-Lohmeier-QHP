@@ -1,0 +1,155 @@
+QHP 2008 / Baroreflex DES
+
+Created : 21-Oct-04
+Last Modified : 26-Jun-05
+Author : Tom Coleman
+Copyright Status : In Public Domain
+Solver : QHP 2008
+Schema : 2008.0
+
+<structure><name> Baroreflex </name>
+
+<variables>
+
+<var>
+  <name> NA </name>
+</var>
+
+<var>
+  <name> PressureChange </name>
+</var>
+
+<parm>
+  <name> Tau </name>
+  <val> 10.0 </val>
+</parm>
+
+<parm>
+  <name> Switch </name>
+  <val> 0 </val>
+</parm>
+
+<parm>
+  <name> Activation </name>
+  <val> 1.0 </val>
+</parm>
+
+<parm>
+  <name> Slope </name>
+  <val> 1 </val>
+</parm>
+
+</variables>
+
+<equations>
+
+<delay>
+  <name> AdaptedPressure </name>
+  <outputname> AdaptedPressure </outputname>
+  <initialval> 97.0 </initialval>
+  <inputname> SinusPressure </inputname>
+  <rateconstname> RateConst </rateconstname>
+  <errorlim> 0.97 </errorlim>
+</delay>
+
+</equations>
+
+<functions>
+
+<curve>
+
+  <name> PressureChangeOnNA </name>
+  <point><x> -50.0 </x><y> 0.0 </y><slope> 0 </slope></point>
+  <point><x>   0.0 </x><y> 1.0 </y><slope> 0.02 </slope></point>
+  <point><x>  50.0 </x><y> 2.0 </y><slope> 0 </slope></point>
+
+</curve>
+
+<curve>
+  <name> PressureChangeOnNA2 </name>
+  <point><x> -50.0 </x><y> 0.0 </y><slope> 0 </slope></point>
+  <point><x>   0.0 </x><y> 1.0 </y><slope> 0.04 </slope></point>
+  <point><x>  50.0 </x><y> 2.0 </y><slope> 0 </slope></point>
+</curve>
+
+<curve>
+  <name> PressureChangeOnNA3 </name>
+  <point><x> -50.0 </x><y> 0.0 </y><slope> 0 </slope></point>
+  <point><x>   0.0 </x><y> 1.0 </y><slope> 0.06 </slope></point>
+  <point><x>  50.0 </x><y> 2.0 </y><slope> 0 </slope></point>
+</curve>
+
+<curve>
+  <name> PressureChangeOnNA4 </name>
+  <point><x> -50.0 </x><y> 0.0 </y><slope> 0 </slope></point>
+  <point><x>   0.0 </x><y> 1.0 </y><slope> 0.08 </slope></point>
+  <point><x>  50.0 </x><y> 2.0 </y><slope> 0 </slope></point>
+</curve>
+
+</functions>
+
+<definitions>
+
+<block><name> Parms </name>
+<def>
+  <name> RateConst </name>
+  <val> INVERT ( 60.0 * Tau ) </val>
+</def>
+
+</block>
+
+<block><name> Calc </name>
+
+<if>
+  <test> OtherTissue-Function.Failed </test>
+  <true>
+
+  <def>
+    <name> PressureChange </name>
+    <val> 0.0 </val>
+  </def>
+  <def>
+    <name> NA </name>
+    <val> 0.0 </val>
+  </def>
+
+  </true>
+  <false>
+     <andif>
+        <test> Baroreflex.Switch </test>
+        <true> 
+          <def><name> NA </name> 
+               <val> Baroreflex.Activation </val>
+          </def>
+        </true>
+        <false>
+          <def>
+            <name> PressureChange </name>
+            <val> Slope * ( CarotidSinus.Pressure - AdaptedPressure ) </val>
+          </def>
+         
+          <def>
+            <name> NA </name>
+            <val> PressureChangeOnNA [ PressureChange ] </val>
+          </def>
+          
+        </false>
+     </andif>
+
+  </false>
+</if>
+
+</block>
+
+<block><name> Dervs </name>
+<def>
+  <name> SinusPressure </name>
+  <val> CarotidSinus.Pressure </val>
+</def>
+
+</block>
+
+</definitions>
+</structure>
+
+End

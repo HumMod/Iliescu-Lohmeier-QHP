@@ -1,0 +1,44 @@
+QHP 2008 / Environment
+
+Created : 21-Dec-05
+Last Modified : 20-Sep-08
+Author : Tom Coleman
+Copyright : 2008-2008
+By : University of Mississippi Medical Center
+Solver : DES 2008
+Schema : 2008.0
+
+<?path Structure\Environment\ ?>
+
+<?include Altitude.DES ?>
+<?include AmbientTemperature.DES ?>
+<?include Barometer.DES ?>
+<?include Clothes.DES ?>
+<?include EquivalentAltitude.DES ?>
+<?include RelativeHumidity.DES ?>
+<?include Wind.DES ?>
+
+<structure><name> Environment </name>
+
+<definitions>
+
+<block><name> Parms </name>
+
+  <call> Altitude.Parms </call>
+  <call> Barometer.Calc </call>
+  <call> AmbientTemperature.Parms </call>
+  <call> RelativeHumidity.Parms </call>
+
+</block>
+
+<block><name> FinishParms </name>
+
+  <call> EquivalentAltitude.Parms </call>
+
+</block>
+
+
+</definitions>
+</structure>
+
+End

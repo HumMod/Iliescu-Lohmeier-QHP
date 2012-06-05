@@ -1,0 +1,39 @@
+QHP 2008 / Involution
+
+Created : 02-Oct-08
+Last Modified : 02-Oct-08
+Author : Tom Coleman
+Copyright : 2008-2008
+By : University of Mississippi Medical Center
+Solver : DES 2008
+Schema : 2008.0
+
+<panel><name> CorpusLuteum-Involution </name>
+
+<showbitmap>
+  <row> 0.3 </row>
+  <col> 1.0 </col>
+  <name> Gender-Female </name>
+</showbitmap>
+
+<label>
+  <row> 0.3 </row>
+  <col> 4.5 </col>
+  <text> CorpusLuteum - Atresia </text>
+</label>
+
+<showclock>
+  <row> 0.3 </row><col> 32.0 </col>
+  <name> System.X </name>
+  <ampm/>
+  <secs/>
+  <days/>
+</showclock>
+
+<?path Display\Organs\Ovaries\CorpusLuteum\Involution\ ?>
+
+<?include Summary.DES ?>
+
+</panel>
+
+End

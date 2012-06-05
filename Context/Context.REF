@@ -1,0 +1,40 @@
+QHP 2008 / Context.REF
+
+Created : 07-Sep-08
+Last Modified : 20-Oct-08
+Author : Tom Coleman
+Copyright : 2008-2008
+By : University of Mississippi Medical Center
+Solver : DES 2008
+Schema : 2008.0
+
+Context code allows us to implement traits such as GENDER-FEMALE
+and AGE-YOUNGISH.
+
+Implementation assigns new values to existing variables at
+solution start and restart, thus altering initial conditions.
+
+Context code is parsed after structure code since it typically
+refers to existing variables. They must exist to be referred to.
+
+Context math is called first. Look in Model.DES in the root
+directory. We can also scale the model in other model parts
+using the system variable System.Starting, which is only TRUE
+when the model is starting.
+
+Gender (like all other traits so far) is an enumerated parameter.
+
+  0 = Male (Default)
+  1 = Female (Set in context)
+
+The following assignment in context math sets gender to female.
+
+<parm><name> Gender.Gender </name><val> 1 </val></parm>
+
+If the token GENDER-FEMALE is defined, we do a conditional include of
+this assignment into the context math.
+
+N.B. Establish the gender trait first because the values of other
+traits may depend on it.
+
+End

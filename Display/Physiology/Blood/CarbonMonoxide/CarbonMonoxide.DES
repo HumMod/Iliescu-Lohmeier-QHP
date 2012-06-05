@@ -1,0 +1,27 @@
+QHP 2008 / CarbonMonoxide
+
+Created : 27-Apr-05
+Last Modified : 30-May-05
+Author : Tom Coleman
+Copyright Status : In Public Domain
+Solver : QHP 2008
+Schema : 2008.0
+
+<panel><name> Blood_CarbonMonoxide </name>
+
+<label>
+  <row> 0.3 </row><col> 1.0 </col>
+  <text> Carbon Monoxide </text>
+</label>
+
+<showclock>
+  <row> 0.3 </row><col> 32.0 </col>
+  <name> System.X </name>
+  <ampm/>
+  <secs/>
+  <days/>
+</showclock>
+
+</panel>
+
+End

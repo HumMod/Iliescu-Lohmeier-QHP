@@ -1,0 +1,33 @@
+QHP 2008 / VascularConductance
+
+Created : 28-Apr-05
+Last Modified : 05-Aug-08
+Author : Tom Coleman
+Copyright : 2008-2008
+By : University of Mississippi Medical Center
+Solver : DES 2008
+Schema : 2008.0
+
+<panel><name> Circulation_VascularConductance </name>
+
+<label>
+  <row> 0.3 </row><col> 1.0 </col>
+  <text> Vascular Conductance </text>
+</label>
+
+<showclock>
+  <row> 0.3 </row><col> 32.0 </col>
+  <name> System.X </name>
+  <ampm/>
+  <secs/>
+  <days/>
+</showclock>
+
+<?path Display\Physiology\Circulation\VascularConductance\ ?>
+
+<?include Summary.DES ?>
+<?include PeripheralResistance.DES ?>
+
+</panel>
+
+End

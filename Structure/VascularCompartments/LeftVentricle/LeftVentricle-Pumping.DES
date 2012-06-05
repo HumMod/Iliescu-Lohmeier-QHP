@@ -1,0 +1,34 @@
+QHP 2008 / LeftVentricle-Pumping
+
+Created : 12-Aug-08
+Last Modified : 24-Sep-08
+Author : Tom Coleman
+Copyright : 2008-2008
+By : University of Mississippi Medical Center
+Solver : DES 2008
+Schema : 2008.0
+
+<structure><name> LeftVentricle-Pumping </name>
+
+<variables>
+
+<var><name> BloodFlow </name></var>
+<var><name> StrokeVolume </name></var>
+<var><name> EjectionFraction </name></var>
+
+</variables>
+
+<definitions>
+
+<block><name> Calc </name>
+
+<def><name> StrokeVolume </name><val> LeftVentricle-Diastole.EDV - LeftVentricle-Systole.ESV </val></def>
+<def><name> BloodFlow </name><val> Heart-Ventricles.Rate * StrokeVolume </val></def>
+<def><name> EjectionFraction </name><val> StrokeVolume / LeftVentricle-Diastole.EDV </val></def>
+
+</block>
+
+</definitions>
+</structure>
+
+End

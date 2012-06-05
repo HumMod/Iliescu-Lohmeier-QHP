@@ -1,0 +1,109 @@
+QHP 2008 / Summary
+
+Created : 08-Feb-06
+Last Modified : 08-Feb-06
+Author : Tom Coleman
+Copyright Status : In Public Domain
+Solver : QHP 2008
+Schema : 2008.0
+
+<groupbox>
+   <row> 2.0 </row>
+   <col> 1.0 </col>
+   <high> 17.8 </high>
+   <wide> 30.0 </wide>
+   <title> Summary </title>
+
+<showvalue>
+  <row> 1.4 </row><col> 1.0 </col>
+  <name> TotalDrive </name>
+  <label> Chemical Drive </label>
+  <format><decimal> 1 </decimal></format>
+</showvalue>
+
+<showgraph>
+  <row> 2.4 </row><col> 1.0 </col><high> 7 </high><wide> 28 </wide>
+  <leftmargin> 4 </leftmargin>
+  <xaxis>
+    <name> System.X </name>
+    <label> Time </label>
+    <scale><min> 0 </min><max> 2 </max></scale>
+  </xaxis>
+  <yaxis>
+    <yvar>
+      <name> TotalDrive </name>
+      <nolabel/>
+      <linecolor> BLUE </linecolor>
+    </yvar>
+    <scale>
+      <min> 0 </min><max> 2 </max><inc> 1 </inc>
+    </scale>
+  </yaxis>
+</showgraph>
+
+<showvalue>
+  <row> 9.8 </row><col> 1.0 </col>
+  <name> CentralDrive </name>
+  <label> Central Drive </label>
+  <format><decimal> 1 </decimal></format>
+</showvalue>
+
+<showvalue>
+  <row> 10.8 </row><col> 3 </col>
+  <name> PhEffect </name>
+  <label> pH Effect </label>
+  <format><decimal> 1 </decimal></format>
+</showvalue>
+
+<repeatlist>
+  <name> RespiratoryCenter-Chemical.CentralBase </name>
+  <repeat><reps> 20 </reps><stepsize> 0.1 </stepsize></repeat>
+  <repeat><reps>  8 </reps><stepsize> 1.0 </stepsize></repeat>
+</repeatlist>
+
+<slidebar>
+  <row> 12.2 </row><col> 3 </col>
+  <name> CentralBase </name>
+  <listname> RespiratoryCenter-Chemical.CentralBase </listname>
+  <label> Base </label>
+</slidebar>
+
+<showvalue>
+  <row> 13.8 </row><col> 1.0 </col>
+  <name> PeripheralDrive </name>
+  <label> Peripheral Drive </label>
+  <format><decimal> 1 </decimal></format>
+</showvalue>
+
+<showvalue>
+  <row> 14.8 </row><col> 3 </col>
+  <name> ChemoreceptorEffect </name>
+  <label> Chemoreceptor Effect </label>
+  <format><decimal> 1 </decimal></format>
+</showvalue>
+
+<repeatlist>
+  <name> RespiratoryCenter-Chemical.PeripheralBase </name>
+  <repeat><reps> 20 </reps><stepsize> 0.1 </stepsize></repeat>
+  <repeat><reps>  8 </reps><stepsize> 1.0 </stepsize></repeat>
+</repeatlist>
+
+<slidebar>
+  <row> 16.2 </row><col> 3 </col>
+  <name> PeripheralBase </name>
+  <listname> RespiratoryCenter-Chemical.PeripheralBase </listname>
+  <label> Base </label>
+</slidebar>
+
+<infobutton>
+  <row> 1.2 </row>
+  <col> 26.0 </col>
+
+  <line> Chemical drive is normally 1.0 x Normal </line>
+  <line> and is the sum of central drive (0.6) </line>
+  <line> and peripheral drive (0.4) </line>
+</infobutton>
+
+</groupbox>
+
+End

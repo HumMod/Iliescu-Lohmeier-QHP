@@ -1,0 +1,34 @@
+QHP 2008 / SkeletalMuscle
+
+Created : 17-Apr-05
+Last Modified : 18-Jan-06
+Author : Tom Coleman
+Copyright Status : In Public Domain
+Solver : QHP 2008
+Schema : 2008.0
+
+<?path Display\Organs\SkeletalMuscle\ ?>
+
+<?include Circulation\Circulation.DES ?>
+<?include Conductance\Conductance.DES ?>
+<?include Effluents\Effluents.DES ?>
+<?include Function\Function.DES ?>
+<?include Heat\Heat.DES ?>
+<?include Metabolism\Metabolism.DES ?>
+<?include Nerves\Nerves.DES ?>
+<?include Size\Size.DES ?>
+<?include ContractileProtein\ContractileProtein.DES ?>
+<?include Structure\Structure.DES ?>
+
+<?include AcidBase\AcidBase.DES ?>
+<?include CO2\CO2.DES ?>
+<?include Lactate\Lactate.DES ?>
+<?include Vasculature\Vasculature.DES ?>
+<?include MusclePumping\MusclePumping.DES ?>
+<?include Metaboreflex\Metaboreflex.DES ?>
+
+<?include Fuel\Fuel.DES ?>
+<?include Glycogen\Glycogen.DES ?>
+<?include Insulin\Insulin.DES ?>
+
+End

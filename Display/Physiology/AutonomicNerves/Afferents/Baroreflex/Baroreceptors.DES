@@ -1,0 +1,126 @@
+QHP 2008 / Baroreceptors
+
+Created : 26-Jun-05
+Last Modified : 26-Jun-05
+Author : Tom Coleman
+Copyright Status : In Public Domain
+Solver : QHP 2008
+Schema : 2008.0
+
+<groupbox>
+   <row> 2.0 </row>
+   <col> 32.0 </col>
+   <high> 31.8 </high>
+   <wide> 30.0 </wide>
+   <title> Baroreceptors </title>
+
+<showvalue>
+   <row> 1.4 </row><col> 1.0 </col>
+   <name> Baroreflex.NA </name>
+   <format><decimal> 1 </decimal></format>
+   <label> Nerve Activity </label>
+</showvalue>
+
+<showgraph>
+  <row> 2.4 </row><col> 1.0 </col><high> 7 </high><wide> 28 </wide>
+  <leftmargin> 7 </leftmargin>
+  <xaxis>
+    <name> System.X </name>
+    <label> Time </label>
+    <scale><min> 0 </min><max> 2 </max></scale>
+  </xaxis>
+  <yaxis>
+    <yvar>
+      <name> Baroreflex.NA </name>
+      <label> NA </label>
+      <linecolor> BLUE </linecolor>
+    </yvar>
+    <scale>
+      <min> 0 </min><max> 2 </max><inc> 1 </inc>
+    </scale>
+  </yaxis>
+</showgraph>
+
+<showcurve>
+  <row> 9.8 </row><col> 1.0 </col><high> 7 </high><wide> 27 </wide>
+  <leftmargin> 7 </leftmargin>
+
+  <xaxis>
+    <name> Baroreflex.PressureChange </name>
+    <label> Change </label>
+    <scale><min> -50 </min><max> 50 </max><inc> 10 </inc></scale>
+  </xaxis>
+
+  <yaxis>
+    <label> NA </label>
+    <scale><min> 0 </min><max> 2 </max><inc> 1 </inc></scale>
+  </yaxis>
+
+  <curvename> Baroreflex.PressureChangeOnNA </curvename>
+</showcurve>
+
+<showvalue>
+   <row> 17.2 </row><col> 1.0 </col>
+   <name> Baroreflex.PressureChange </name>
+   <format><decimal> 1 </decimal></format>
+   <label> Pressure Change </label>
+</showvalue>
+
+<showvalue>
+   <row> 18.6 </row><col> 1.0 </col>
+   <name> Baroreflex.AdaptedPressure </name>
+   <format><decimal> 1 </decimal></format>
+   <label> Adapted Pressure </label>
+</showvalue>
+
+<repeatlist>
+  <name> Baroreflex.Tau </name>
+  <firstval> 1.0 </firstval>
+  <repeat><reps> 19 </reps><stepsize>   1 </stepsize></repeat>
+  <repeat><reps>  8 </reps><stepsize>  10 </stepsize></repeat>
+  <repeat><reps>  9 </reps><stepsize> 100 </stepsize></repeat>
+  <repeat><reps>  9 </reps><stepsize> 1000 </stepsize></repeat>
+</repeatlist>
+
+<slidebar>
+  <row> 20.0 </row><col> 1.0 </col>
+  <wide> 8 </wide>
+  <name> Baroreflex.Tau </name>
+  <listname> Baroreflex.Tau </listname>
+  <label> Time Constant </label>
+</slidebar>
+
+<radiobuttons>
+  <row> 23.0 </row><col> 1.0 </col>
+  <name> Baroreflex.Switch </name>
+  <listname> Common.NoYes </listname>
+  <label> Activate Baroreflex </label>
+</radiobuttons>
+
+<slidebar>
+  <row> 26.0 </row><col> 1.0 </col>
+  <name> Baroreflex.Activation </name>
+  <listname> Common.Activation </listname>
+  <label> Activation Level </label>
+</slidebar>
+
+<slidebar>
+  <row> 28 </row><col> 1.0 </col>
+  <name> Baroreflex.Slope </name>
+  <listname> Common.Slope </listname>
+  <label> Change slope (X Times Normal) </label>
+</slidebar> 
+  
+<infobutton>
+  <row> 1.2 </row>
+  <col> 26.0 </col>
+
+  <line> Nerve Activity = 1.0 x Normal </line>
+  <line> Pressure Change = ~0 mmHg </line>
+  <line> Adapted Pressure = 97.0 mmHg </line>
+  <line> Time Constant = 10.0 Hrs </line>
+</infobutton>
+
+</groupbox>
+
+End

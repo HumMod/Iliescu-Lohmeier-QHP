@@ -1,0 +1,39 @@
+QHP 2008 / Integration
+
+Created : 27-Apr-05
+Last Modified : 26-Jun-05
+Author : Tom Coleman
+Copyright Status : In Public Domain
+Solver : QHP 2008
+Schema : 2008.0
+
+<panel><name> AutonomicNerves-CNS-Integration </name>
+
+<showbitmap>
+  <row> 0.3 </row>
+  <col> 1.0 </col>
+  <name> NerveCNS </name>
+</showbitmap>
+
+<label>
+  <row> 0.3 </row>
+  <col> 4.5 </col>
+  <text> CNS s - Integration </text>
+</label>
+
+<showclock>
+  <row> 0.3 </row><col> 32.0 </col>
+  <name> System.X </name>
+  <ampm/>
+  <secs/>
+  <days/>
+</showclock>
+
+<?path Display\Physiology\AutonomicNerves\CNS\Integration\ ?>
+
+<?include General.DES ?>
+<?include Kidney.DES ?>
+
+</panel>
+
+End

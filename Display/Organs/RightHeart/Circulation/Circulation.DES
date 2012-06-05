@@ -1,0 +1,43 @@
+QHP 2008 / Circulation
+
+Created : 18-Apr-05
+Last Modified : 24-May-05
+Author : Tom Coleman
+Copyright Status : In Public Domain
+Solver : QHP 2008
+Schema : 2008.0
+
+<panel><name> RightHeart-Circulation </name>
+
+<showbitmap>
+  <row> 0.3 </row>
+  <col> 1.0 </col>
+  <name> RightHeart </name>
+</showbitmap>
+
+<label>
+  <row> 0.3 </row>
+  <col> 4.5 </col>
+  <text> Right Heart - Circulation </text>
+</label>
+
+<showclock>
+  <row> 0.3 </row><col> 32.0 </col>
+  <name> System.X </name>
+  <ampm/>
+  <secs/>
+  <days/>
+</showclock>
+
+<structurename> RightHeart-Flow </structurename>
+
+<?path Display\Organs\RightHeart\Circulation\ ?>
+
+<?include BloodFlow.DES ?>
+<?include Pump.DES ?>
+
+<?include Conductance.DES ?>
+
+</panel>
+
+End

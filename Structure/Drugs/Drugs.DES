@@ -1,0 +1,51 @@
+QHP 2008 / Drugs
+
+Created : 21-Oct-04
+Last Modified : 03-Jun-06
+Author : Tom Coleman
+Copyright Status : In Public Domain
+Solver : QHP 2008
+Schema : 2008.0
+
+<?path Structure\Drugs\ ?>
+
+<?include Chlorothiazide\Chlorothiazide.DES ?>
+<?include Digoxin\Digoxin.DES ?>
+<?include Furosemide\Furosemide.DES ?>
+<?include Midodrine\Midodrine.DES ?>
+
+<structure><name> Drugs </name>
+
+<definitions>
+
+<block><name> Parms </name>
+  <call> Chlorothiazide.Parms </call>
+  <call> Digoxin.Parms </call>
+  <call> Furosemide.Parms </call>
+  <call> Midodrine.Parms </call>
+</block>
+
+<block><name> CalcConc </name>
+  <call> Chlorothiazide.CalcConc </call>
+  <call> Digoxin.CalcConc </call>
+  <call> Furosemide.CalcConc </call>
+  <call> Midodrine.CalcConc </call>
+</block>
+
+<block><name> Dervs </name>
+  <call> Chlorothiazide.Dervs </call>
+  <call> Digoxin.Dervs </call>
+  <call> Furosemide.Dervs </call>
+  <call> Midodrine.Dervs </call>
+</block>
+
+<block><name> Wrapup </name>
+  <call> Chlorothiazide.Wrapup </call>
+  <call> Digoxin.Wrapup </call>
+  <call> Midodrine.Wrapup </call>
+</block>
+
+</definitions>
+</structure>
+
+End

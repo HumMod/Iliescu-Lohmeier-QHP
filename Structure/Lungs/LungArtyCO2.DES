@@ -1,0 +1,50 @@
+QHP 2008 / LungArtyCO2
+
+Created : 10-Feb-06
+Last Modified : 10-Feb-06
+Author : Tom Coleman
+Copyright Status : In Public Domain
+Solver : QHP 2008
+Schema : 2008.0
+
+<structure><name> LungArtyCO2 </name>
+
+<variables>
+
+<var>
+  <name> [CO2] </name>
+</var>
+
+<var>
+  <name> [CO2(mEq/L)] </name>
+</var>
+
+<var>
+  <name> PCO2 </name>
+</var>
+
+</variables>
+
+<definitions>
+<block><name> Calc </name>
+
+<def>
+  <name> [CO2] </name>
+  <val> CO2Veins.[HCO3] </val>
+</def>
+
+<def>
+  <name> [CO2(mEq/L)] </name>
+  <val> CO2Veins.[HCO3(mEq/L)] </val>
+</def>
+
+<def>
+  <name> PCO2 </name>
+  <val> CO2Veins.Pressure </val>
+</def>
+
+</block>
+</definitions>
+</structure>
+
+End

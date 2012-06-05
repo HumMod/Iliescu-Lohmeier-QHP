@@ -1,0 +1,41 @@
+Model.DES
+
+Created : 19-Oct-04
+Last Modified : 06-Sep-08
+Author : Tom Coleman
+Copyright : 2008-2008
+By : University of Mississippi Medical Center
+Solver : DES 2008
+Schema : 2008.0
+
+<?xml version = '1.0' ?>
+
+<model>
+
+<schema> 2008.0 </schema>
+<modeltitle> QHP 2008 </modeltitle>
+
+<?include Config\Config.DES ?>
+<?include Structure\Structure.DES ?>
+<?include Context\Context.DES ?>
+
+<math>
+
+  <context> Context.Math </context>
+  <parms> Structure.Parms </parms>
+  <dervs> Structure.Dervs </dervs>
+  <wrapup> Structure.Wrapup </wrapup>
+
+</math>
+
+<?include Control\Control.DES ?>
+
+<display>
+
+<?include Display\Display.DES ?>
+
+</display>
+
+</model>
+
+End

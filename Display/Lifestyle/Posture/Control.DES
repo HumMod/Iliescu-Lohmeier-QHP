@@ -1,0 +1,78 @@
+QHP 2008 / Control
+
+Created : 25-May-05
+Last Modified : 05-Mar-08
+Author : Tom Coleman
+Copyright : 2005-2008
+By : University of Mississippi Medical Center
+Solver : QHP 2008
+Schema : 2008.0
+
+<groupbox>
+   <row> 2.0 </row>
+   <col> 1.0 </col>
+   <high> 13.0 </high>
+   <wide> 30.0 </wide>
+   <title> Control </title>
+
+<label>
+  <row> 1.4 </row><col> 1.0 </col>
+  <text> Request </text>
+</label>
+
+<maplist>
+  <name> PostureControl.Request </name>
+  <map><val> 0 </val><img> Lying </img></map>
+  <map><val> 1 </val><img> Sitting </img></map>
+  <map><val> 2 </val><img> Standing </img></map>
+  <map><val> 3 </val><img> Tilting </img></map>
+</maplist>
+
+<radiobuttons>
+  <row> 2.6 </row><col> 1.0 </col>
+  <name> PostureControl.Request </name>
+  <listname> PostureControl.Request </listname>
+  <nolabel/>
+  <layout> VERT </layout>
+</radiobuttons>
+
+<label>
+  <row> 7.2 </row><col> 1.0 </col>
+  <text> Status </text>
+</label>
+
+<checkmark>
+   <row> 8.2 </row><col> 1.0 </col>
+   <name> Status.Lying </name>
+   <label> Lying </label>
+</checkmark>
+
+<checkmark>
+   <row> 9.2 </row><col> 1.0 </col>
+   <name> Status.Sitting </name>
+   <label> Sitting </label>
+</checkmark>
+
+<checkmark>
+   <row> 10.2 </row><col> 1.0 </col>
+   <name> Status.Standing </name>
+   <label> Standing </label>
+</checkmark>
+
+<checkmark>
+   <row> 11.2 </row><col> 1.0 </col>
+   <name> Status.Tilting </name>
+   <label> Tilting </label>
+</checkmark>
+
+<infobutton>
+  <row> 1.2 </row>
+  <col> 26.0 </col>
+  <line> A request for posture change is not executed </line>
+  <line> when posture is being controlled by the daily </line>
+  <line> planner or when the subject is comatose. </line>
+</infobutton>
+
+</groupbox>
+
+End

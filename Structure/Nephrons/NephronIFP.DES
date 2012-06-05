@@ -1,0 +1,64 @@
+QHP 2008 / NephronIFP
+
+Created : 10-Apr-05
+Last Modified : 10-Apr-05
+Author : Tom Coleman
+Copyright Status : In Public Domain
+Solver : QHP 2008
+Schema : 2008.0
+
+<structure><name> NephronIFP </name>
+
+<variables>
+
+<var><name> Pressure </name></var>
+<var><name> RenalVeinPressureEffect </name></var>
+
+<parm><name> Clamp </name><val> FALSE </val></parm>
+<parm><name> Level </name><val> 0.0 </val></parm>
+
+<parm><name> Remove </name><val> FALSE </val></parm>
+
+<constant><name> K </name><val> 0.042 </val></constant>
+
+</variables>
+
+<functions>
+<curve> 
+<name> RenalVeinPressureonIFP </name>
+
+ 
+  <point><x> 6.8 </x><y> 1.0 </y><slope> 0.0 </slope></point>
+  <point><x> 7.8 </x><y> 1.0 </y><slope> 0.28 </slope></point>
+  <point><x> 40.0 </x><y> 11.2 </y><slope> 0.28 </slope></point>
+  <point><x> 60.0 </x><y> 17.8 </y><slope> 0.0 </slope></point>
+
+</curve>
+</functions>
+
+<definitions>
+
+
+<block><name> Calc </name>
+
+<conditional>
+<name> RenalVeinPressureEffect </name>
+<test> Remove </test>
+<true> 0.0 </true>
+<false> RenalVeinPressureonIFP [ Kidney-Pressure.VeinPressure ] - 1 </false>
+</conditional>
+
+<conditional><name> Pressure </name>
+<test> Clamp </test>
+<true> Level </true>
+<false> ( ( K * Kidney-ArcuateArtery.Pressure ) + RenalVeinPressureEffect ) </false>
+</conditional>
+
+</block>
+
+</definitions>
+
+
+</structure>
+
+End

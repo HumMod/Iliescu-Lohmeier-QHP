@@ -1,0 +1,56 @@
+QHP 2008 / Kidney-NephronCount
+
+Created : 20-Dec-05
+Last Modified : 20-Dec-05
+Author : Tom Coleman
+Copyright Status : In Public Domain
+Solver : QHP 2008
+Schema : 2008.0
+
+<structure><name> Kidney-NephronCount </name>
+
+<variables>
+
+<parm>
+  <name> Total </name>
+  <val> 2400000 </val>
+</parm>
+
+<var>
+  <name> Total(xNormal) </name>
+</var>
+
+<constant>
+  <name> Normal </name>
+  <val> 2400000 </val>
+</constant>
+
+<parm>
+  <name> Filtering(%) </name>
+  <val> 100.0 </val>
+</parm>
+
+<var>
+  <name> Filtering(xNormal) </name>
+</var>
+
+</variables>
+
+<definitions>
+<block><name> Calc </name>
+
+<def>
+  <name> Total(xNormal) </name>
+  <val> Total / Normal </val>
+</def>
+
+<def>
+  <name> Filtering(xNormal) </name>
+  <val> 0.01 * Filtering(%) * Total(xNormal) </val>
+</def>
+
+</block>
+</definitions>
+</structure>
+
+End

@@ -1,0 +1,27 @@
+QHP 2008 / Organs
+
+Created : 02-Apr-08
+Last Modified : 02-Apr-08
+Author : Tom Coleman
+Copyright : 2008-2008
+By : University of Mississippi Medical Center
+Solver : DES 2005
+Schema : 2005.0
+
+<?path Structure\Organs\ ?>
+
+<?include Organs-Vasculature.DES ?>
+<?include Organs-Size.DES ?>
+<?include Organs-Lactate.DES ?>
+<?include Organs-Ph.DES ?>
+<?include Organs-CO2.DES ?>
+<?include Organs-Function.DES ?>
+<?include Organs-AlphaReceptors.DES ?>
+<?include Organs-BetaReceptors.DES ?>
+<?include Organs-Pressure.DES ?>
+<?include Organs-Metabolism.DES ?>
+<?include Organs-Flow.DES ?>
+<?include Organs-Fuel.DES ?>
+<?include Organs-Structure.DES ?>
+
+End

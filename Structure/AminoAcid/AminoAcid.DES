@@ -1,0 +1,14 @@
+QHP 2008 / AminoAcid
+
+Created : 07-Apr-05
+Last Modified : 07-Apr-05
+Author : Tom Coleman
+Copyright Status : In Public Domain
+Solver : QHP 2008
+Schema : 2008.0
+
+<?path Structure\AminoAcid\ ?>
+
+<?include AAPool.DES ?>
+
+End

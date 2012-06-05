@@ -1,0 +1,71 @@
+QHP 2008 / X
+
+Created : 07-Apr-05
+Last Modified : 06-Jun-06
+Author : Tom Coleman
+Copyright Status : In Public Domain
+Solver : QHP 2008
+Schema : 2008.0
+
+<?path Structure\X\ ?>
+
+<!--
+<?include .DES ?>
+-->
+
+<structure><name> X </name>
+
+<variables>
+
+<var><name> Gain </name></var>
+<var><name> Loss </name></var>
+
+</variables>
+
+<equations>
+
+<!--
+<diffeq>
+  <name> Mass </name>
+  <integralname> Mass </integralname>
+  <initialval> 0.0 </initialval>
+  <dervname> Change </dervname>
+  <errorlim> 0.0 </errorlim>
+</diffeq>
+-->
+
+</equations>
+
+<definitions>
+
+<block><name> Initialize </name>
+<!--
+<def>
+  <name>  </name>
+  <val>  </val>
+</def>
+-->
+</block>
+
+<block><name> Conc </name>
+<!--
+<def>
+  <name>  </name>
+  <val>  </val>
+</def>
+-->
+</block>
+
+<block><name> Dervs </name>
+<!--
+<def>
+  <name>  </name>
+  <val>  </val>
+</def>
+-->
+</block>
+
+</definitions>
+</structure>
+
+End

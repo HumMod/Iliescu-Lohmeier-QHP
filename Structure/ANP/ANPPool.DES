@@ -1,0 +1,100 @@
+QHP 2008 / ANPPool
+
+Created : 07-Apr-05
+Last Modified : 20-Oct-08
+Author : Tom Coleman
+Copyright : 2008-2008
+By : University of Mississippi Medical Center
+Solver : DES 2008
+Schema : 2008.0
+
+<structure><name> ANPPool </name>
+
+<variables>
+
+<var><name> [ANP] </name></var>
+<var><name> [ANP(pG/mL)] </name></var>
+<var><name> Log10Conc </name></var>
+<constant><name> PMOLTOPG </name><val> 3.060 </val></constant>
+<var><name> Gain </name></var>
+<var><name> Loss </name></var>
+<var><name> Change </name></var>
+<parm><name> Switch </name><val> 0.0 </val></parm>
+<parm><name> Clamp </name><val> 20.0 </val></parm>
+ 
+<constant><name> InitialConc </name><val> 20.0 </val></constant>
+
+</variables>
+
+<equations>
+
+<backwardeuler>
+  <name> Mass </name>
+  <integralname> Mass </integralname>
+  <initialval> -1 </initialval>
+  <f1name> F1 </f1name>
+  <f2name> F2 </f2name>
+  <errorlim> 3.00 </errorlim>
+</backwardeuler>
+
+</equations>
+
+<definitions>
+<block><name> Initialize </name>
+
+<def><name> Mass </name><val> InitialConc * ECFV.Vol(L) </val></def>
+
+</block>
+
+<block><name> CalcConc </name>
+
+<if><test> ANPPool.Switch </test>
+    <true><def><name> [ANP] </name><val> ANPPool.Clamp </val></def></true>
+    <false>
+<def>
+  <name> [ANP] </name>
+  <val> Mass / ECFV.Vol(L) </val>
+</def>
+    </false>
+</if>
+
+<def>
+  <name> [ANP(pG/mL)] </name>
+  <val> PMOLTOPG * [ANP] </val>
+</def>
+
+<conditional>
+  <name> Log10Conc </name>
+  <test> [ANP] GT 1.0 </test>
+  <true> LOG10 [ANP] </true>
+  <false> 0.0 </false>
+</conditional>
+
+</block>
+
+<block><name> Dervs </name>
+
+<def>
+  <name> Gain </name>
+  <val> ANPSecretion.Rate + ANPPump.Rate </val>
+</def>
+
+<def>
+  <name> Loss </name>
+  <val> ANPClearance.Rate </val>
+</def>
+
+<def>
+  <name> Change </name>
+  <val> Gain - Loss </val>
+</def>
+
+<def><name> F1 </name><val> Gain </val></def>
+<def><name> F2 </name><val> ANPClearance.K </val></def>
+
+</block>
+
+</definitions>
+</structure>
+
+End

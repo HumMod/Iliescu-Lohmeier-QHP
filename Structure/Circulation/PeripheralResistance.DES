@@ -1,0 +1,34 @@
+QHP 2008 / PeripheralResistance DES
+
+Created : 05-Aug-08
+Last Modified : 05-Aug-08
+Author : Tom Coleman
+Copyright : 2008-2008
+By : University of Mississippi Medical Center
+Solver : DES 2008
+Schema : 2008.0
+
+<structure><name> PeripheralResistance </name>
+
+<variables>
+
+<var><name> TPR </name></var>
+
+</variables>
+
+<definitions>
+
+<block><name> Wrapup </name>
+
+<conditional><name> TPR </name>
+<test> CardiacOutput.Flow GT 0.0 </test>
+<true> ( SystemicArtys.Pressure - RightAtrium.Pressure ) / CardiacOutput.Flow </true>
+<false> UNKNOWN </false>
+</conditional>
+
+</block>
+
+</definitions>
+</structure>
+
+End

@@ -1,0 +1,31 @@
+QHP 2008 / PulmVeins
+
+Created : 29-Sep-08
+Last Modified : 29-Sep-08
+Author : Tom Coleman
+Copyright : 2008-2008
+By : University of Mississippi Medical Center
+Solver : DES 2008
+Schema : 2008.0
+
+<def>
+  <name> PulmVeins.Vol </name>
+  <val> 0.75 * PulmVeins.Vol </val>
+</def>
+
+<def>
+  <name> PulmVeins.V0 </name>
+  <val> 0.75 * PulmVeins.V0 </val>
+</def>
+
+<def>
+  <name> PulmVeins.Compliance </name>
+  <val> 0.75 * PulmVeins.Compliance </val>
+</def>
+
+<def>
+  <name> PulmVeins.Conductance </name>
+  <val> 0.80 * PulmVeins.Conductance </val>
+</def>
+
+End

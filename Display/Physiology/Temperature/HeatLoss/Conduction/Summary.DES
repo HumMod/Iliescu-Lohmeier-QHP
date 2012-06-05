@@ -1,0 +1,66 @@
+QHP 2008 / Summary
+
+Created : 29-Jun-06
+Last Modified : 29-Jun-06
+Author : Tom Coleman
+Copyright Status : In Public Domain
+Solver : QHP 2008
+Schema : 2008.0
+
+<groupbox>
+   <row> 2.0 </row>
+   <col> 1.0 </col>
+   <high> 7.0 </high>
+   <wide> 30.0 </wide>
+   <title> Summary </title>
+
+<structurename> HeatConduction </structurename>
+
+<showvalue>
+   <row> 1.4 </row><col> 1.0 </col>
+   <name> Flux </name>
+   <format><decimal> 2 </decimal></format>
+   <label> Flux </label>
+</showvalue>
+
+<showvalue>
+   <row> 2.4 </row><col> 3 </col>
+   <name> ClothesEffect </name>
+   <format><decimal> 2 </decimal></format>
+   <label> Clothes Effect </label>
+</showvalue>
+
+<showvalue>
+   <row> 3.4 </row><col> 3 </col>
+   <name> BloodFlowEffect </name>
+   <format><decimal> 2 </decimal></format>
+   <label> Blood Flow Effect </label>
+</showvalue>
+
+<showvalue>
+   <row> 4.4 </row><col> 3 </col>
+   <name> WindEffect </name>
+   <format><decimal> 2 </decimal></format>
+   <label> Wind Effect </label>
+</showvalue>
+
+<showvalue>
+   <row> 5.4 </row><col> 3 </col>
+   <name> TemperatureDifference </name>
+   <format><decimal> 2 </decimal></format>
+   <label> Temperature Difference </label>
+</showvalue>
+
+<infobutton>
+  <row> 1.2 </row>
+  <col> 26.0 </col>
+
+  <line> Units for heat flux are kCal/Min. </line>
+  <line> </line>
+  <line> Temperature difference is skin </line>
+  <line> minus ambient in deg K. </line>
+</infobutton>
+
+</groupbox>
+
+End

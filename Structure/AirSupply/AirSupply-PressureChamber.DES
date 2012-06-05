@@ -1,0 +1,42 @@
+QHP 2008 / AirSupply-PressureChamber
+
+Created : 21-Oct-04
+Last Modified : 24-Dec-05
+Author : Tom Coleman
+Copyright Status : In Public Domain
+Solver : QHP 2008
+Schema : 2008.0
+
+<structure><name> AirSupply-PressureChamber </name>
+
+<variables>
+
+<parm>
+  <name> Switch </name>
+  <val> FALSE </val>
+</parm>
+
+<parm>
+  <name> Pressure(Atm) </name>
+  <val> 1.0 </val>
+</parm>
+
+<var>
+  <name> Pressure </name>
+</var>
+
+</variables>
+
+<definitions>
+<block><name> Calc </name>
+
+<def>
+  <name> Pressure </name>
+  <val> 760.0 * Pressure(Atm) </val>
+</def>
+
+</block>
+</definitions>
+</structure>
+
+End

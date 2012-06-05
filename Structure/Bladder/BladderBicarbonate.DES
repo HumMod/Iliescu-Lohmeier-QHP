@@ -1,0 +1,54 @@
+QHP 2008 / BladderBicarbonate
+
+Created : 16-Mar-08
+Last Modified : 16-Mar-08
+Author : Tom Coleman
+Copyright : 2008-2008
+By : University of Mississippi Medical Center
+Solver : QHP 2008
+Schema : 2008.0
+
+<structure><name> BladderBicarbonate </name>
+<variables>
+
+<var><name> [HCO3-] </name></var>
+<var><name> [HCO3-(mEq/L)] </name></var>
+
+</variables>
+
+<equations>
+
+<diffeq>
+  <name> Mass </name>
+  <integralname> Mass </integralname>
+  <initialval> 0.0 </initialval>
+  <dervname> Change </dervname>
+</diffeq>
+
+</equations>
+
+<definitions>
+
+<block><name> Dervs </name>
+
+  <def><name> Change </name><val> CD_HCO3.Outflow </val></def>
+
+</block>
+
+<block><name> Conc </name>
+
+  <def><name> [HCO3-] </name><val> Mass / BladderVolume.Mass </val></def>
+  <def><name> [HCO3-(mEq/L)] </name><val> 1000.0 * [HCO3-] </val></def>
+
+</block>
+
+<block><name> Void </name>
+
+  <def><name> Mass </name><val> Mass - ( BladderVolume.VolumeVoid * [HCO3-] ) </val></def>
+
+</block>
+
+</definitions>
+</structure>
+
+End

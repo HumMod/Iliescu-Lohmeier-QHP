@@ -1,0 +1,24 @@
+QHP 2008 / Metabolism
+
+Created : 21-Oct-04
+Last Modified : 11-Dec-05
+Author : Tom Coleman
+Copyright Status : In Public Domain
+Solver : QHP 2008
+Schema : 2008.0
+
+<?path Structure\Metabolism\ ?>
+
+<?include Metabolism-Tools.DES ?>
+<?include Thyroid.DES ?>
+
+<?include Metabolism-FuelUse.DES ?>
+
+<?include Metabolism-MetabolicRate.DES ?>
+<?include Metabolism-RespiratoryQuotient.DES ?>
+<?include Metabolism-CaloriesUsed.DES ?>
+
+<?include Metabolism-Glucose.DES ?>
+<?include Metabolism-FattyAcid.DES ?>
+
+End

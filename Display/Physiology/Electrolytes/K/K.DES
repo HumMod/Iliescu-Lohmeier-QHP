@@ -1,0 +1,16 @@
+QHP 2008 / K
+
+Created : 27-Apr-05
+Last Modified : 27-Apr-05
+Author : Tom Coleman
+Copyright Status : In Public Domain
+Solver : QHP 2008
+Schema : 2008.0
+
+<?path Display\Physiology\Electrolytes\K\ ?>
+
+<?include Cell\Cell.DES ?>
+<?include ECFV\ECFV.DES ?>
+<?include Membrane\Membrane.DES ?>
+
+End

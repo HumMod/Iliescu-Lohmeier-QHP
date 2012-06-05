@@ -1,0 +1,16 @@
+QHP 2008 / Glucose
+
+Created : 29-Apr-05
+Last Modified : 28-Jul-08
+Author : Tom Coleman
+Copyright : 2008-2008
+By : University of Mississippi Medical Center
+Solver : DES 2008
+Schema : 2008.0
+
+<?path Display\Physiology\Metabolism\Glucose\ ?>
+
+<?include Summary\Summary.DES ?>
+<?include Organs\Organs.DES ?>
+
+End

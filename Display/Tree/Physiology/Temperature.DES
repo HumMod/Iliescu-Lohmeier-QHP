@@ -1,0 +1,82 @@
+QHP 2008 / Temperature
+
+Created : 19-Jun-06
+Last Modified : 10-Jul-06
+Author : Tom Coleman
+Copyright Status : In Public Domain
+Solver : QHP 2008
+Schema : 2008.0
+
+<branch>
+  <name> Temperature </name>
+  <label> Temperature </label>
+  <parent> PHYSIOLOGY </parent>
+</branch>
+
+<leaf>
+  <name> Temperature_Core </name>
+  <label> Core </label>
+  <parent> Temperature </parent>
+</leaf>
+
+<leaf>
+  <name> Temperature_Skin </name>
+  <label> Skin </label>
+  <parent> Temperature </parent>
+</leaf>
+
+<leaf>
+  <name> Temperature_SkeletalMuscle </name>
+  <label> Skeletal Muscle </label>
+  <parent> Temperature </parent>
+</leaf>
+
+<branch>
+  <name> HeatLoss </name>
+  <label> Heat Loss </label>
+  <parent> Temperature </parent>
+</branch>
+
+<leaf>
+  <name> Temperature_HeatLoss_Total </name>
+  <label> Total </label>
+  <parent> HeatLoss </parent>
+</leaf>
+
+<leaf>
+  <name> Temperature_HeatLoss_Radiation </name>
+  <label> Radiation </label>
+  <parent> HeatLoss </parent>
+</leaf>
+
+<leaf>
+  <name> Temperature_HeatLoss_Conduction </name>
+  <label> Conduction </label>
+  <parent> HeatLoss </parent>
+</leaf>
+
+<leaf>
+  <name> Temperature_HeatLoss_Sweating </name>
+  <label> Sweating </label>
+  <parent> HeatLoss </parent>
+</leaf>
+
+<leaf>
+  <name> Temperature_HeatLoss_Shivering </name>
+  <label> Shivering </label>
+  <parent> HeatLoss </parent>
+</leaf>
+
+<leaf>
+  <name> Temperature_HeatLoss_InsensibleSkin </name>
+  <label> Insensible Skin </label>
+  <parent> HeatLoss </parent>
+</leaf>
+
+<leaf>
+  <name> Temperature_HeatLoss_InsensibleLung </name>
+  <label> Insensible Lung </label>
+  <parent> HeatLoss </parent>
+</leaf>
+
+End

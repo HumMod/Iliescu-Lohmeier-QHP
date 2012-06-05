@@ -1,0 +1,38 @@
+QHP 2008 / InsulinClearance
+
+Created : 21-Jun-06
+Last Modified : 21-Jun-06
+Author : Tom Coleman
+Copyright Status : In Public Domain
+Solver : QHP 2008
+Schema : 2008.0
+
+<structure><name> InsulinClearance </name>
+
+<variables>
+
+<var>
+  <name> Rate </name>
+</var>
+
+<parm>
+  <name> K </name>
+  <val> 0.057 </val>
+</parm>
+
+</variables>
+
+<definitions>
+<block><name> Dervs </name>
+
+<def>
+  <name> Rate </name>
+  <val> K * InsulinPool.Mass </val>
+</def>
+
+</block>
+
+</definitions>
+</structure>
+
+End

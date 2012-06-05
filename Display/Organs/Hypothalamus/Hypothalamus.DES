@@ -1,0 +1,17 @@
+QHP 2008 / Temperature
+
+Created : 17-Apr-05
+Last Modified : 19-Jun-06
+Author : Tom Coleman
+Copyright Status : In Public Domain
+Solver : QHP 2008
+Schema : 2008.0
+
+<?path Display\Organs\Hypothalamus\ ?>
+
+<?include Shivering\Shivering.DES ?>
+<?include SkinFlow\SkinFlow.DES ?>
+<?include Sweating\Sweating.DES ?>
+<?include TSH\TSH.DES ?>
+
+End

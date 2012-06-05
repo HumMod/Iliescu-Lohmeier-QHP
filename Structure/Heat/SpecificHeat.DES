@@ -1,0 +1,43 @@
+QHP 2008 / SpecificHeat
+
+Created : 24-Jun-06
+Last Modified : 24-Jun-06
+Author : Tom Coleman
+Copyright Status : In Public Domain
+Solver : QHP 2008
+Schema : 2008.0
+
+<structure><name> SpecificHeat </name>
+
+<variables>
+
+<constant>
+  <name> Water </name>
+  <val> 1.00 </val>
+</constant>
+
+<constant>
+  <name> Water(kCal/G) </name>
+  <val> 0.001 </val>
+</constant>
+
+<constant>
+  <name> Tissue </name>
+  <val> 0.83 </val>
+</constant>
+
+<constant>
+  <name> Blood </name>
+  <val> 0.92 </val>
+</constant>
+
+<constant>
+  <name> Air(kCal/mL) </name>
+  <val> 3.1E-7 </val>
+</constant>
+
+</variables>
+
+</structure>
+
+End

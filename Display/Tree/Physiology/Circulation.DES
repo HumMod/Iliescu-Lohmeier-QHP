@@ -1,0 +1,47 @@
+QHP 2008 / Circulation
+
+Created : 19-Jun-06
+Last Modified : 05-Aug-08
+Author : Tom Coleman
+Copyright : 2008-2008
+By : University of Mississippi Medical Center
+Solver : DES 2008
+Schema : 2008.0
+
+<branch>
+  <name> Circulation </name>
+  <label> Circulation </label>
+  <parent> PHYSIOLOGY </parent>
+</branch>
+
+<leaf>
+  <name> Circulation_BloodPressure </name>
+  <label> Blood Pressure </label>
+  <parent> Circulation </parent>
+</leaf>
+
+<leaf>
+  <name> Circulation_BloodFlow </name>
+  <label> Blood Flow </label>
+  <parent> Circulation </parent>
+</leaf>
+
+<leaf>
+  <name> Circulation_Viscosity </name>
+  <label> Viscosity </label>
+  <parent> Circulation </parent>
+</leaf>
+
+<leaf>
+  <name> Circulation_VascularConductance </name>
+  <label> Vascular Conductance </label>
+  <parent> Circulation </parent>
+</leaf>
+
+<leaf>
+  <name> Circulation_VascularCompliance </name>
+  <label> Vascular Compliance </label>
+  <parent> Circulation </parent>
+</leaf>
+
+End

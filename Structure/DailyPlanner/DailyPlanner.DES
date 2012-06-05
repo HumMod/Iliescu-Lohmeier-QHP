@@ -1,0 +1,16 @@
+QHP 2008 / DailyPlanner.DES
+
+Created : 27-Feb-08
+Last Modified : 27-Feb-08
+Author : Tom Coleman
+Copyright : 2008-2008
+By : University of Mississippi Medical Center
+Solver : QHP 2008
+Schema : 2008.0
+
+<?path Structure\DailyPlanner\ ?>
+
+<?include DailyPlannerControl.DES ?>
+<?include DailyPlannerSchedule.DES ?>
+
+End

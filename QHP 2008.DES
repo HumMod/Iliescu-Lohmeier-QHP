@@ -1,0 +1,35 @@
+QHP 2008
+
+Created : 06-Sep-08
+Last Modified : 21-Oct-08
+Author : Tom Coleman
+Copyright : 2008-2008
+By : University of Mississippi Medical Center
+Solver : DES 2008
+Schema : 2008.0
+
+<!-- <?create GENDER-MALE ?> -->
+<!-- <?create GENDER-FEMALE ?> -->
+
+<!-- <?create AGE-YOUNG ?> -->
+<!-- <?create AGE-YOUNGISH ?> -->
+<!-- <?create AGE-MIDDLEAGED ?> -->
+<!-- <?create AGE-OLD ?> -->
+<!-- <?create AGE-VERYOLD ?> -->
+
+<!-- <?create BODYSIZE-SMALL ?> -->
+<!-- <?create BODYSIZE-NORMAL ?> -->
+<!-- <?create BODYSIZE-LARGE ?> -->
+<!-- <?create BODYSIZE-EXTRALARGE ?> -->
+
+<!-- <?create ADIPOSITY-UNDERWEIGHT ?> -->
+<!-- <?create ADIPOSITY-NORMALWEIGHT ?> -->
+<!-- <?create ADIPOSITY-OVERWEIGHT ?> -->
+<!-- <?create ADIPOSITY-OBESE ?> -->
+<!-- <?create ADIPOSITY-MORBIDLYOBESE ?> -->
+
+
+
+<?include Model.DES ?>
+
+End

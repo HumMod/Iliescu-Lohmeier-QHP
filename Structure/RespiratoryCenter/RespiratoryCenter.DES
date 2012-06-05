@@ -1,0 +1,35 @@
+QHP 2008 / RespiratoryCenter
+
+Created : 24-Dec-05
+Last Modified : 07-Feb-06
+Author : Tom Coleman
+Copyright Status : In Public Domain
+Solver : QHP 2008
+Schema : 2008.0
+
+<?path Structure\RespiratoryCenter\ ?>
+
+<?include RespiratoryCenter-Output.DES ?>
+<?include RespiratoryCenter-Integration.DES ?>
+<?include RespiratoryCenter-Chemical.DES ?>
+<?include RespiratoryCenter-Exercise.DES ?>
+<?include RespiratoryCenter-Radiation.DES ?>
+<?include RespiratoryCenter-Metaboreflex.DES ?>
+
+<structure><name> RespiratoryCenter </name>
+
+<definitions>
+
+<block><name> Calc </name>
+  <call> RespiratoryCenter-Chemical.Calc </call>
+  <call> RespiratoryCenter-Radiation.Calc </call>
+  <call> RespiratoryCenter-Metaboreflex.Calc </call>
+  <call> RespiratoryCenter-Exercise.Calc </call>
+  <call> RespiratoryCenter-Integration.Calc </call>
+  <call> RespiratoryCenter-Output.Calc </call>
+</block>
+
+</definitions>
+</structure>
+
+End

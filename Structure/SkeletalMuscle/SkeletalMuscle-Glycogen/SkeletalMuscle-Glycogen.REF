@@ -1,0 +1,18 @@
+QHP 2008 / SkeletalMuscle-Glycogen.REF
+
+Created : 31-Jul-08
+Last Modified : 31-Jul-08
+Author : Tom Coleman
+Copyright : 2008-2008
+By : University of Mississippi Medical Center
+Solver : DES 2008
+Schema : 2008.0
+
+The factors that control glycogen synthesis are insulin, blood glucose and
+the size of the glycogen pool. While fasting, formation rate is 20 mG/Min
+for skeletal muscle. Synthesis rate can increase to 2000 mG/Min when all of
+the above factors favor synthesis.
+
+Note that units for glycogen mass are G while rates are mG/Min.
+
+End

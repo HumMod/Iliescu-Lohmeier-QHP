@@ -1,0 +1,50 @@
+QHP 2008 / RightHeart-Work
+
+Created : 23-May-05
+Last Modified : 23-May-05
+Author : Tom Coleman
+Copyright Status : In Public Domain
+Solver : QHP 2008
+Schema : 2008.0
+
+<structure><name> RightHeart-Work </name>
+
+<variables>
+
+<var>
+  <name> TotalCals </name>
+</var>
+
+<var>
+  <name> MotionCals </name>
+</var>
+
+<var>
+  <name> HeatCals </name>
+</var>
+
+</variables>
+
+<definitions>
+<block><name> Calc </name>
+
+<def>
+  <name> MotionCals </name>
+  <val> 5.0 </val>
+</def>
+
+<def>
+  <name> HeatCals </name>
+  <val> 17.0 </val>
+</def>
+
+<def>
+  <name> TotalCals </name>
+  <val> MotionCals + HeatCals </val>
+</def>
+
+</block>
+</definitions>
+</structure>
+
+End

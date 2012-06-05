@@ -1,0 +1,17 @@
+QHP 2008 / DistalTubule
+
+Created : 17-Apr-05
+Last Modified : 18-Mar-08
+Author : Tom Coleman
+Copyright : 2005-2008
+By : University of Mississippi Medical Center
+Solver : QHP 2008
+Schema : 2008.0
+
+<?path Display\Physiology\Nephrons\DistalTubule\ ?>
+
+<?include Aldosterone\Aldosterone.DES ?>
+<?include Potassium\Potassium.DES ?>
+<?include Sodium\Sodium.DES ?>
+
+End

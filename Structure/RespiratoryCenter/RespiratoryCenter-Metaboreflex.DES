@@ -1,0 +1,34 @@
+QHP 2008 / RespiratoryCenter-Metaboreflex
+
+Created : 07-Feb-06
+Last Modified : 07-Feb-06
+Author : Tom Coleman
+Copyright Status : In Public Domain
+Solver : QHP 2008
+Schema : 2008.0
+
+<structure><name> RespiratoryCenter-Metaboreflex </name>
+
+<variables>
+
+<var>
+  <name> Drive </name>
+</var>
+
+</variables>
+
+<definitions>
+
+<block><name> Calc </name>
+
+<def>
+  <name> Drive </name>
+  <val> SkeletalMuscle-Metaboreflex.NerveActivity </val>
+</def>
+
+</block>
+
+</definitions>
+</structure>
+
+End

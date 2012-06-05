@@ -1,0 +1,52 @@
+QHP 2008 / EquivalentAltitude
+
+Created : 20-Sep-08
+Last Modified : 20-Sep-08
+Author : Tom Coleman
+Copyright : 2008-2008
+By : University of Mississippi Medical Center
+Solver : DES 2008
+Schema : 2008.0
+
+<structure><name> EquivalentAltitude </name>
+
+<variables>
+
+<var><name> Feet </name></var>
+<var><name> Pressure </name></var>
+
+<constant><name> K </name><val> -25000.0 </val></constant>
+
+<var><name> GeographicAltitude </name></var>
+<var><name> OxygenAltitude </name></var>
+
+</variables>
+
+<definitions>
+<block><name> Parms </name>
+
+<def>
+  <name> Pressure </name>
+  <val> ( AirSupply-InspiredAir.O2(%) / 21.0 ) * Barometer.Pressure </val>
+</def>
+
+<def>
+  <name> Feet </name>
+  <val> ( K * LOG ( Pressure / 760.0 ) ) MAX 0.0 </val>
+</def>
+
+<def>
+  <name> GeographicAltitude </name>
+  <val> Altitude.Feet </val>
+</def>
+
+<def>
+  <name> OxygenAltitude </name>
+  <val> Feet - GeographicAltitude </val>
+</def>
+
+</block>
+</definitions>
+</structure>
+
+End

@@ -1,0 +1,15 @@
+QHP 2008 / SequesteredBlood
+
+Created : 17-Apr-05
+Last Modified : 19-Jun-05
+Author : Tom Coleman
+Copyright Status : In Public Domain
+Solver : QHP 2008
+Schema : 2008.0
+
+<?path Display\Physiology\Orthostasis\SequesteredBlood\ ?>
+
+<?include Arteries\Arteries.DES ?>
+<?include Veins\Veins.DES ?>
+
+End

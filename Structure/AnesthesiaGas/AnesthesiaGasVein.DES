@@ -1,0 +1,88 @@
+QHP 2008 / AnesthesiaGasVein
+
+Created : 03-Jun-06
+Last Modified : 24-Sep-08
+Author : Tom Coleman
+Copyright : 2008-2008
+By : University of Mississippi Medical Center
+Solver : DES 2008
+Schema : 2008.0
+
+<structure><name> AnesthesiaGasVein </name>
+
+<variables>
+
+<var>
+  <name> [Blood] </name>
+</var>
+
+<var>
+  <name> pBlood </name>
+</var>
+
+</variables>
+
+<definitions>
+
+<block><name> CalcConc </name>
+
+<conditional><name> [Blood] </name>
+<test> CardiacOutput.Flow GT 0.0 </test>
+<true>
+  ( ( AnesthesiaGasBone.[Vein]
+  * Bone-Flow.BloodFlow )
+
+  + ( AnesthesiaGasBrain.[Vein]
+  * Brain-Flow.BloodFlow )
+
+  + ( AnesthesiaGasFat.[Vein]
+  * Fat-Flow.BloodFlow )
+
+  + ( AnesthesiaGasGITract.[Vein]
+  * GITract-Flow.BloodFlow )
+
+  + ( AnesthesiaGasKidney.[Vein]
+  * Kidney-Flow.BloodFlow )
+
+  + ( AnesthesiaGasLeftHeart.[Vein]
+  * LeftHeart-Flow.BloodFlow )
+
+  + ( AnesthesiaGasLiver.[Vein]
+  * OrganFlow.SplanchnicFlow )
+
+  + ( AnesthesiaGasOtherTissue.[Vein]
+  * OtherTissue-Flow.BloodFlow )
+
+  + ( AnesthesiaGasRespiratoryMuscle.[Vein]
+  * RespiratoryMuscle-Flow.BloodFlow )
+
+  + ( AnesthesiaGasRightHeart.[Vein]
+  * RightHeart-Flow.BloodFlow )
+
+  + ( AnesthesiaGasSkeletalMuscle.[Vein]
+  * SkeletalMuscle-Flow.BloodFlow )
+
+  + ( AnesthesiaGasSkin.[Vein]
+  * Skin-Flow.BloodFlow ) )
+
+  / CardiacOutput.Flow
+
+</true>
+<false>
+
+  0.0
+  
+</false>
+</conditional>
+
+<def>
+  <name> pBlood </name>
+  <val> [Blood] * AnesthesiaGasSolubility.BloodK </val>
+</def>
+
+</block>
+
+</definitions>
+</structure>
+
+End

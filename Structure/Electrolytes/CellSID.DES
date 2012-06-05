@@ -1,0 +1,51 @@
+QHP 2008 / CellSID
+
+Created : 13-May-05
+Last Modified : 13-May-05
+Author : Tom Coleman
+Copyright Status : In Public Domain
+Solver : QHP 2008
+Schema : 2008.0
+
+<structure><name> CellSID </name>
+
+<variables>
+
+<parm>
+  <name> WeakAnions </name>
+  <val> 0.036 </val>
+</parm>
+
+<parm>
+  <name> StrongAnions </name>
+  <val> 0.117 </val>
+</parm>
+
+<parm>
+  <name> OtherCations </name>
+  <val> 0.012 </val>
+</parm>
+
+<var>
+  <name> LessLac </name>
+</var>
+
+</variables>
+
+<definitions>
+<block><name> Calc </name>
+
+<def>
+  <name> LessLac </name>
+  <val>
+      KCell.[K+]
+    + OtherCations
+    - StrongAnions
+  </val>
+</def>
+
+</block>
+</definitions>
+</structure>
+
+End

@@ -1,0 +1,65 @@
+QHP 2008 / DietIntakeNutrition
+
+Created : 24-Jun-06
+Last Modified : 11-Mar-08
+Author : Tom Coleman
+Copyright : 2006-2008
+By : University of Mississippi Medical Center
+Solver : QHP 2008
+Schema : 2008.0
+
+<structure><name> DietIntakeNutrition </name>
+
+<variables>
+
+<var><name> Carbo_mG/Min </name></var>
+<var><name> Fat_mG/Min </name></var>
+<var><name> Protein_mG/Min </name></var>
+
+<parm><name> Fixed? </name><val> TRUE </val></parm>
+<parm><name> FixedIntake(xGoal) </name><val> 1.0 </val></parm>
+<var><name> Intake(xGoal) </name></var>
+
+</variables>
+
+<definitions>
+<block><name> Dervs </name>
+
+<if>
+<test> Brain-Function.IsReallyDead </test>
+<true>
+  <def><name> Carbo_mG/Min </name><val> 0.0 </val></def>
+  <def><name> Fat_mG/Min </name><val> 0.0 </val></def>
+  <def><name> Protein_mG/Min </name><val> 0.0 </val></def>
+  <exitblock/>  
+</true>
+</if>
+
+<conditional>
+  <name> Intake(xGoal) </name>
+  <test> Fixed? </test>
+  <true> FixedIntake(xGoal) </true>
+  <false> DietAppetite.LeptinEffect </false>
+</conditional>
+
+<def>
+  <name> Carbo_mG/Min </name>
+  <val> 1000.0 * DietFeeding.Fraction * DietGoalNutrition.Carbo_G/Day * Intake(xGoal) </val>
+</def>
+
+<def>
+  <name> Fat_mG/Min </name>
+  <val> 1000.0 * DietFeeding.Fraction * DietGoalNutrition.Fat_G/Day * Intake(xGoal) </val>
+</def>
+
+<def>
+  <name> Protein_mG/Min </name>
+  <val> 1000.0 * DietFeeding.Fraction * DietGoalNutrition.Protein_G/Day * Intake(xGoal) </val>
+</def>
+
+</block>
+
+</definitions>
+</structure>
+
+End

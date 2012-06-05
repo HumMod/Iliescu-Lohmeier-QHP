@@ -1,0 +1,31 @@
+QHP 2008 / Heart-ECG
+
+Created : 01-Mar-08
+Last Modified : 01-Mar-08
+Author : Tom Coleman
+Copyright : 2008-2008
+By : University of Mississippi Medical Center
+Solver : DES 2005
+Schema : 2005.0
+
+<structure><name> Heart-ECG </name>
+
+<variables>
+
+<var><name> Is_OK </name><val> TRUE </val></var>
+<var><name> Is_Paced </name><val> FALSE </val></var>
+<var><name> Is_STShift </name><val> FALSE </val></var>
+<var><name> Is_VFib </name><val> FALSE </val></var>
+<var><name> Is_Flat </name><val> FALSE </val></var>
+
+</variables>
+
+<definitions>
+
+<block><name> Wrapup </name>
+</block>
+
+</definitions>
+</structure>
+
+End

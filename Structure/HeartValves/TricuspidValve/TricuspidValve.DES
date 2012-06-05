@@ -1,0 +1,28 @@
+QHP 2008 / TricuspidValve
+
+Created : 23-Aug-08
+Last Modified : 23-Aug-08
+Author : Tom Coleman
+Copyright : 2008-2008
+By : University of Mississippi Medical Center
+Solver : DES 2008
+Schema : 2008.0
+
+<?path Structure\HeartValves\TricuspidValve\ ?>
+
+<?include TricuspidValve-Stenosis.DES ?>
+<?include TricuspidValve-Regurgitation.DES ?>
+
+<structure><name> TricuspidValve </name>
+
+<definitions>
+<block><name> Parms </name>
+
+<call> TricuspidValve-Stenosis.Parms </call>
+<call> TricuspidValve-Regurgitation.Parms </call>
+
+</block>
+</definitions>
+</structure>
+
+End

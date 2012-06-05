@@ -1,0 +1,28 @@
+QHP 2008 / Bone
+
+Created : 21-Oct-04
+Last Modified : 12-Dec-05
+Author : Tom Coleman
+Copyright Status : In Public Domain
+Solver : QHP 2008
+Schema : 2008.0
+
+<?path Structure\Bone\ ?>
+
+<?include Bone-Flow.DES ?>
+<?include Bone-Pressure.DES ?>
+<?include Bone-Mineral.DES ?>
+<?include Bone-Size.DES ?>
+
+<?include Bone-CO2.DES ?>
+<?include Bone-Ph.DES ?>
+<?include Bone-Lactate.DES ?>
+
+<?include Bone-Fuel.DES ?>
+<?include Bone-Function.DES ?>
+<?include Bone-Metabolism.DES ?>
+<?include Bone-AlphaReceptors.DES ?>
+<?include Bone-Structure.DES ?>
+<?include Bone-Vasculature.DES ?>
+
+End

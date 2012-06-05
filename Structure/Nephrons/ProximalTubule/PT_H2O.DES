@@ -1,0 +1,59 @@
+QHP 2008 / PT_H2O
+
+Created : 10-Apr-05
+Last Modified : 10-Apr-05
+Author : Tom Coleman
+Copyright Status : In Public Domain
+Solver : QHP 2008
+Schema : 2008.0
+
+<structure><name> PT_H2O </name>
+
+<variables>
+
+<var>
+  <name> Inflow </name>
+</var>
+
+<var>
+  <name> Outflow </name>
+</var>
+
+<var>
+  <name> FractReab </name>
+</var>
+
+<var>
+  <name> Reab </name>
+</var>
+
+</variables>
+
+<definitions>
+<block><name> Calc </name>
+
+<def>
+  <name> Inflow </name>
+  <val> GlomerulusFiltrate.GFR </val>
+</def>
+
+<def>
+  <name> FractReab </name>
+  <val> PT_Na.FractReab </val>
+</def>
+
+<def>
+  <name> Reab </name>
+  <val> Inflow * FractReab </val>
+</def>
+
+<def>
+  <name> Outflow </name>
+  <val> Inflow - Reab </val>
+</def>
+
+</block>
+</definitions>
+</structure>
+
+End

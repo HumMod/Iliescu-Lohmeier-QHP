@@ -1,0 +1,37 @@
+QHP 2008 / Motivation
+
+Created : 24-Dec-05
+Last Modified : 10-Mar-08
+Author : Tom Coleman
+Copyright : 2005-2008
+By : University of Mississippi Medical Center
+Solver : QHP 2008
+Schema : 2008.0
+
+<groupbox>
+   <row> 2.0 </row>
+   <col> 32.0 </col>
+   <high> 3.2 </high>
+   <wide> 30.0 </wide>
+   <title> Motivation </title>
+
+<structurename> Exercise-Motivation </structurename>
+
+<maplist>
+  <name> Exercise-Control.Motivation </name>
+  <map><val> 0.03 </val><img> Low </img></map>
+  <map><val> 0.04 </val><img> Normal </img></map>
+  <map><val> 0.05 </val><img> High </img></map>
+  <map><val> 0.06 </val><img> Extreme </img></map>
+</maplist>
+
+<slidebar>
+  <row> 1.4 </row><col> 1.0 </col>
+  <name> Motivation </name>
+  <listname> Exercise-Control.Motivation </listname>
+  <nolabel/>
+</slidebar>
+
+</groupbox>
+
+End

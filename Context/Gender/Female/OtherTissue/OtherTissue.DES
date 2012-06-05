@@ -1,0 +1,17 @@
+QHP 2008 / OtherTissue
+
+Created : 20-Sep-08
+Last Modified : 20-Sep-08
+Author : Tom Coleman
+Copyright : 2008-2008
+By : University of Mississippi Medical Center
+Solver : DES 2008
+Schema : 2008.0
+
+<?path Context\Gender\Female\OtherTissue\ ?>
+
+<?include OtherTissue-Flow.DES ?>
+<?include OtherTissue-Metabolism.DES ?>
+<?include OtherTissue-Size.DES ?>
+
+End

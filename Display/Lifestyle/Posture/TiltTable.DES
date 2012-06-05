@@ -1,0 +1,43 @@
+QHP 2008 / TiltTable
+
+Created : 16-Jun-05
+Last Modified : 16-Jun-05
+Author : Tom Coleman
+Copyright Status : In Public Domain
+Solver : QHP 2008
+Schema : 2008.0
+
+<groupbox>
+   <row> 5.6 </row>
+   <col> 32.0 </col>
+   <high> 3.2 </high>
+   <wide> 30.0 </wide>
+   <title> Tilt Table </title>
+
+<repeatlist>
+  <name> TiltTable.Degrees </name>
+  <firstval> -90.0 </firstval>
+  <repeat><reps> 37 </reps><stepsize> 5.0 </stepsize></repeat>
+</repeatlist>
+
+<slidebar>
+  <row> 1.4 </row><col> 1.0 </col>
+  <name> TiltTable.Degrees </name>
+  <listname> TiltTable.Degrees </listname>
+  <label> Degrees </label>
+</slidebar>
+
+<infobutton>
+  <row> 1.2 </row>
+  <col> 26.0 </col>
+
+  <line> When the tilt table is on, subject </line>
+  <line> has lying posture plus the imposed </line>
+  <line> angle of tilt. </line>
+  <line>  </line>
+  <line> Tilt can be head-up or head-down. </line>
+</infobutton>
+
+</groupbox>
+
+End

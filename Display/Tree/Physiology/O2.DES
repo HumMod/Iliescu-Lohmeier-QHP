@@ -1,0 +1,28 @@
+QHP 2008 / O2
+
+Created : 19-Jun-06
+Last Modified : 19-Jun-06
+Author : Tom Coleman
+Copyright Status : In Public Domain
+Solver : QHP 2008
+Schema : 2008.0
+
+<branch>
+  <name> Physiology_O2 </name>
+  <label> O2 </label>
+  <parent> PHYSIOLOGY </parent>
+</branch>
+
+<leaf>
+  <name> O2_Blood </name>
+  <label> Blood </label>
+  <parent> Physiology_O2 </parent>
+</leaf>
+
+<leaf>
+  <name> O2_Tissues </name>
+  <label> Tissues </label>
+  <parent> Physiology_O2 </parent>
+</leaf>
+
+End

@@ -1,0 +1,26 @@
+QHP 2008 / RightAtrium
+
+Created : 29-Sep-08
+Last Modified : 29-Sep-08
+Author : Tom Coleman
+Copyright : 2008-2008
+By : University of Mississippi Medical Center
+Solver : DES 2008
+Schema : 2008.0
+
+<def>
+  <name> RightAtrium.Vol </name>
+  <val> 0.75 * RightAtrium.Vol </val>
+</def>
+
+<def>
+  <name> RightAtrium.V0 </name>
+  <val> 0.75 * RightAtrium.V0 </val>
+</def>
+
+<def>
+  <name> RightAtrium.Compliance </name>
+  <val> 0.75 * RightAtrium.Compliance </val>
+</def>
+
+End

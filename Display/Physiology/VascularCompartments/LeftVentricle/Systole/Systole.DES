@@ -1,0 +1,39 @@
+QHP 2008 / Systole
+
+Created : 16-May-05
+Last Modified : 13-Aug-08
+Author : Tom Coleman
+Copyright : 2008-2008
+By : University of Mississippi Medical Center
+Solver : DES 2008
+Schema : 2008.0
+
+<panel><name> LeftVentricle-Systole </name>
+
+<showbitmap>
+  <row> 0.3 </row><col> 1.0 </col>
+  <name> LeftHeart </name>
+</showbitmap>
+
+<label>
+  <row> 0.3 </row><col> 4.5 </col>
+  <text> Left Ventricle - Systole </text>
+</label>
+
+<showclock>
+  <row> 0.3 </row><col> 32.0 </col>
+  <name> System.X </name>
+  <ampm/>
+  <secs/>
+  <days/>
+</showclock>
+
+<?path Display\Physiology\VascularCompartments\LeftVentricle\Systole\ ?>
+
+<?include Pressure-Volume.DES ?>
+<?include Technical.DES ?>
+<?include Contractility.DES ?>
+
+</panel>
+
+End

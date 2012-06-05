@@ -1,0 +1,35 @@
+QHP 2008 / RespiratoryCenter-Exercise
+
+Created : 23-Jan-06
+Last Modified : 07-Feb-06
+Author : Tom Coleman
+Copyright Status : In Public Domain
+Solver : QHP 2008
+Schema : 2008.0
+
+<structure><name> RespiratoryCenter-Exercise </name>
+
+<variables>
+
+<var>
+  <name> TotalDrive </name>
+</var>
+
+</variables>
+
+<definitions>
+<block><name> Calc </name>
+
+<def>
+  <name> TotalDrive </name>
+  <val>
+      RespiratoryCenter-Radiation.TotalDrive
+    + RespiratoryCenter-Metaboreflex.Drive </val>
+</def>
+
+</block>
+
+</definitions>
+</structure>
+
+End

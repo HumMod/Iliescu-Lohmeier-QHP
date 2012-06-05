@@ -1,0 +1,49 @@
+QHP 2008 / O2
+
+Created : 10-May-05
+Last Modified : 08-Jan-07
+Author : Tom Coleman
+Copyright : 2006
+By : University of Mississippi Medical Center
+Solver : QHP 2008
+Schema : 2008.0
+
+<?path Structure\O2\ ?>
+
+<?include O2Total.DES ?>
+<?include O2Artys.DES ?>
+<?include O2Veins.DES ?>
+
+<?include PO2Artys.DES ?>
+<?include PO2Veins.DES ?>
+
+<structure><name> O2 </name>
+
+<definitions>
+<block><name> CalcConc </name>
+
+  <call> O2Artys.CalcConc </call>
+  <call> O2Veins.CalcConc </call>
+
+</block>
+
+<block><name> CalcPO2 </name>
+
+  <call> PO2Artys.Calc </call>
+  <call> PO2Veins.Calc </call>
+
+</block>
+
+<block><name> Dervs </name>
+
+  <call> O2Total.Dervs </call>
+  <call> O2Artys.Dervs </call>
+  <call> O2Veins.Dervs </call>
+
+</block>
+
+</definitions>
+
+</structure>
+
+End

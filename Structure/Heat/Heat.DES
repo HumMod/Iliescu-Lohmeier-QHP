@@ -1,0 +1,83 @@
+QHP 2008 / Heat
+
+Created : 21-Oct-04
+Last Modified : 28-Sep-08
+Author : Tom Coleman
+Copyright : 2008-2008
+By : University of Mississippi Medical Center
+Solver : DES 2008
+Schema : 2008.0
+
+<?path Structure\Heat\ ?>
+
+<?include SpecificHeat.DES ?>
+<?include TempTools.DES ?>
+<?include HeatCore.DES ?>
+<?include HeatSkin.DES ?>
+<?include HeatSkeletalMuscle.DES ?>
+<?include Convulsing.DES ?>
+<?include HeatMetabolism.DES ?>
+<?include HeatRadiation.DES ?>
+<?include HeatConduction.DES ?>
+<?include HeatInsensibleSkin.DES ?>
+<?include HeatInsensibleLung.DES ?>
+<?include HeatShivering.DES ?>
+<?include HeatSweating.DES ?>
+<?include HeatLoss.DES ?>
+
+<structure><name> Heat </name>
+
+<definitions>
+
+<block><name> Parms </name>
+
+</block>
+
+<block><name> Initialize </name>
+
+  <call> HeatCore.Initialize </call>
+  <call> HeatSkin.Initialize </call>
+  <call> HeatSkeletalMuscle.Initialize </call>
+
+</block>
+
+<block><name> CalcTemp </name>
+
+  <call> HeatCore.CalcTemp </call>
+  <call> HeatSkin.CalcTemp </call>
+  <call> HeatSkeletalMuscle.CalcTemp </call>
+
+  <call> HeatMetabolism.Calc </call>
+
+</block>
+
+<block><name> Cals </name>
+
+  <call> HeatShivering.Cals </call>
+
+</block>
+
+<block><name> Dervs </name>
+
+  <call> HeatRadiation.Flux </call>
+  <call> HeatConduction.Flux </call>
+  <call> HeatInsensibleSkin.Flux </call>
+  <call> HeatInsensibleLung.Flux </call>
+  <call> HeatSweating.Flux </call>
+
+  <call> HeatLoss.Calc </call>
+
+  <call> HeatCore.Flux </call>
+  <call> HeatSkin.Flux </call>
+  <call> HeatSkeletalMuscle.Flux </call>
+
+  <call> HeatCore.Dervs </call>
+  <call> HeatSkin.Dervs </call>
+  <call> HeatSkeletalMuscle.Dervs </call>
+
+</block>
+
+</definitions>
+</structure>
+
+End

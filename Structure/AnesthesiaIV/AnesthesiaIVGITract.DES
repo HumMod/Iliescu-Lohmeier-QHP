@@ -1,0 +1,76 @@
+QHP 2008 / AnesthesiaIVGITract
+
+Created : 03-Jun-06
+Last Modified : 03-Jun-06
+Author : Tom Coleman
+Copyright Status : In Public Domain
+Solver : QHP 2008
+Schema : 2008.0
+
+<structure><name> AnesthesiaIVGITract </name>
+
+<variables>
+
+<var>
+  <name> [Tissue] </name>
+</var>
+
+<var>
+  <name> [Vein] </name>
+</var>
+
+<var>
+  <name> Uptake </name>
+</var>
+
+</variables>
+
+<equations>
+
+<diffeq>
+  <name> Mass </name>
+  <integralname> Mass </integralname>
+  <initialval> 0.0 </initialval>
+  <dervname> Change </dervname>
+  <errorlim> 1.08 </errorlim>
+</diffeq>
+
+</equations>
+
+<definitions>
+
+<block><name> CalcConc </name>
+
+<def>
+  <name> [Tissue] </name>
+  <val> Mass / GITract-Size.Vol </val>
+</def>
+
+<def>
+  <name> [Vein] </name>
+  <val> [Tissue] * AnesthesiaIVSolubility.GeneralK </val>
+</def>
+
+</block>
+
+<block><name> Dervs </name>
+
+<def>
+  <name> Uptake </name>
+  <val>
+    ( AnesthesiaIVBlood.[Blood] - [Vein] )
+    * GITract-Flow.BloodFlow
+  </val>
+</def>
+
+<def>
+  <name> Change </name>
+  <val> Uptake </val>
+</def>
+
+</block>
+
+</definitions>
+</structure>
+
+End

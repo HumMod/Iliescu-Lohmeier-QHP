@@ -1,0 +1,18 @@
+QHP 2008 / Heat
+
+Created : 24-Apr-05
+Last Modified : 25-Jun-06
+Author : Tom Coleman
+Copyright Status : In Public Domain
+Solver : QHP 2008
+Schema : 2008.0
+
+<?path Display\Physiology\Temperature\ ?>
+
+<?include Core\Core.DES ?>
+<?include Skin\Skin.DES ?>
+<?include SkeletalMuscle\SkeletalMuscle.DES ?>
+
+<?include HeatLoss\HeatLoss.DES ?>
+
+End

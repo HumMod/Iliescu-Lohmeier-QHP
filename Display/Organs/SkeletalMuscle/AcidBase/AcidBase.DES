@@ -1,0 +1,41 @@
+QHP 2008 / AcidBase
+
+Created : 14-May-05
+Last Modified : 13-Dec-05
+Author : Tom Coleman
+Copyright Status : In Public Domain
+Solver : QHP 2008
+Schema : 2008.0
+
+<panel><name> SkeletalMuscle-AcidBase </name>
+
+<showbitmap>
+  <row> 0.3 </row>
+  <col> 1.0 </col>
+  <name> SkeletalMuscle </name>
+</showbitmap>
+
+<label>
+  <row> 0.3 </row>
+  <col> 4.5 </col>
+  <text> Skeletal Muscle - Acid-Base </text>
+</label>
+
+<showclock>
+  <row> 0.3 </row><col> 32.0 </col>
+  <name> System.X </name>
+  <ampm/>
+  <secs/>
+  <days/>
+</showclock>
+
+<structurename> SkeletalMuscle-Ph </structurename>
+
+<?path Display\Organs\SkeletalMuscle\AcidBase\ ?>
+
+<?include Ph.DES ?>
+<?include SID.DES ?>
+
+</panel>
+
+End

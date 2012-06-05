@@ -1,0 +1,37 @@
+QHP 2008 / Clinic DES
+
+Created : 14-Oct-04
+Last Modified : 15-Apr-08
+Author : Tom Coleman
+Copyright : 2004-2008
+By : University of Mississippi Medical Center
+Solver : DES 2005
+Schema : 2005.0
+
+<?path Display\Tree\Clinic\ ?>
+
+<?if ANESTHESIA Anesthesia.DES ?>
+
+<?include AutopsyReport.DES ?>
+<?include Blockers.DES ?>
+<?include CardiacPacemaker.DES ?>
+<?include Chart.DES ?>
+<?include CPR.DES ?>
+<?include Defibrillator.DES ?>
+<?include Drugs.DES ?>
+<?include Evaluation.DES ?>
+<?include Hemodialysis.DES ?>
+<?include Hemorrhage.DES ?>
+<?include InfusionPumps.DES ?>
+<?include InsulinInjection.DES ?>
+<?include IVDrip.DES ?>
+<?include IVEpinephrineInjection.DES ?>
+<?include Morphology.DES ?>
+<?include OralH2O-GlucoseLoad.DES ?>
+<?include PericardialDrain.DES ?>
+<?include Stimulators.DES ?>
+<?include Transfusion.DES ?>
+<?include Ventilator.DES ?>
+<?include VentricularFibrillation.DES ?>
+
+End

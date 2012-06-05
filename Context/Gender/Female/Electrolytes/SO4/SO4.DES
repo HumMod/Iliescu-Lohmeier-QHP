@@ -1,0 +1,15 @@
+QHP 2008 / SO4
+
+Created : 30-Sep-08
+Last Modified : 30-Sep-08
+Author : Tom Coleman
+Copyright : 2008-2008
+By : University of Mississippi Medical Center
+Solver : DES 2008
+Schema : 2008.0
+
+<?path Context\Gender\Female\Electrolytes\SO4\ ?>
+
+<?include SO4Pool.DES ?>
+
+End

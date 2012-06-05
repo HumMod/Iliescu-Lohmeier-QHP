@@ -1,0 +1,29 @@
+QHP 2008 / Sweat
+
+Created : 25-Mar-07
+Last Modified : 20-Mar-08
+Author : Tom Coleman
+Copyright : 2008-2008
+By : University of Mississippi Medical Center
+Solver : DES 2005
+Schema : 2005.0
+
+<?path Structure\Sweat\ ?>
+
+<?include SweatGland.DES ?>
+<?include SweatDuct.DES ?>
+<?include SweatFuel.DES ?>
+
+<structure><name> Sweat </name>
+
+<definitions>
+
+<block><name> Dervs </name>
+  <call> SweatDuct.Dervs </call>
+</block>
+
+</definitions>
+</structure>
+
+End
+End

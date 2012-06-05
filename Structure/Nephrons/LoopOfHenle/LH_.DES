@@ -1,0 +1,37 @@
+QHP 2008 / X
+
+Created : 10-Apr-05
+Last Modified : 10-Apr-05
+Author : Tom Coleman
+Copyright Status : In Public Domain
+Solver : QHP 2008
+Schema : 2008.0
+
+<structure><name> X </name>
+
+<variables>
+
+<parm>
+  <name>  </name>
+  <val>  </val>
+</parm>
+
+<var>
+  <name>  </name>
+</var>
+
+</variables>
+
+<definitions>
+<block><name> Calc </name>
+
+<def>
+  <name>  </name>
+  <val>  </val>
+</def>
+
+</block>
+</definitions>
+</structure>
+
+End

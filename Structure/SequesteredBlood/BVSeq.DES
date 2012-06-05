@@ -1,0 +1,32 @@
+QHP 2008 / BVSeq DES
+
+Created : 21-Oct-04
+Last Modified : 19-Jun-05
+Author : Tom Coleman
+Copyright Status : In Public Domain
+Solver : QHP 2008
+Schema : 2008.0
+
+<structure><name> BVSeq </name>
+
+<variables>
+
+<var>
+  <name> Vol </name>
+</var>
+
+</variables>
+
+<definitions>
+<block><name> Calc </name>
+
+<def>
+  <name> Vol </name>
+  <val> BVSeqArtys.Vol + BVSeqVeins.Vol </val>
+</def>
+
+</block>
+</definitions>
+</structure>
+
+End

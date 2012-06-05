@@ -1,0 +1,40 @@
+QHP 2008 / FSH
+
+Created : 07-Apr-05
+Last Modified : 05-Oct-08
+Author : Tom Coleman
+Copyright : 2008-2008
+By : University of Mississippi Medical Center
+Solver : DES 2008
+Schema : 2008.0
+
+<?path Structure\FSH\ ?>
+
+<?include FSH-Circulating.DES ?>
+<?include FSH-AnteriorPituitary.DES ?>
+
+<structure><name> FSH </name>
+
+<definitions>
+
+<block><name> Parms </name>
+  <call> FSH-AnteriorPituitary.Parms </call>
+</block>
+
+<block><name> Initialize </name>
+  <call> FSH-Circulating.Initialize </call>
+</block>
+
+<block><name> Conc </name>
+  <call> FSH-Circulating.Conc </call>
+</block>
+
+<block><name> Dervs </name>
+  <call> FSH-AnteriorPituitary.Dervs </call>
+  <call> FSH-Circulating.Dervs </call>
+</block>
+
+</definitions>
+</structure>
+
+End

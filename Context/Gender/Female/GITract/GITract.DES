@@ -1,0 +1,17 @@
+QHP 2008 / GITract
+
+Created : 29-Sep-08
+Last Modified : 29-Sep-08
+Author : Tom Coleman
+Copyright : 2008-2008
+By : University of Mississippi Medical Center
+Solver : DES 2008
+Schema : 2008.0
+
+<?path Context\Gender\Female\GITract\ ?>
+
+<?include GITract-Flow.DES ?>
+<?include GITract-Metabolism.DES ?>
+<?include GITract-Size.DES ?>
+
+End

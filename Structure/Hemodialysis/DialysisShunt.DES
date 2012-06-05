@@ -1,0 +1,36 @@
+QHP 2008 / DialysisShunt
+
+Created : 03-Mar-08
+Last Modified : 03-Mar-08
+Author : Tom Coleman
+Copyright : 2008-2008
+By : University of Mississippi Medical Center
+Solver : DES 2005
+Schema : 2005.0
+
+<structure><name> DialysisShunt </name>
+
+<variables>
+
+<parm><name> BasicConductance </name><val> 0.0 </val></parm>
+
+<var><name> Conductance </name></var>
+<var><name> PressureGradient </name></var>
+<var><name> BloodFlow </name></var>
+
+</variables>
+
+<definitions>
+
+<block><name> Dervs </name>
+
+  <def><name> Conductance </name><val> Viscosity.ConductanceEffect * BasicConductance </val></def>
+  <def><name> PressureGradient </name><val> SystemicArtys.Pressure - SystemicVeins.Pressure </val></def>
+  <def><name> BloodFlow </name><val> Conductance * PressureGradient </val></def>
+
+</block>
+
+</definitions>
+</structure>
+
+End

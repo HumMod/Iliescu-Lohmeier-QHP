@@ -1,0 +1,29 @@
+QHP 2008 / Glucagon
+
+Created : 10-Oct-08
+Last Modified : 10-Oct-08
+Author : Tom Coleman
+Copyright : 2008-2008
+By : University of Mississippi Medical Center
+Solver : DES 2008
+Schema : 2008.0
+
+<branch>
+  <name> Hormones_Glucagon </name>
+  <label> Glucagon </label>
+  <parent> Hormones </parent>
+</branch>
+
+<leaf>
+  <name> Hormones_Glucagon_Circulating </name>
+  <label> Circulating </label>
+  <parent> Hormones_Glucagon </parent>
+</leaf>
+
+<leaf>
+  <name> Hormones_Glucagon_AlphaCells </name>
+  <label> Alpha Cells </label>
+  <parent> Hormones_Glucagon </parent>
+</leaf>
+
+End

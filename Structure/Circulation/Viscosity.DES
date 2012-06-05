@@ -1,0 +1,64 @@
+QHP 2008 / Viscosity
+
+Created : 01-Apr-05
+Last Modified : 01-Apr-05
+Author : Tom Coleman
+Copyright Status : In Public Domain
+Solver : QHP 2008
+Schema : 2008.0
+
+<structure><name> Viscosity </name>
+
+<variables>
+
+<var>
+  <name> Value </name>
+</var>
+
+<var>
+  <name> ConductanceEffect </name>
+</var>
+
+<parm>
+  <name> Clamp </name>
+  <val> FALSE </val>
+</parm>
+
+<parm>
+  <name> Level </name>
+  <val> 0.0 </val>
+</parm>
+
+</variables>
+
+<functions>
+
+<curve>
+  <name> HctOnVisc </name>
+  <point><x> 0.00 </x><y> 0.5 </y><slope>  0.8 </slope></point>
+  <point><x> 0.44 </x><y> 1.0 </y><slope>  3.0 </slope></point>
+  <point><x> 0.80 </x><y> 5.0 </y><slope> 30.0 </slope></point>
+</curve>
+
+</functions>
+
+<definitions>
+<block><name> Calc </name>
+
+<conditional>
+  <name> Value </name>
+  <test> Clamp </test>
+  <true> Level </true>
+  <false> HctOnVisc [ BloodVol.HctFract ] </false>
+</conditional>
+
+<def>
+  <name> ConductanceEffect </name>
+  <val> INVERT Value </val>
+</def>
+
+</block>
+</definitions>
+</structure>
+
+End

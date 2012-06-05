@@ -1,0 +1,49 @@
+QHP 2008 / Clearance
+
+Created : 20-Jun-06
+Last Modified : 20-Jun-06
+Author : Tom Coleman
+Copyright Status : In Public Domain
+Solver : QHP 2008
+Schema : 2008.0
+
+<groupbox>
+   <row> 8.6 </row>
+   <col> 32.0 </col>
+   <high> 6.0 </high>
+   <wide> 30.0 </wide>
+   <title> Clearance </title>
+
+<structurename> ADHClearance </structurename>
+
+<showvalue>
+   <row> 1.4 </row><col> 1.0 </col>
+   <name> Total </name>
+   <format><decimal> 3 </decimal></format>
+   <label> Total </label>
+</showvalue>
+
+<showvalue>
+   <row> 2.4 </row><col> 3 </col>
+   <name> Liver </name>
+   <format><decimal> 3 </decimal></format>
+   <label> Liver </label>
+</showvalue>
+
+<showvalue>
+   <row> 3.4 </row><col> 3 </col>
+   <name> Kidney </name>
+   <format><decimal> 3 </decimal></format>
+   <label> Kidney </label>
+</showvalue>
+
+<showvalue>
+   <row> 4.4 </row><col> 3 </col>
+   <name> Other </name>
+   <format><decimal> 3 </decimal></format>
+   <label> Other </label>
+</showvalue>
+
+</groupbox>
+
+End

@@ -1,0 +1,74 @@
+QHP 2008 / RightVentricle-Compartment
+
+Created : 16-May-05
+Last Modified : 01-Aug-08
+Author : Tom Coleman
+Copyright : 2008-2008
+By : University of Mississippi Medical Center
+Solver : DES 2008
+Schema : 2008.0
+
+<structure><name> RightVentricle-Compartment </name>
+
+<variables>
+
+<parm><name> V0 </name><val> 0.0 </val></parm>
+<var><name> StressedVol </name></var>
+<var><name> Pressure </name></var>
+<var><name> ExternalPressure </name></var>
+
+<parm><name> BasicCompliance </name><val> 29.2 </val></parm>
+<var><name> Compliance </name></var>
+
+</variables>
+
+<equations>
+
+<stabledelay>
+  <name> Vol </name>
+  <outputname> Vol </outputname>
+  <initialval> 87.5 </initialval>
+  <inputname> Vol-SteadyState </inputname>
+  <rateconstname> K </rateconstname>
+  <errorlim> 0.9 </errorlim>
+  <dxmaxname> DxMax </dxmaxname>
+</stabledelay>
+
+</equations>
+
+<definitions>
+
+<block><name> CalcPressure </name>
+
+<def>
+  <name> StressedVol </name>
+  <val> ( Vol - V0 ) MAX 0.0 </val>
+</def>
+
+<def>
+  <name> Compliance </name>
+  <val> BasicCompliance / RightVentricle-Diastole.Stiffness </val>
+</def>
+
+<def>
+  <name> ExternalPressure </name>
+  <val> Pericardium.Pressure </val>
+</def>
+
+<def>
+  <name> Pressure </name>
+  <val> ( StressedVol / Compliance ) + ExternalPressure </val>
+</def>
+
+</block>
+
+<block><name> Dervs </name>
+  <def><name> Vol-SteadyState </name><val> ( RightVentricle-Diastole.EDV + RightVentricle-Systole.ESV ) / 2.0 </val></def>
+  <def><name> K </name><val> 1.0 </val></def>
+  <def><name> DxMax </name><val> 1.0 </val></def>
+</block>
+
+</definitions>
+</structure>
+
+End

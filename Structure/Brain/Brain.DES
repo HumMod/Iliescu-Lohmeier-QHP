@@ -1,0 +1,31 @@
+QHP 2008 / Brain DES
+
+Created : 21-Oct-04
+Last Modified : 16-Jun-05
+Author : Tom Coleman
+Copyright Status : In Public Domain
+Solver : QHP 2008
+Schema : 2008.0
+
+<?path Structure\Brain\ ?>
+
+<?include Brain-Flow.DES ?>
+<?include Brain-Fuel.DES ?>
+<?include Brain-Function.DES ?>
+<?include Brain-Ph.DES ?>
+<?include Brain-Pressure.DES ?>
+<?include Brain-Structure.DES ?>
+<?include Brain-Size.DES ?>
+
+<?include BrainInsult\BrainInsult.DES ?>
+
+<?include GlasgowComaScale.DES ?>
+<?include Seizure.DES ?>
+
+<?include Brain-CO2.DES ?>
+<?include Brain-Lactate.DES ?>
+
+<?include Brain-Metabolism.DES ?>
+<?include Brain-Vasculature.DES ?>
+
+End

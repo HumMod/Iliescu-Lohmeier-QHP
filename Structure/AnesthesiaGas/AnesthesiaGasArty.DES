@@ -1,0 +1,53 @@
+QHP 2008 / AnesthesiaGasArty
+
+Created : 03-Jun-06
+Last Modified : 03-Jun-06
+Author : Tom Coleman
+Copyright Status : In Public Domain
+Solver : QHP 2008
+Schema : 2008.0
+
+<structure><name> AnesthesiaGasArty </name>
+
+<variables>
+
+<var>
+  <name> [Blood] </name>
+</var>
+
+<var>
+  <name> pBlood </name>
+</var>
+
+</variables>
+
+<definitions>
+
+<block><name> CalcConc </name>
+
+<conditional>
+  <name> [Blood] </name>
+  <test> LungBloodFlow.Total GT 0.0 </test>
+  <true>
+  ( ( AnesthesiaGasLung.[Capy]
+  * LungBloodFlow.AlveolarVentilated )
+
+  + ( AnesthesiaGasVein.[Blood]
+  * LungBloodFlow.TotalShunt ) )
+
+  / LungBloodFlow.Total
+  </true>
+  <false> 0.0 </false>
+</conditional>
+
+<def>
+  <name> pBlood </name>
+  <val> [Blood] * AnesthesiaGasSolubility.BloodK </val>
+</def>
+
+</block>
+
+</definitions>
+</structure>
+
+End

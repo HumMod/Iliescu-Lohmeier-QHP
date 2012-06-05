@@ -1,0 +1,39 @@
+QHP 2008 / Organs
+
+Created : 29-Apr-05
+Last Modified : 28-Jul-08
+Author : Tom Coleman
+Copyright : 2008-2008
+By : University of Mississippi Medical Center
+Solver : DES 2008
+Schema : 2008.0
+
+<panel><name> MetabolismFattyAcidsOrgans </name>
+
+<showbitmap>
+  <row> 0.3 </row>
+  <col> 1.0 </col>
+  <name> Metabolism </name>
+</showbitmap>
+
+<label>
+  <row> 0.3 </row>
+  <col> 4.5 </col>
+  <text> Fatty Acids - Organs </text>
+</label>
+
+<showclock>
+  <row> 0.3 </row><col> 32.0 </col>
+  <name> System.X </name>
+  <ampm/>
+  <secs/>
+  <days/>
+</showclock>
+
+<?path Display\Physiology\Metabolism\FattyAcids\Organs\ ?>
+
+<?include FattyAcidsUsed.DES ?>
+
+</panel>
+
+End

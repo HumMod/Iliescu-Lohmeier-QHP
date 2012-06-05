@@ -1,0 +1,32 @@
+QHP 2008 / BMI
+
+Created : 06-Jun-05
+Last Modified : 06-Jun-05
+Author : Tom Coleman
+Copyright Status : In Public Domain
+Solver : QHP 2008
+Schema : 2008.0
+
+<structure><name> BMI </name>
+
+<variables>
+
+<var>
+  <name> BMI </name>
+</var>
+
+</variables>
+
+<definitions>
+<block><name> Calc </name>
+
+<def>
+  <name> BMI </name>
+  <val> Weight.Weight(kG) / ( Height.Height(M) ^ 2 ) </val>
+</def>
+
+</block>
+</definitions>
+</structure>
+
+End

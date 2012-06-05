@@ -1,0 +1,39 @@
+QHP 2008 / MiddleTorso
+
+Created : 16-Aug-08
+Last Modified : 16-Aug-08
+Author : Tom Coleman
+Copyright : 2008-2008
+By : University of Mississippi Medical Center
+Solver : DES 2008
+Schema : 2008.0
+
+<panel><name> InterstitialProtein-MiddleTorso</name>
+
+<showbitmap>
+  <row> 0.3 </row><col> 1.0 </col>
+  <name> Protein </name>
+</showbitmap>
+
+<label>
+  <row> 0.3 </row><col> 4.5 </col>
+  <text> Interstitial Protein - Middle Torso</text>
+</label>
+
+<showclock>
+  <row> 0.3 </row><col> 32.0 </col>
+  <name> System.X </name>
+  <ampm/>
+  <secs/>
+  <days/>
+</showclock>
+
+<?path Display\Physiology\CircyProtein\Interstitium\MiddleTorso\ ?>
+
+<?include Balance.DES ?>
+<?include Capillaries.DES ?>
+<?include Lymph.DES ?>
+
+</panel>
+
+End

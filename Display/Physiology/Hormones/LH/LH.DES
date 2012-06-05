@@ -1,0 +1,16 @@
+QHP 2008 / LH
+
+Created : 02-Oct-08
+Last Modified : 05-Oct-08
+Author : Tom Coleman
+Copyright : 2008-2008
+By : University of Mississippi Medical Center
+Solver : DES 2008
+Schema : 2008.0
+
+<?path Display\Physiology\Hormones\LH\ ?>
+
+<?include Circulating\Circulating.DES ?>
+<?include AnteriorPituitary\AnteriorPituitary.DES ?>
+
+End

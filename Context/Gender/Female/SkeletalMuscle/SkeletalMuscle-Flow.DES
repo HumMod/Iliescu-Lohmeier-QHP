@@ -1,0 +1,16 @@
+QHP 2008 / SkeletalMuscle-Flow
+
+Created : 30-Sep-08
+Last Modified : 30-Sep-08
+Author : Tom Coleman
+Copyright : 2008-2008
+By : University of Mississippi Medical Center
+Solver : DES 2008
+Schema : 2008.0
+
+<def>
+  <name> SkeletalMuscle-Flow.BasicConductance </name>
+  <val> 0.57 * SkeletalMuscle-Flow.BasicConductance </val>
+</def>
+
+End

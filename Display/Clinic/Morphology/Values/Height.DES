@@ -1,0 +1,39 @@
+QHP 2008 / Height
+
+Created : 06-Jun-05
+Last Modified : 06-Jun-05
+Author : Tom Coleman
+Copyright Status : In Public Domain
+Solver : QHP 2008
+Schema : 2008.0
+
+<groupbox>
+   <row> 2.0 </row>
+   <col> 32.0 </col>
+   <high> 4.2 </high>
+   <wide> 30.0 </wide>
+   <title> Height </title>
+
+<repeatlist>
+  <name> Height.Height </name>
+  <firstval> 100 </firstval>
+  <repeat><reps> 100 </reps><stepsize> 1 </stepsize></repeat>
+</repeatlist>
+
+<slidebar>
+  <row> 1.4 </row><col> 1.0 </col>
+  <name> Height.Height </name>
+  <listname> Height.Height </listname>
+  <label> Height </label>
+</slidebar>
+
+<showvalue>
+   <row> 2.6 </row><col> 3 </col>
+   <name> Height.Height(In) </name>
+   <format><decimal> 1 </decimal></format>
+   <label> Height (In) </label>
+</showvalue>
+
+</groupbox>
+
+End

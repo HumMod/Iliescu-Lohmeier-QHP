@@ -1,0 +1,42 @@
+QHP 2008 / Total
+
+Created : 13-May-05
+Last Modified : 13-May-05
+Author : Tom Coleman
+Copyright Status : In Public Domain
+Solver : QHP 2008
+Schema : 2008.0
+
+<groupbox>
+   <row> 25.4 </row>
+   <col> 32.0 </col>
+   <high> 4.0 </high>
+   <wide> 30.0 </wide>
+   <title> Total [HCO3] </title>
+
+<structurename> CO2Total </structurename>
+
+<showvalue>
+   <row> 1.4 </row><col> 1.0 </col>
+   <name> Inflow</name>
+   <format><decimal> 1 </decimal></format>
+   <label> Inflow </label>
+</showvalue>
+
+<showvalue>
+   <row> 2.4 </row><col> 1.0 </col>
+   <name> Outflow</name>
+   <format><decimal> 1 </decimal></format>
+   <label> Outflow </label>
+</showvalue>
+
+<infobutton>
+  <row> 1.2 </row>
+  <col> 26.0 </col>
+  <line> Normal HCO3 inflow and outflow is 8.8 </line>
+  <line> mEq/Min. </line>
+</infobutton>
+
+</groupbox>
+
+End

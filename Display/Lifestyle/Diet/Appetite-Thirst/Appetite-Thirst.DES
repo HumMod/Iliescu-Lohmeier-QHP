@@ -1,0 +1,41 @@
+QHP 2008 / Appetite-Thirst
+
+Created : 24-Jun-06
+Last Modified : 24-Jun-06
+Author : Tom Coleman
+Copyright Status : In Public Domain
+Solver : QHP 2008
+Schema : 2008.0
+
+<panel><name> Diet_Appetite-Thirst </name>
+
+<showbitmap>
+  <row> 0.3 </row>
+  <col> 1.0 </col>
+  <name> Diet </name>
+</showbitmap>
+
+<label>
+  <row> 0.3 </row>
+  <col> 4.5 </col>
+  <text> Diet - Appetite | Thirst</text>
+</label>
+
+<showclock>
+  <row> 0.3 </row><col> 32.0 </col>
+  <name> System.X </name>
+  <ampm/>
+  <secs/>
+  <days/>
+</showclock>
+
+<?path Display\Lifestyle\Diet\Appetite-Thirst\ ?>
+
+<?include Nutrition.DES ?>
+<?include Appetite.DES ?>
+<?include H2O.DES ?>
+<?include Thirst.DES ?>
+
+</panel>
+
+End

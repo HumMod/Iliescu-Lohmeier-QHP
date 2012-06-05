@@ -1,0 +1,76 @@
+QHP 2008 / Tree-Anesthesia
+
+Created : 08-Dec-05
+Last Modified : 08-Dec-05
+Author : Tom Coleman
+Copyright Status : In Public Domain
+Solver : QHP 2008
+Schema : 2008.0
+
+<branch>
+  <name> Anesthesia </name>
+  <label> Anesthesia </label>
+  <parent> CLINIC </parent>
+</branch>
+
+<branch>
+  <name> IVAnesthesia </name>
+  <label> IV </label>
+  <parent> Anesthesia </parent>
+</branch>
+
+<leaf>
+  <name> IVAnesthesiaControl </name>
+  <label> Control </label>
+  <parent> IVAnesthesia </parent>
+</leaf>
+
+<leaf>
+  <name> IVAnesthesiaProperties </name>
+  <label> Properties </label>
+  <parent> IVAnesthesia </parent>
+</leaf>
+
+<leaf>
+  <name> IVAnesthesiaBlood </name>
+  <label> Blood </label>
+  <parent> IVAnesthesia </parent>
+</leaf>
+
+<leaf>
+  <name> IVAnesthesiaTissue </name>
+  <label> Tissue </label>
+  <parent> IVAnesthesia </parent>
+</leaf>
+
+<branch>
+  <name> GasAnesthesia </name>
+  <label> Gas </label>
+  <parent> Anesthesia </parent>
+</branch>
+
+<leaf>
+  <name> GasAnesthesiaControl </name>
+  <label> Control </label>
+  <parent> GasAnesthesia </parent>
+</leaf>
+
+<leaf>
+  <name> GasAnesthesiaProperties </name>
+  <label> Properties </label>
+  <parent> GasAnesthesia </parent>
+</leaf>
+
+<leaf>
+  <name> GasAnesthesiaLung </name>
+  <label> Lung </label>
+  <parent> GasAnesthesia </parent>
+</leaf>
+
+<leaf>
+  <name> GasAnesthesiaTissue </name>
+  <label> Tissue </label>
+  <parent> GasAnesthesia </parent>
+</leaf>
+
+End

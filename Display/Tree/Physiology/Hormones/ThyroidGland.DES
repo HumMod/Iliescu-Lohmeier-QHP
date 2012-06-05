@@ -1,0 +1,29 @@
+QHP 2008 / ThyroidGland
+
+Created : 10-Oct-08
+Last Modified : 10-Oct-08
+Author : Tom Coleman
+Copyright : 2008-2008
+By : University of Mississippi Medical Center
+Solver : DES 2008
+Schema : 2008.0
+
+<branch>
+  <name> Hormones_Thyroid </name>
+  <label> Thyroid Gland </label>
+  <parent> Hormones </parent>
+</branch>
+
+<leaf>
+  <name> Hormones_Thyroid_T4-T3 </name>
+  <label> T4-T3 </label>
+  <parent> Hormones_Thyroid </parent>
+</leaf>
+
+<leaf>
+  <name> Hormones_Thyroid_TSH </name>
+  <label> TSH </label>
+  <parent> Hormones_Thyroid </parent>
+</leaf>
+
+End

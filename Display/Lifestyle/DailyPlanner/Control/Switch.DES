@@ -1,0 +1,46 @@
+QHP 2008 / Switch
+
+Created : 27-Feb-08
+Last Modified : 27-Feb-08
+Author : Tom Coleman
+Copyright : 2008-2008
+By : University of Mississippi Medical Center
+Solver : QHP 2008
+Schema : 2008.0
+
+<groupbox>
+   <row> 2.0 </row>
+   <col> 1.0 </col>
+   <high> 4.4 </high>
+   <wide> 30.0 </wide>
+   <title> Switch </title>
+
+<structurename> DailyPlannerControl </structurename>
+
+<radiobuttons>
+  <row> 1.4 </row><col> 1.0 </col>
+  <name> Switch </name>
+  <listname> Common.Switch </listname>
+  <nolabel/>
+</radiobuttons>
+
+<maplist>
+  <name> DailyPlannerControl.Status </name>
+  <map><val> 0 </val><img> Inactive </img></map>
+  <map><val> 1 </val><img> Waiting </img></map>
+  <map><val> 2 </val><img> Active </img></map>
+</maplist>
+
+<showvalue>
+  <row> 2.8 </row><col> 1.0 </col>
+  <name> Status </name>
+  <format><list> DailyPlannerControl.Status </list></format>
+  <label> Status </label>
+</showvalue>
+
+
+
+
+</groupbox>
+
+End

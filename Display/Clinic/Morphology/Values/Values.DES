@@ -1,0 +1,42 @@
+QHP 2008 / Values
+
+Created : 24-Apr-05
+Last Modified : 20-Oct-08
+Author : Tom Coleman
+Copyright : 2008-2008
+By : University of Mississippi Medical Center
+Solver : DES 2008
+Schema : 2008.0
+
+<panel><name> Morphology-Values </name>
+
+<showbitmap>
+  <row> 0.3 </row>
+  <col> 1.0 </col>
+  <name> WholeBody </name>
+</showbitmap>
+
+<label>
+  <row> 0.3 </row>
+  <col> 4.5 </col>
+  <text> Morphology - Values </text>
+</label>
+
+<showclock>
+  <row> 0.3 </row><col> 32.0 </col>
+  <name> System.X </name>
+  <ampm/>
+  <secs/>
+  <days/>
+</showclock>
+
+<?path Display\Clinic\Morphology\Values\ ?>
+
+<?include Weight.DES ?>
+<?include Height.DES ?>
+<?include BMI.DES ?>
+<?include SurfaceArea.DES ?>
+
+</panel>
+
+End

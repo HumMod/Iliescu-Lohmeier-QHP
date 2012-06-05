@@ -1,0 +1,23 @@
+QHP 2008 / TiltTable
+
+Created : 16-Jun-05
+Last Modified : 16-Jun-05
+Author : Tom Coleman
+Copyright Status : In Public Domain
+Solver : QHP 2008
+Schema : 2008.0
+
+<structure><name> TiltTable </name>
+
+<variables>
+
+<parm>
+  <name> Degrees </name>
+  <val> 0.0 </val>
+</parm>
+
+</variables>
+
+</structure>
+
+End

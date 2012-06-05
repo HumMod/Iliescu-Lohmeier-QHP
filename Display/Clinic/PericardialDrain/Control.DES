@@ -1,0 +1,44 @@
+QHP 2008 / Control
+
+Created : 29-Feb-08
+Last Modified : 29-Feb-08
+Author : Tom Coleman
+Copyright : 2008-2008
+By : University of Mississippi Medical Center
+Solver : DES 2005
+Schema : 2005.0
+
+<groupbox>
+   <row> 2.0 </row>
+   <col> 1.0 </col>
+   <high> 4.4 </high>
+   <wide> 30.0 </wide>
+   <title> Control </title>
+
+<structurename> Pericardium-Drain </structurename>
+
+<radiobuttons>
+  <row> 1.4 </row><col> 1.0 </col>
+  <name> Switch </name>
+  <listname> Common.Switch </listname>
+  <nolabel/>
+</radiobuttons>
+
+<maplist>
+  <name> PericardialDrain.Conductance </name>
+  <map><val> 0.0  </val><img> None </img></map>
+  <map><val> 0.01 </val><img> Slow </img></map>
+  <map><val> 0.1  </val><img> Moderate </img></map>
+  <map><val> 1.0  </val><img> Fast </img></map>
+</maplist>
+
+<slidebar>
+  <row> 2.8 </row><col> 1.0 </col><wide> 8 </wide>
+  <name> Conductance </name>
+  <listname> PericardialDrain.Conductance </listname>
+  <label> Rate </label>
+</slidebar>
+
+</groupbox>
+
+End

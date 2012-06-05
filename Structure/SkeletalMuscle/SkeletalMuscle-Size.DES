@@ -1,0 +1,170 @@
+QHP 2008 / SkeletalMuscle-Size
+
+Created : 05-Jun-05
+Last Modified : 05-Jun-05
+Author : Tom Coleman
+Copyright Status : In Public Domain
+Solver : QHP 2008
+Schema : 2008.0
+
+<structure><name> SkeletalMuscle-Size </name>
+
+<variables>
+
+<var>
+  <name> Vol </name>
+</var>
+
+<var>
+  <name> Mass </name>
+</var>
+
+<var>
+  <name> Mass(kG) </name>
+</var>
+
+<var>
+  <name> Density </name>
+</var>
+
+<var>
+  <name> LiquidMass </name>
+</var>
+
+<constant>
+  <name> LiquidDensity </name>
+  <val> 1.00 </val>
+</constant>
+
+<var>
+  <name> LiquidVol </name>
+</var>
+
+<var>
+  <name> SolidMass </name>
+</var>
+
+<var>
+  <name> ContractileProteinMass </name>
+</var>
+
+<constant>
+  <name> ContractileProteinDensity </name>
+  <val> 1.17 </val>
+</constant>
+
+<constant>
+  <name> OtherMass </name>
+  <val> 3398.7 </val>
+</constant>
+
+<constant>
+  <name> OtherDensity </name>
+  <val> 1.17 </val>
+</constant>
+
+<var>
+  <name> ContractileProteinVol </name>
+</var>
+
+<var>
+  <name> OtherVol </name>
+</var>
+
+<var>
+  <name> SolidVol </name>
+</var>
+
+<var>
+  <name> IFV </name>
+</var>
+
+<constant>
+  <name> FractIFV </name>
+  <val> 0.472 </val>
+</constant>
+
+<var>
+  <name> OrganH2O </name>
+</var>
+
+<constant>
+  <name> FractOrganH2O </name>
+  <val> 0.552 </val>
+</constant>
+
+</variables>
+
+<definitions>
+<block><name> Calc </name>
+
+<def>
+  <name> IFV </name>
+  <val> FractIFV * InterstitialWater.Vol </val>
+</def>
+
+<def>
+  <name> OrganH2O </name>
+  <val> FractOrganH2O * CellH2O.Vol </val>
+</def>
+
+<def>
+  <name> LiquidVol </name>
+  <val> IFV + OrganH2O </val>
+</def>
+
+<def>
+  <name> LiquidMass </name>
+  <val> LiquidVol * LiquidDensity </val>
+</def>
+
+<def>
+  <name> ContractileProteinMass </name>
+  <val> SkeletalMuscle-ContractileProtein.Mass </val>
+</def>
+
+<def>
+  <name> SolidMass </name>
+  <val> ContractileProteinMass + OtherMass </val>
+</def>
+
+<def>
+  <name> ContractileProteinVol </name>
+  <val> ContractileProteinMass / ContractileProteinDensity </val>
+</def>
+
+<def>
+  <name> OtherVol </name>
+  <val> OtherMass / OtherDensity </val>
+</def>
+
+<def>
+  <name> SolidVol </name>
+  <val> ContractileProteinVol + OtherVol </val>
+</def>
+
+<def>
+  <name> Mass </name>
+  <val> LiquidMass + SolidMass </val>
+</def>
+
+<def>
+  <name> Mass(kG) </name>
+  <val> Mass / 1000.0 </val>
+</def>
+
+<def>
+  <name> Vol </name>
+  <val> LiquidVol + SolidVol </val>
+</def>
+
+<def>
+  <name> Density </name>
+  <val> Mass / Vol </val>
+</def>
+
+</block>
+</definitions>
+</structure>
+
+End

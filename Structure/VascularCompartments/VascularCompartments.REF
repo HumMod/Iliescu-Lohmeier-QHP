@@ -1,0 +1,33 @@
+QHP 2008 / VascularCompartments.REF
+
+Created : 05-Aug-08
+Last Modified : 13-Aug-08
+Author : Tom Coleman
+Copyright : 2008-2008
+By : University of Mississippi Medical Center
+Solver : DES 2008
+Schema : 2008.0
+
+There is strong interaction between the vascular compartments and
+the cardiovascular reflexes.
+
+First the compartment pressures are calculated for those compartments
+that supply reflex afferents (arteries, atria). This is CalcPressure(1).
+
+Then the complete reflex efferents are calculated.
+
+Finally the compartment pressures are calculated for those compartments
+receiving reflex efferents This is CalcPressure(2).
+
+In the derivatives sequence, we need cardiac output early, so the
+sequence is
+
+  EDV
+  ESV
+  Stroke Volume
+  Cardiac Output (from SV & HR)
+
+The remaining derivatives are calculated later, since organ blood
+flow is required.
+
+End

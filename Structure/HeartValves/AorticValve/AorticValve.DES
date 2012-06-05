@@ -1,0 +1,28 @@
+QHP 2008 / AorticValve
+
+Created : 23-Aug-08
+Last Modified : 23-Aug-08
+Author : Tom Coleman
+Copyright : 2008-2008
+By : University of Mississippi Medical Center
+Solver : DES 2008
+Schema : 2008.0
+
+<?path Structure\HeartValves\AorticValve\ ?>
+
+<?include AorticValve-Stenosis.DES ?>
+<?include AorticValve-Regurgitation.DES ?>
+
+<structure><name> AorticValve </name>
+
+<definitions>
+<block><name> Parms </name>
+
+<call> AorticValve-Stenosis.Parms </call>
+<call> AorticValve-Regurgitation.Parms </call>
+
+</block>
+</definitions>
+</structure>
+
+End

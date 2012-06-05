@@ -1,0 +1,102 @@
+QHP 2008 / Balance
+
+Created : 25-May-05
+Last Modified : 26-Mar-08
+Author : Tom Coleman
+Copyright : 2005-2008
+By : University of Mississippi Medical Center
+Solver : DES 2005
+Schema : 2005.0
+
+<groupbox>
+   <row> 2.0 </row>
+   <col> 32.0 </col>
+   <high> 22.4 </high>
+   <wide> 30.0 </wide>
+   <title> Balance </title>
+
+<structurename> TriglyceridePool </structurename>
+
+<showvalue>
+  <row> 1.4 </row><col> 1.0 </col>
+  <name> Mass </name>
+  <format><decimal> 1 </decimal></format>
+  <label> Mass </label>
+</showvalue>
+
+<showgraph>
+  <row> 2.4 </row><col> 1.0 </col><high> 9 </high><wide> 28 </wide>
+  <leftmargin> 6 </leftmargin>
+  <xaxis>
+    <name> System.X </name>
+    <label> Time </label>
+    <scale><min> 0 </min><max> 2 </max></scale>
+  </xaxis>
+  <yaxis>
+    <yvar>
+      <name> Mass </name>
+      <nolabel/>
+      <linecolor> BLUE </linecolor>
+    </yvar>
+    <scale>
+      <min> 12000 </min><max> 13000 </max>
+    </scale>
+  </yaxis>
+</showgraph>
+
+<showvalue>
+  <row> 11.8 </row><col> 1.0 </col>
+  <name> Change </name>
+  <format><decimal> 1 </decimal></format>
+  <label> Change </label>
+</showvalue>
+
+<showvalue>
+  <row> 13.4 </row><col> 1.0 </col>
+  <name> Gain </name>
+  <format><decimal> 1 </decimal></format>
+  <label> Gain </label>
+</showvalue>
+
+<showvalue>
+  <row> 14.4 </row><col> 3.0 </col>
+  <name> GILumenFat.Absorption </name>
+  <format><decimal> 1 </decimal></format>
+  <label> Gut Absorption </label>
+</showvalue>
+
+<label>
+  <row> 15.4 </row><col> 3.0 </col>
+  <text> Liver Synthesis </text>
+</label>
+
+<showvalue>
+  <row> 16.8 </row><col> 1.0 </col>
+  <name> Loss </name>
+  <format><decimal> 1 </decimal></format>
+  <label> Loss </label>
+</showvalue>
+
+<showvalue>
+  <row> 17.8 </row><col> 3.0 </col>
+  <name> LipidDeposits-Uptake.Rate </name>
+  <format><decimal> 1 </decimal></format>
+  <label> Adipose Uptake </label>
+</showvalue>
+
+<showvalue>
+  <row> 18.8 </row><col> 3.0 </col>
+  <name> TriglycerideDecomposition.Rate </name>
+  <format><decimal> 1 </decimal></format>
+  <label> Decomposition </label>
+</showvalue>
+
+<infobutton>
+  <row> 1.2 </row>
+  <col> 26.0 </col>
+  <line> Units for triglyceride movement are mG/Min. </line>
+</infobutton>
+
+</groupbox>
+
+End

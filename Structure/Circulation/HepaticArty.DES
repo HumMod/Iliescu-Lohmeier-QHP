@@ -1,0 +1,34 @@
+QHP 2008 / HepaticArty DES
+
+Created : 21-Oct-04
+Last Modified : 17-May-05
+Author : Tom Coleman
+Copyright Status : In Public Domain
+Solver : QHP 2008
+Schema : 2008.0
+
+<structure><name> HepaticArty </name>
+
+<variables>
+
+<var><name> PressureGradient </name></var>
+<var><name> Flow </name></var>
+<var><name> Conductance </name></var>
+<parm><name> BasicConductance </name><val> 2.8 </val></parm>
+
+</variables>
+
+<definitions>
+
+<block><name> CalcFlow </name>
+
+<def><name> PressureGradient </name><val> SystemicArtys.Pressure - SplanchnicVeins.Pressure </val></def>
+<def><name> Conductance </name><val> BasicConductance </val></def>
+<def><name> Flow </name><val> PressureGradient * Conductance </val></def>
+
+</block>
+
+</definitions>
+</structure>
+
+End

@@ -1,0 +1,41 @@
+QHP 2008 / Ketoacids
+
+Created : 29-Apr-05
+Last Modified : 28-May-05
+Author : Tom Coleman
+Copyright Status : In Public Domain
+Solver : QHP 2008
+Schema : 2008.0
+
+<panel><name> Metabolism_Ketoacids </name>
+
+<showbitmap>
+  <row> 0.3 </row>
+  <col> 1.0 </col>
+  <name> Metabolism </name>
+</showbitmap>
+
+<label>
+  <row> 0.3 </row>
+  <col> 4.5 </col>
+  <text> Ketoacids </text>
+</label>
+
+<showclock>
+  <row> 0.3 </row><col> 32.0 </col>
+  <name> System.X </name>
+  <ampm/>
+  <secs/>
+  <days/>
+</showclock>
+
+<?path Display\Physiology\Metabolism\Ketoacids\ ?>
+
+<?include Concentration.DES ?>
+<?include Pump.DES ?>
+<?include Balance.DES ?>
+<?include Decomposition.DES ?>
+
+</panel>
+
+End

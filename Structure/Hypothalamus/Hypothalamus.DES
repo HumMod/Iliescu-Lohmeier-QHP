@@ -1,0 +1,50 @@
+QHP 2008 / Hypothalamus
+
+Created : 21-Jun-06
+Last Modified : 28-Jun-06
+Author : Tom Coleman
+Copyright Status : In Public Domain
+Solver : QHP 2008
+Schema : 2008.0
+
+<?path Structure\Hypothalamus\ ?>
+
+<?include HypothalamusSweating.DES ?>
+<?include HypothalamusShivering.DES ?>
+<?include HypothalamusSkinFlow.DES ?>
+<?include HypothalamusTSH.DES ?>
+
+<?include HypothalamusShiveringAcclimation.DES ?>
+<?include HypothalamusSweatingAcclimation.DES ?>
+
+<structure><name> Hypothalamus </name>
+
+<definitions>
+
+<block><name> Parms </name>
+
+  <call> HypothalamusShiveringAcclimation.Parms </call>
+  <call> HypothalamusSweatingAcclimation.Parms </call>
+
+</block>
+
+<block><name> CalcEffect </name>
+
+  <call> HypothalamusSweating.CalcEffect </call>
+  <call> HypothalamusShivering.CalcEffect </call>
+  <call> HypothalamusSkinFlow.CalcEffect </call>
+  <call> HypothalamusTSH.CalcEffect </call>
+
+</block>
+
+<block><name> Dervs </name>
+
+  <call> HypothalamusShiveringAcclimation.Dervs </call>
+  <call> HypothalamusSweatingAcclimation.Dervs </call>
+
+</block>
+
+</definitions>
+</structure>
+
+End

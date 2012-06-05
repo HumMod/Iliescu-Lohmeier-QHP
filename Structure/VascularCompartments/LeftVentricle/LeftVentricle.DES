@@ -1,0 +1,37 @@
+QHP 2008 / LeftVentricle
+
+Created : 16-May-05
+Last Modified : 05-Aug-08
+Author : Tom Coleman
+Copyright : 2008-2008
+By : University of Mississippi Medical Center
+Solver : DES 2008
+Schema : 2008.0
+
+<?path Structure\VascularCompartments\LeftVentricle\ ?>
+
+<?include LeftVentricle-Compartment.DES ?>
+<?include LeftVentricle-Pumping.DES ?>
+<?include LeftVentricle-Diastole.DES ?>
+<?include LeftVentricle-Systole.DES ?>
+
+
+<structure><name> LeftVentricle </name>
+
+<definitions>
+
+<block><name> CalcPressure </name>
+  <call> LeftVentricle-Compartment.CalcPressure </call>
+</block>
+
+<block><name> Dervs </name>
+  <call> LeftVentricle-Diastole.Calc </call>
+  <call> LeftVentricle-Systole.Calc </call>
+  <call> LeftVentricle-Pumping.Calc </call>
+  <call> LeftVentricle-Compartment.Dervs </call>
+</block>
+
+</definitions>
+</structure>
+
+End

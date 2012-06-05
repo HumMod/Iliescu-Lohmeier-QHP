@@ -1,0 +1,60 @@
+QHP 2008 / Source
+
+Created : 05-Jun-05
+Last Modified : 05-Jun-05
+Author : Tom Coleman
+Copyright Status : In Public Domain
+Solver : QHP 2008
+Schema : 2008.0
+
+<groupbox>
+   <row> 14.8 </row>
+   <col> 1.0 </col>
+   <high> 6.4 </high>
+   <wide> 30.0 </wide>
+   <title> H2O Source </title>
+
+<showvalue>
+   <row> 1.4 </row><col> 1.0 </col>
+   <name> RespiratoryMuscle-Size.IFV </name>
+   <format> <integer/> </format>
+   <label> IFV </label>
+</showvalue>
+
+<showvalue>
+   <row> 2.4 </row><col> 3 </col>
+   <name> RespiratoryMuscle-Size.FractIFV </name>
+   <format><decimal> 3 </decimal></format>
+   <label> Fraction </label>
+</showvalue>
+
+<showvalue>
+   <row> 3.8 </row><col> 1.0 </col>
+   <name> RespiratoryMuscle-Size.OrganH2O</name>
+   <format> <integer/> </format>
+   <label> Organ H2O </label>
+</showvalue>
+
+<showvalue>
+   <row> 4.8 </row><col> 3 </col>
+   <name> RespiratoryMuscle-Size.FractOrganH2O </name>
+   <format><decimal> 3 </decimal></format>
+   <label> Fraction </label>
+</showvalue>
+
+<infobutton>
+  <row> 1.2 </row>
+  <col> 26.0 </col>
+
+  <line> NORMAL VALUES AND UNITS </line>
+  <line>  </line>
+  <line> IFV = 846 </line>
+  <line> Fraction = 0.070 </line>
+  <line>  </line>
+  <line> Organ H2O = 2176 </line>
+  <line> Fraction = 0.082 </line>
+</infobutton>
+
+</groupbox>
+
+End

@@ -1,0 +1,38 @@
+QHP 2008 / Sweating
+
+Created : 28-Jun-06
+Last Modified : 01-Jul-06
+Author : Tom Coleman
+Copyright Status : In Public Domain
+Solver : QHP 2008
+Schema : 2008.0
+
+<panel><name> Temperature_HeatLoss_Sweating </name>
+
+<showbitmap>
+  <row> 0.3 </row>
+  <col> 1.0 </col>
+  <name> Heat </name>
+</showbitmap>
+
+<label>
+  <row> 0.3 </row>
+  <col> 4.5 </col>
+  <text> Heat Loss - Sweating </text>
+</label>
+
+<showclock>
+  <row> 0.3 </row><col> 32.0 </col>
+  <name> System.X </name>
+  <ampm/>
+  <secs/>
+  <days/>
+</showclock>
+
+<?path Display\Physiology\Temperature\HeatLoss\Sweating\ ?>
+
+<?include Summary.DES ?>
+
+</panel>
+
+End

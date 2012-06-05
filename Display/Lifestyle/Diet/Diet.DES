@@ -1,0 +1,17 @@
+QHP 2008 / Diet
+
+Created : 24-Apr-05
+Last Modified : 15-Aug-08
+Author : Tom Coleman
+Copyright : 2008-2008
+By : University of Mississippi Medical Center
+Solver : DES 2008
+Schema : 2008.0
+
+<?path Display\Lifestyle\Diet\ ?>
+
+<?include Goal\Goal.DES ?>
+<?include Appetite-Thirst\Appetite-Thirst.DES ?>
+<?include Intake\Intake.DES ?>
+
+End

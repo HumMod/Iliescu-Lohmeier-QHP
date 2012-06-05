@@ -1,0 +1,75 @@
+QHP 2008 / FAPool
+
+Created : 07-Apr-05
+Last Modified : 20-Oct-08
+Author : Tom Coleman
+Copyright : 2008-2008
+By : University of Mississippi Medical Center
+Solver : DES 2008
+Schema : 2008.0
+
+<structure><name> FAPool </name>
+
+<variables>
+
+<var><name> Gain </name></var>
+<var><name> Loss </name></var>
+
+<var><name> [FA] </name></var>
+<var><name> [FA(mG/dL)] </name></var>
+<var><name> [FA(mMol/L)] </name></var>
+
+<constant><name> PER_ML_TO_PER_DL </name><val> 100.0 </val></constant>
+<constant><name> MG_TO_MMOL </name><val> 3.92 </val></constant>
+
+<constant><name> InitialConc </name><val> 0.15 </val></constant>
+
+</variables>
+
+<equations>
+
+<diffeq>
+  <name> Mass </name>
+  <integralname> Mass </integralname>
+  <initialval> 2500.0 </initialval>
+  <dervname> Change </dervname>
+  <errorlim> 25.0 </errorlim>
+</diffeq>
+
+</equations>
+
+<definitions>
+<block><name> Initialize </name>
+
+<def><name> Mass </name><val> InitialConc * ECFV.Vol </val></def>
+
+</block>
+
+<block><name> CalcConc </name>
+
+<def><name> [FA] </name><val> Mass / ECFV.Vol </val></def>
+<def><name> [FA(mG/dL)] </name><val> PER_ML_TO_PER_DL * [FA] </val></def>
+<def><name> [FA(mMol/L)] </name><val> MG_TO_MMOL * [FA] </val></def>
+
+</block>
+
+<block><name> CalcDervs </name>
+
+<def><name> Gain </name><val> LipidDeposits-Release.Rate </val></def>
+
+<def><name> Loss </name>
+  <val>
+       Metabolism-FattyAcid.TotalBurn
+     + LM_Ketoacids.FattyAcidUptake
+     + FADecomposition.Rate
+  </val>
+</def>
+
+<def><name> Change </name><val> Gain - Loss </val></def>
+
+</block>
+
+</definitions>
+</structure>
+
+End

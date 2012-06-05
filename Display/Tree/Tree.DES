@@ -1,0 +1,22 @@
+QHP 2008 / Tree DES
+
+Created : 14-Oct-04
+Last Modified : 28-Sep-06
+Author : Tom Coleman
+Copyright Status : In Public Domain
+Solver : QHP 2008
+Schema : 2008.0
+
+<?path Display\Tree\ ?>
+
+<tree>
+
+<!--?include Chart\Chart.DES ? -->
+<?include Physiology\Physiology.DES ?>
+<?include Organs\Organs.DES ?>
+<?include Lifestyle\Lifestyle.DES ?>
+<?include Clinic\Clinic.DES ?>
+
+</tree>
+
+End

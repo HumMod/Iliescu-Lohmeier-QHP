@@ -1,0 +1,40 @@
+QHP 2008 / LH-Circulating
+
+Created : 02-Oct-08
+Last Modified : 05-Oct-08
+Author : Tom Coleman
+Copyright : 2008-2008
+By : University of Mississippi Medical Center
+Solver : DES 2008
+Schema : 2008.0
+
+<panel><name> LH-Circulating </name>
+
+<showbitmap>
+  <row> 0.3 </row>
+  <col> 1.0 </col>
+  <name> Hormone </name>
+</showbitmap>
+
+<label>
+  <row> 0.3 </row>
+  <col> 4.5 </col>
+  <text> LH - Circulating </text>
+</label>
+
+<showclock>
+  <row> 0.3 </row><col> 32.0 </col>
+  <name> System.X </name>
+  <ampm/>
+  <secs/>
+  <days/>
+</showclock>
+
+<?path Display\Physiology\Hormones\LH\Circulating\ ?>
+
+<?include Pool.DES ?>
+<?include Degradation.DES ?>
+
+</panel>
+
+End

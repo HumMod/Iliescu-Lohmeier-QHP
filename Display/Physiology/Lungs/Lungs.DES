@@ -1,0 +1,18 @@
+QHP 2008 / Lungs
+
+Created : 24-Apr-05
+Last Modified : 19-Jun-06
+Author : Tom Coleman
+Copyright Status : In Public Domain
+Solver : QHP 2008
+Schema : 2008.0
+
+<?include Display\Physiology\Lungs\Fluids\Fluids.DES ?>
+<?include Display\Physiology\Lungs\GasExchange\GasExchange.DES ?>
+<?include Display\Physiology\Lungs\Hemodynamics\Hemodynamics.DES ?>
+<?include Display\Physiology\Lungs\Thorax\Thorax.DES ?>
+<?include Display\Physiology\Lungs\Breathing\Breathing.DES ?>
+
+<?include Display\Physiology\Lungs\Bronchi\Bronchi.DES ?>
+
+End

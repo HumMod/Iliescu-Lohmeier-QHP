@@ -1,0 +1,17 @@
+QHP 2008 / IV
+
+Created : 15-Apr-05
+Last Modified : 15-Apr-05
+Author : Tom Coleman
+Copyright Status : In Public Domain
+Solver : QHP 2008
+Schema : 2008.0
+
+<?path Display\Clinic\Anesthesia\IV\ ?>
+
+<?include Blood\Blood.DES ?>
+<?include Control\Control.DES ?>
+<?include Properties\Properties.DES ?>
+<?include Tissue\Tissue.DES ?>
+
+End

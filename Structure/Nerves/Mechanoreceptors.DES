@@ -1,0 +1,32 @@
+QHP 2008 / Mechanoreceptors DES
+
+Created : 21-Oct-04
+Last Modified : 08-Feb-06
+Author : Tom Coleman
+Copyright Status : In Public Domain
+Solver : QHP 2008
+Schema : 2008.0
+
+<structure><name> Mechanoreceptors </name>
+
+<variables>
+
+<var>
+  <name> FiringRate </name>
+</var>
+
+</variables>
+
+<definitions>
+
+<block><name> Calc </name>
+<def>
+  <name> FiringRate </name>
+  <val> 0.0 </val>
+</def>
+
+</block>
+</definitions>
+</structure>
+
+End

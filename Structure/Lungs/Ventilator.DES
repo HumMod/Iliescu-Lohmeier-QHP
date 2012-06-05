@@ -1,0 +1,58 @@
+QHP 2008 / X
+
+Created : 27-Mar-05
+Last Modified : 27-Mar-05
+Author : Tom Coleman
+Copyright Status : In Public Domain
+Solver : QHP 2008
+Schema : 2008.0
+
+<structure><name> Ventilator </name>
+
+<variables>
+
+<parm>
+  <name> Switch </name>
+  <val> FALSE </val>
+</parm>
+
+<parm>
+  <name> Rate </name>
+  <val> 0.0 </val>
+</parm>
+
+<parm>
+  <name> TidalVolume </name>
+  <val> 0.0 </val>
+</parm>
+
+<var>
+  <name> MinuteVolume </name>
+</var>
+
+<var>
+  <name> MinuteVolume(L) </name>
+</var>
+
+</variables>
+
+<definitions>
+<block><name> Calc </name>
+
+<conditional>
+  <name> MinuteVolume </name>
+  <test> Switch </test>
+  <true> TidalVolume * Rate </true>
+  <false> 0.0 </false>
+</conditional>
+
+<def>
+  <name> MinuteVolume(L) </name>
+  <val> MinuteVolume / 1000.0 </val>
+</def>
+
+</block>
+</definitions>
+</structure>
+
+End

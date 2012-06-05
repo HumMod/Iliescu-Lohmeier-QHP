@@ -1,0 +1,44 @@
+QHP 2008 / FurosemideKidney
+
+Created : 05-Jun-06
+Last Modified : 05-Jun-06
+Author : Tom Coleman
+Copyright Status : In Public Domain
+Solver : QHP 2008
+Schema : 2008.0
+
+<structure><name> FurosemideKidney </name>
+
+<variables>
+
+<var>
+  <name> UrineLoss </name>
+</var>
+
+<constant>
+  <name> K </name>
+  <val> 0.01 </val>
+</constant>
+
+</variables>
+
+<definitions>
+
+<block><name> Dervs </name>
+
+<def>
+  <name> UrineLoss </name>
+  <val>
+      K
+    * FurosemidePool.Mass
+    * Kidney-NephronCount.Filtering(xNormal)
+    * Kidney-Function.Effect
+  </val>
+</def>
+
+</block>
+
+</definitions>
+</structure>
+
+End

@@ -1,0 +1,17 @@
+QHP 2008 / LipidDeposits
+
+Created : 30-Mar-08
+Last Modified : 30-Mar-08
+Author : Tom Coleman
+Copyright : 2008-2008
+By : University of Mississippi Medical Center
+Solver : DES 2005
+Schema : 2005.0
+
+<leaf>
+  <name> LipidDeposits </name>
+  <label> Lipid Deposits </label>
+  <parent> ORGANS </parent>
+</leaf>
+
+End

@@ -1,0 +1,16 @@
+QHP 2008 / GasTools
+
+Created : 01-Mar-07
+Last Modified : 01-Mar-07
+Author : Tom Coleman
+Copyright : 2006-2008
+By : University of Mississippi Medical Center
+Solver : QHP 2008
+Schema : 2008.0
+
+<?path Structure\Lungs\GasTools\ ?>
+
+<?include STPD_To_BTPS.DES ?>
+<?include BTPS_To_STPD.DES ?>
+
+End

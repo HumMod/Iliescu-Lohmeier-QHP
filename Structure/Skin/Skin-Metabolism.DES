@@ -1,0 +1,83 @@
+QHP 2008 / Skin-Metabolism
+
+Created : 31-Mar-05
+Last Modified : 01-Apr-05
+Author : Tom Coleman
+Copyright Status : In Public Domain
+Solver : QHP 2008
+Schema : 2008.0
+
+<structure><name> Skin-Metabolism </name>
+
+<variables>
+
+<var>
+  <name> TotalCalsUsed </name>
+</var>
+
+<parm>
+  <name> NormalCalsUsed </name>
+  <val> 43.0 </val>
+</parm>
+
+<var>
+  <name> AerobicCals </name>
+</var>
+
+<var>
+  <name> AnaerobicCals </name>
+</var>
+
+<var>
+  <name> O2Need </name>
+</var>
+
+<var>
+  <name> O2Lack </name>
+</var>
+
+</variables>
+
+<definitions>
+<block><name> CalcCals </name>
+
+<def>
+  <name> TotalCalsUsed </name>
+  <val>
+      NormalCalsUsed
+    * Thyroid.Effect
+    * HeatMetabolism.Skin
+    * Skin-Structure.Effect
+  </val>
+</def>
+
+<def>
+  <name> O2Need </name>
+  <val> Metabolism-Tools.CalToO2 * TotalCalsUsed </val>
+</def>
+
+</block>
+
+<block><name> SplitCals </name>
+
+<def>
+  <name> O2Lack </name>
+  <val> O2Need - Skin-Flow.O2Use </val>
+</def>
+
+<def>
+  <name> AerobicCals </name>
+  <val> Metabolism-Tools.O2ToCal * Skin-Flow.O2Use </val>
+</def>
+
+<def>
+  <name> AnaerobicCals </name>
+  <val> Metabolism-Tools.O2ToCal * O2Lack </val>
+</def>
+
+</block>
+</definitions>
+
+</structure>
+
+End

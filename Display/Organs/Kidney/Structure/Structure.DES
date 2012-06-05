@@ -1,0 +1,42 @@
+QHP 2008 / Structure
+
+Created : 08-Jun-05
+Last Modified : 09-Jun-05
+Author : Tom Coleman
+Copyright Status : In Public Domain
+Solver : QHP 2008
+Schema : 2008.0
+
+<panel><name> Kidney-Structure </name>
+
+<showbitmap>
+  <row> 0.3 </row>
+  <col> 1.0 </col>
+  <name> OtherTissue </name>
+</showbitmap>
+
+<label>
+  <row> 0.3 </row>
+  <col> 4.5 </col>
+  <text> Other Tissue - Structure </text>
+</label>
+
+<showclock>
+  <row> 0.3 </row><col> 32.0 </col>
+  <name> System.X </name>
+  <ampm/>
+  <secs/>
+  <days/>
+</showclock>
+
+<?path Display\Organs\OtherTissue\Structure\ ?>
+
+<?include Summary.DES ?>
+
+<?include PhEffect.DES ?>
+<?include FuelEffect.DES ?>
+<?include TemperatureEffect.DES ?>
+
+</panel>
+
+End

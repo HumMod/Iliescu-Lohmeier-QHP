@@ -1,0 +1,59 @@
+QHP 2008 / RespiratoryCenter-Output
+
+Created : 23-Jan-06
+Last Modified : 23-Jan-06
+Author : Tom Coleman
+Copyright Status : In Public Domain
+Solver : QHP 2008
+Schema : 2008.0
+
+<structure><name> RespiratoryCenter-Output </name>
+
+<variables>
+
+<var>
+  <name> Rate </name>
+</var>
+
+<var>
+  <name> MotorNerveActivity </name>
+</var>
+
+</variables>
+
+<functions>
+
+<curve>
+  <name> Rate </name>
+  <point><x>  0 </x><y>  0 </y><slope> 12 </slope></point>
+  <point><x>  1 </x><y> 12 </y><slope>  4 </slope></point>
+  <point><x> 10 </x><y> 40 </y><slope>  0 </slope></point>
+</curve>
+
+</functions>
+
+<definitions>
+<block><name> Calc </name>
+
+<def>
+  <name> Rate </name>
+  <val>
+      Brain-Function.Effect
+    * Rate [ RespiratoryCenter-Integration.TotalDrive ]
+  </val>
+</def>
+
+<def>
+  <name> MotorNerveActivity </name>
+  <val>
+      Brain-Function.Effect
+    * Anesthesia.TidalVolume
+    * RespiratoryCenter-Integration.TotalDrive
+  </val>
+</def>
+
+</block>
+</definitions>
+</structure>
+
+End

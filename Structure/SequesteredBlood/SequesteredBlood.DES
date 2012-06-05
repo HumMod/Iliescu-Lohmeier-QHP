@@ -1,0 +1,17 @@
+QHP 2008 / SequesteredBlood
+
+Created : 21-Mar-08
+Last Modified : 21-Mar-08
+Author : Tom Coleman
+Copyright : 2008-2008
+By : University of Mississippi Medical Center
+Solver : DES 2005
+Schema : 2005.0
+
+<?path Structure\SequesteredBlood\ ?>
+
+<?include BVSeq.DES ?>
+<?include BVSeqArtys.DES ?>
+<?include BVSeqVeins.DES ?>
+
+End

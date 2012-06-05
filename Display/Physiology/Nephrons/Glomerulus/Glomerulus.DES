@@ -1,0 +1,25 @@
+QHP 2008 / Glomerulus
+
+Created : 17-Apr-05
+Last Modified : 17-Mar-08
+Author : Tom Coleman
+Copyright : 2005-2008
+By : University of Mississippi Medical Center
+Solver : QHP 2008
+Schema : 2008.0
+
+<?path Display\Physiology\Nephrons\Glomerulus\ ?>
+
+<?include Filtrate\Filtrate.DES ?>
+<?include Sodium\Sodium.DES ?>
+<?include Chloride\Chloride.DES ?>
+<?include Bicarbonate\Bicarbonate.DES ?>
+<?include Ketoacid\Ketoacid.DES ?>
+<?include Phosphate\Phosphate.DES ?>
+<?include Sulphate\Sulphate.DES ?>
+<?include Protein\Protein.DES ?>
+<?include Glucose\Glucose.DES ?>
+<?include Creatinine\Creatinine.DES ?>
+<?include Urea\Urea.DES ?>
+
+End

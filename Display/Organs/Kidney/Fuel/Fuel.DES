@@ -1,0 +1,18 @@
+QHP 2008 / Fuel
+
+Created : 17-Apr-05
+Last Modified : 27-Jul-08
+Author : Tom Coleman
+Copyright : 2008-2008
+By : University of Mississippi Medical Center
+Solver : DES 2008
+Schema : 2008.0
+
+<?path Display\Organs\Kidney\Fuel\ ?>
+
+<?include Selection\Selection.DES ?>
+<?include AerobicUse\AerobicUse.DES ?>
+<?include AnaerobicUse\AnaerobicUse.DES ?>
+<?include Adequacy\Adequacy.DES ?>
+
+End

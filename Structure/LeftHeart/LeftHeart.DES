@@ -1,0 +1,32 @@
+QHP 2008 / LeftHeart
+
+Created : 21-Oct-04
+Last Modified : 12-Dec-05
+Author : Tom Coleman
+Copyright Status : In Public Domain
+Solver : QHP 2008
+Schema : 2008.0
+
+<?path Structure\LeftHeart\ ?>
+
+<?include LeftHeart-Flow.DES ?>
+<?include LeftHeart-Pressure.DES ?>
+<?include LeftHeart-ContractileProtein.DES ?>
+<?include LeftHeart-Size.DES ?>
+<?include LeftHeart-Function.DES ?>
+
+<?include LeftHeart-CO2.DES ?>
+<?include LeftHeart-Lactate.DES ?>
+<?include LeftHeart-Ph.DES ?>
+
+<?include LeftHeart-Fuel.DES ?>
+<?include LeftHeart-Metabolism.DES ?>
+<?include LeftHeart-AlphaReceptors.DES ?>
+<?include LeftHeart-BetaReceptors.DES ?>
+<?include LeftHeart-Structure.DES ?>
+<?include LeftHeart-Vasculature.DES ?>
+
+<?include LeftHeart-Work.DES ?>
+<?include LeftHeart-Infarction.DES ?>
+
+End

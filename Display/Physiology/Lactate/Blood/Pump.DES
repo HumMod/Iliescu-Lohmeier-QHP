@@ -1,0 +1,54 @@
+QHP 2008 / LactatePump
+
+Created : 13-Dec-05
+Last Modified : 13-Dec-05
+Author : Tom Coleman
+Copyright Status : In Public Domain
+Solver : QHP 2008
+Schema : 2008.0
+
+<groupbox>
+   <row> 2.0 </row>
+   <col> 32.0 </col>
+   <high> 4.5 </high>
+   <wide> 30.0 </wide>
+   <title> Lactate Pump </title>
+
+<structurename> LacPool </structurename>
+
+<radiobuttons>
+  <row> 1.4 </row><col> 1.0 </col>
+  <name> PumpSwitch </name>
+  <listname> Common.Switch </listname>
+  <label> Switch </label>
+</radiobuttons>
+
+<repeatlist>
+  <name> PumpSetting </name>
+  <repeat>
+    <reps> 10 </reps>
+    <stepsize> 0.1 </stepsize>
+  </repeat>
+  <repeat>
+    <reps> 9 </reps>
+    <stepsize> 1.0 </stepsize>
+  </repeat>
+</repeatlist>
+
+<slidebar>
+  <row> 3.0 </row><col> 1.0 </col>
+  <name> PumpSetting </name>
+  <listname> PumpSetting </listname>
+  <label> Rate </label>
+</slidebar>
+
+<infobutton>
+  <row> 1.2 </row>
+  <col> 26.0 </col>
+
+  <line> Units for rate are mEq/Min. </line>
+</infobutton>
+
+</groupbox>
+
+End

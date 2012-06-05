@@ -1,0 +1,45 @@
+QHP 2008 / GILumenDiarrhea
+
+Created : 05-Jun-06
+Last Modified : 13-Mar-08
+Author : Tom Coleman
+Copyright : 2006-2008
+By : University of Mississippi Medical Center
+Solver : QHP 2008
+Schema : 2008.0
+
+<structure><name> GILumenDiarrhea </name>
+
+<variables>
+
+<parm><name> H2OTarget </name><val> 0.0 </val></parm>
+
+<var><name> H2OLoss </name></var>
+<var><name> Na+Loss </name></var>
+<var><name> HeatLoss </name></var>
+
+</variables>
+
+<functions>
+
+<curve><name> H2OMassEffect </name>
+  <point><x>  0.0 </x><y> 0.0 </y><slope> 0.0 </slope></point>
+  <point><x> 50.0 </x><y> 1.0 </y><slope> 0.0 </slope></point>
+</curve>
+
+</functions>
+
+<definitions>
+
+<block><name> Dervs </name>
+
+<def><name> H2OLoss </name><val> H2OTarget * H2OMassEffect [ GILumenVolume.Mass ] </val></def>
+<def><name> Na+Loss </name><val> H2OLoss * GILumenSodium.[Na+] </val></def>
+<def><name> HeatLoss </name><val> 0.001 * H2OLoss * GILumenTemperature.DegK </val></def>
+
+</block>
+
+</definitions>
+</structure>
+
+End

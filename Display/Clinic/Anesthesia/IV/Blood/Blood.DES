@@ -1,0 +1,32 @@
+QHP 2008 / Blood
+
+Created : 15-Apr-05
+Last Modified : 04-Jun-06
+Author : Tom Coleman
+Copyright Status : In Public Domain
+Solver : QHP 2008
+Schema : 2008.0
+
+<panel><name> IVAnesthesiaBlood </name>
+
+<label>
+  <row> 0.3 </row><col> 1.0 </col>
+  <text> IV Anesthesia - Blood </text>
+</label>
+
+<showclock>
+  <row> 0.3 </row><col> 32.0 </col>
+  <name> System.X </name>
+  <ampm/>
+  <secs/>
+  <days/>
+</showclock>
+
+<?path Display\Clinic\Anesthesia\IV\Blood\ ?>
+
+<?include Summary.DES ?>
+<?include LiverDegradation.DES ?>
+
+</panel>
+
+End

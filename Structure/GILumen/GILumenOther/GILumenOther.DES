@@ -1,0 +1,28 @@
+QHP 2008 / GILumenOther
+
+Created : 13-Mar-08
+Last Modified : 13-Mar-08
+Author : Tom Coleman
+Copyright : 2008-2008
+By : University of Mississippi Medical Center
+Solver : QHP 2008
+Schema : 2008.0
+
+<?path Structure\GILumen\GILumenOther\ ?>
+
+<?include GILumenDiarrhea.DES ?>
+<?include GILumenVomitus.DES ?>
+
+<structure><name> GILumenOther </name>
+
+<definitions>
+
+<block><name> Dervs </name>
+  <call> GILumenDiarrhea.Dervs </call>
+  <call> GILumenVomitus.Dervs </call>
+</block>
+
+</definitions>
+</structure>
+
+End

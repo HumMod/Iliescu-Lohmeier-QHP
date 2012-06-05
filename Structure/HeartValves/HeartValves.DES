@@ -1,0 +1,32 @@
+QHP 2008 / HeartValves
+
+Created : 21-Oct-04
+Last Modified : 23-Aug-08
+Author : Tom Coleman
+Copyright : 2008-2008
+By : University of Mississippi Medical Center
+Solver : DES 2008
+Schema : 2008.0
+
+<?path Structure\HeartValves\ ?>
+
+<?include AorticValve\AorticValve.DES ?>
+<?include MitralValve\MitralValve.DES ?>
+<?include PulmonicValve\PulmonicValve.DES ?>
+<?include TricuspidValve\TricuspidValve.DES ?>
+
+<structure><name> HeartValves </name>
+
+<definitions>
+<block><name> Parms </name>
+
+<call> AorticValve.Parms </call>
+<call> MitralValve.Parms </call>
+<call> PulmonicValve.Parms </call>
+<call> TricuspidValve.Parms </call>
+
+</block>
+</definitions>
+</structure>
+
+End

@@ -1,0 +1,52 @@
+QHP 2008 / Tissue-BaseToGas
+
+Created : 13-May-05
+Last Modified : 09-Dec-05
+Author : Tom Coleman
+Copyright Status : In Public Domain
+Solver : QHP 2008
+Schema : 2008.0
+
+<structure><name> Tissue-BaseToGas </name>
+
+<variables>
+
+<var>
+  <name> pCO2 </name>
+</var>
+
+<var>
+  <name> [SID] </name>
+</var>
+
+<var>
+  <name> [HCO3] </name>
+</var>
+
+<constant>
+  <name> C </name>
+  <val> -1411.4 </val>
+</constant>
+
+<constant>
+  <name> D </name>
+  <val> 5988.0 </val>
+</constant>
+
+</variables>
+
+<definitions>
+<block><name> Calc </name>
+
+<conditional>
+  <name> pCO2 </name>
+  <test> ( [HCO3] GT 0.0 ) AND ( [SID] GT 0.0 ) </test>
+  <true> ( C * [SID] ) + ( D * [HCO3] ) </true>
+  <false> 0.0001 </false>
+</conditional>
+
+</block>
+</definitions>
+</structure>
+
+End

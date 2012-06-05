@@ -1,0 +1,21 @@
+QHP 2008 / Heart-VFib.REF
+
+Created : 15-Apr-08
+Last Modified : 15-Apr-08
+Author : Tom Coleman
+Copyright : 2008-2008
+By : University of Mississippi Medical Center
+Solver : DES 2005
+Schema : 2005.0
+
+The heart will not fibrillate when the left heart has failed. In
+this case we have cardiac arrest.
+
+Otherwise, we get fibrillation when
+
+# Left heart function (Effect) < 0.30
+# [K+] > 10.0
+# [K+] < 2.4
+# [Digoxin] > 2.5
+
+End

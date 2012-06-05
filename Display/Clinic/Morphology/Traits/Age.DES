@@ -1,0 +1,58 @@
+QHP 2008 / Age
+
+Created : 20-Oct-08
+Last Modified : 20-Oct-08
+Author : Tom Coleman
+Copyright : 2008-2008
+By : University of Mississippi Medical Center
+Solver : DES 2008
+Schema : 2008.0
+
+<groupbox>
+   <row> 2.0 </row>
+   <col> 32.0 </col>
+   <high> 5.4 </high>
+   <wide> 30.0 </wide>
+   <title> Age </title>
+
+<structurename> Age </structurename>
+
+<maplist><name> Trait </name>
+  <map><val> 0 </val><img> Young </img></map>
+  <map><val> 1 </val><img> Youngish </img></map>
+  <map><val> 2 </val><img> Middle-Aged </img></map>
+  <map><val> 3 </val><img> Old </img></map>
+  <map><val> 4 </val><img> Very Old </img></map>
+</maplist>
+
+<showvalue>
+   <row> 1.4 </row><col> 1.0 </col>
+   <name> Trait </name>
+   <format><list> Trait </list></format>
+   <label> Trait </label>
+</showvalue>
+
+<showvalue>
+   <row> 2.4 </row><col> 1.0 </col>
+   <name> Trait </name>
+   <format><decimal> 1 </decimal></format>
+   <label> Value </label>
+</showvalue>
+
+<showvalue>
+   <row> 3.8 </row><col> 1.0 </col>
+   <name> BasicYears </name>
+   <format><decimal> 1 </decimal></format>
+   <label> Initial Years </label>
+</showvalue>
+
+<infobutton>
+  <row> 1.2 </row>
+  <col> 26.0 </col>
+
+  <line>  </line>
+</infobutton>
+
+</groupbox>
+
+End

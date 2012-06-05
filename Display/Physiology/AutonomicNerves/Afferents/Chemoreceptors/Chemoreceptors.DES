@@ -1,0 +1,41 @@
+QHP 2008 / Chemoreceptors
+
+Created : 27-Apr-05
+Last Modified : 09-Feb-06
+Author : Tom Coleman
+Copyright Status : In Public Domain
+Solver : QHP 2008
+Schema : 2008.0
+
+<panel><name> AutonomicNerves-Afferents-Chemoreceptors </name>
+
+<showbitmap>
+  <row> 0.3 </row>
+  <col> 1.0 </col>
+  <name> NerveAfferents </name>
+</showbitmap>
+
+<label>
+  <row> 0.3 </row>
+  <col> 4.5 </col>
+  <text> Chemoreceptors </text>
+</label>
+
+<showclock>
+  <row> 0.3 </row><col> 32.0 </col>
+  <name> System.X </name>
+  <ampm/>
+  <secs/>
+  <days/>
+</showclock>
+
+<?path Display\Physiology\AutonomicNerves\Afferents\Chemoreceptors\ ?>
+
+<?include Firing.DES ?>
+
+<?include Acclimation.DES ?>
+<?include Stimuli.DES ?>
+
+</panel>
+
+End

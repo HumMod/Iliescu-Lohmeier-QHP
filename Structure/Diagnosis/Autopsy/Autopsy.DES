@@ -1,0 +1,43 @@
+QHP 2008 / Autopsy
+
+Created : 21-May-05
+Last Modified : 21-May-05
+Author : Tom Coleman
+Copyright Status : In Public Domain
+Solver : QHP 2008
+Schema : 2008.0
+
+<structure><name> Autopsy </name>
+
+<variables>
+
+<var>
+  <name> StillAlive </name>
+</var>
+
+<var>
+  <name> IsDead </name>
+</var>
+
+</variables>
+
+<definitions>
+
+<block><name> Calc </name>
+
+<def>
+  <name> StillAlive </name>
+  <val> TRUE </val>
+</def>
+
+<def>
+  <name> IsDead </name>
+  <val> FALSE </val>
+</def>
+
+</block>
+
+</definitions>
+</structure>
+
+End

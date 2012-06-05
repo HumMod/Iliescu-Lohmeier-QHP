@@ -1,0 +1,45 @@
+QHP 2008 / Digoxin
+
+Created : 10-Apr-05
+Last Modified : 05-Jun-06
+Author : Tom Coleman
+Copyright Status : In Public Domain
+Solver : QHP 2008
+Schema : 2008.0
+
+<?path Structure\Drugs\Digoxin\ ?>
+
+<?include DigoxinPool.DES ?>
+<?include DigoxinKidney.DES ?>
+<?include DigoxinGILumen.DES ?>
+<?include DigoxinSingleDose.DES ?>
+<?include DigoxinDailyDose.DES ?>
+
+<structure><name> Digoxin </name>
+
+<definitions>
+
+<block><name> Parms </name>
+  <call> DigoxinDailyDose.Parms </call>
+</block>
+
+<block><name> CalcConc </name>
+  <call> DigoxinGILumen.CalcConc </call>
+  <call> DigoxinPool.CalcConc </call>
+</block>
+
+<block><name> Dervs </name>
+  <call> DigoxinGILumen.Dervs </call>
+  <call> DigoxinKidney.Dervs </call>
+  <call> DigoxinPool.Dervs </call>
+</block>
+
+<block><name> Wrapup </name>
+  <call> DigoxinDailyDose.Wrapup </call>
+  <call> DigoxinPool.Wrapup </call>
+</block>
+
+</definitions>
+</structure>
+
+End

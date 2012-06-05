@@ -1,0 +1,48 @@
+QHP 2008 / Midodrine
+
+Created : 10-Apr-05
+Last Modified : 06-Jun-06
+Author : Tom Coleman
+Copyright Status : In Public Domain
+Solver : QHP 2008
+Schema : 2008.0
+
+<?path Structure\Drugs\Midodrine\ ?>
+
+<?include MidodrinePool.DES ?>
+<?include DesglymidodrinePool.DES ?>
+
+<?include DesglymidodrineKidney.DES ?>
+<?include MidodrineGILumen.DES ?>
+<?include MidodrineSingleDose.DES ?>
+<?include MidodrineDailyDose.DES ?>
+
+<structure><name> Midodrine </name>
+
+<definitions>
+
+<block><name> Parms </name>
+  <call> MidodrineDailyDose.Parms </call>
+</block>
+
+<block><name> CalcConc </name>
+  <call> MidodrineGILumen.CalcConc </call>
+  <call> MidodrinePool.CalcConc </call>
+  <call> DesglymidodrinePool.CalcConc </call>
+</block>
+
+<block><name> Dervs </name>
+  <call> MidodrineGILumen.Dervs </call>
+  <call> DesglymidodrineKidney.Dervs </call>
+  <call> MidodrinePool.Dervs </call>
+  <call> DesglymidodrinePool.Dervs </call>
+</block>
+
+<block><name> Wrapup </name>
+  <call> MidodrineDailyDose.Wrapup </call>
+</block>
+
+</definitions>
+</structure>
+
+End

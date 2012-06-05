@@ -1,0 +1,298 @@
+QHP 2008 / Chart
+
+Created : 24-Apr-05
+Last Modified : 02-Oct-08
+Author : Tom Coleman
+Copyright : 2008-2008
+By : University of Mississippi Medical Center
+Solver : DES 2008
+Schema : 2008.0
+
+<panel><name> Chart </name>
+
+<?include Display\Version.DES ?>
+
+<showbitmap>
+  <row> 0.3 </row>
+  <col> 1.0 </col>
+  <name> Chart </name>
+</showbitmap>
+
+<label>
+  <row> 0.3 </row>
+  <col> 4.5 </col>
+  <text> Chart </text>
+</label>
+
+<showclock>
+  <row> 0.3 </row><col> 32.0 </col>
+  <name> System.X </name>
+  <ampm/><secs/><days/>
+</showclock>
+
+<note>
+   <row> 2.0 </row><col> 1.0 </col><high>3.8 </high><wide> 30.0 </wide>
+   <name> Chart.Thumbnail </name>
+   <text> This person seems to be in pretty good health. </text>
+</note>
+
+<maplist>
+  <name> Symptoms.Number </name>
+  <map><val>  0 </val><img> "I'm feeling OK." </img></map>
+  <map><val>  1 </val><img> Your patient is not responding. </img></map>
+  <map><val>  2 </val><img> "I've got a bad chest pain." </img></map>
+  <map><val>  3 </val><img> "I can't get enough air." </img></map>
+  <map><val>  4 </val><img> "I get tired real easy." </img></map>
+  <map><val>  5 </val><img> "I'm confused." </img></map>
+  <map><val>  6 </val><img> "I'm dizzy" </img></map>
+  <map><val>  7 </val><img> "I've got swelling in my head." </img></map>
+  <map><val>  8 </val><img> "I've got swelling in my gut." </img></map>
+  <map><val>  9 </val><img> "I've got swelling in my feet." </img></map>
+  <map><val> 10 </val><img> "My urine gives me trouble." </img></map>
+  <map><val> 11 </val><img> "I'm at work." </img></map>
+  <map><val> 12 </val><img> "I'm in aerobics." </img></map>
+  <map><val> 13 </val><img> "I'm on the bike." </img></map>
+  <map><val> 14 </val><img> "I'm on the treadmill." </img></map>
+</maplist>
+
+<showvalue>
+  <row> 6.2 </row><col> 1.0 </col>
+  <name> Symptoms.Number </name>
+  <nolabel/>
+  <format>
+    <list> Symptoms.Number </list>
+    <fieldwidth> 34 </fieldwidth>
+  </format>
+</showvalue>
+
+<showvalue>
+   <row> 7.6 </row><col> 1.0 </col>
+   <name> SystemicArtys.SBP </name>
+   <format><integer/></format>
+   <label> Blood Pressure </label>
+</showvalue>
+
+<label>
+  <row> 7.6 </row>
+  <col> 19 </col>
+  <text> / </text>
+</label>
+
+<showvalue>
+   <row> 7.6 </row><col> 20 </col>
+   <name> SystemicArtys.Pressure </name>
+   <format><integer/></format>
+   <nolabel/>
+</showvalue>
+
+<label>
+  <row> 7.6 </row>
+  <col> 23 </col>
+  <text> / </text>
+</label>
+
+<showvalue>
+   <row> 7.6 </row><col> 24 </col>
+   <name> SystemicArtys.DBP </name>
+   <format><integer/></format>
+   <nolabel/>
+</showvalue>
+
+<showgraph>
+  <row> 8.6 </row><col> 1.0 </col><high> 10 </high><wide> 28 </wide>
+  <leftmargin> 4 </leftmargin>
+  <xaxis>
+    <name> System.X </name>
+    <label> Time </label>
+    <scale><min> 0 </min><max> 2 </max></scale>
+  </xaxis>
+  <yaxis>
+
+    <yvar>
+      <name> SystemicArtys.SBP </name>
+      <label> S </label>
+      <linecolor> RED </linecolor>
+    </yvar>
+
+    <yvar>
+      <name> SystemicArtys.Pressure </name>
+      <label> M </label>
+      <linecolor> BLACK </linecolor>
+    </yvar>
+
+    <yvar>
+      <name> SystemicArtys.DBP </name>
+      <label> D </label>
+      <linecolor> BLUE </linecolor>
+    </yvar>
+
+    <scale><min> 80 </min><max> 120 </max><inc> 10 </inc></scale>
+  </yaxis>
+</showgraph>
+
+<showvalue>
+   <row> 18.6 </row><col> 1.0 </col>
+   <name> SystemicArtys.SBP(kPa) </name>
+   <format><decimal> 1 </decimal></format>
+   <label> BP (kPa) </label>
+</showvalue>
+
+<label>
+  <row> 18.6 </row>
+  <col> 14 </col>
+  <text> / </text>
+</label>
+
+<showvalue>
+   <row> 18.6 </row><col> 15 </col>
+   <name> SystemicArtys.MeanBP(kPa) </name>
+   <format><decimal> 1 </decimal></format>
+   <nolabel/>
+</showvalue>
+
+<label>
+  <row> 18.6 </row>
+  <col> 19 </col>
+  <text> / </text>
+</label>
+
+<showvalue>
+   <row> 18.6 </row><col> 20 </col>
+   <name> SystemicArtys.DBP(kPa) </name>
+   <format><decimal> 1 </decimal></format>
+   <nolabel/>
+</showvalue>
+
+<showvalue>
+   <row> 20.0 </row><col> 1.0 </col>
+   <name> Breathing.RespRate </name>
+   <format><decimal> 1 </decimal></format>
+   <label> Respiratory Rate </label>
+</showvalue>
+
+<showgraph>
+  <row> 21.0 </row><col> 1.0 </col><high> 10 </high><wide> 28 </wide>
+  <leftmargin> 4 </leftmargin>
+  <xaxis>
+    <name> System.X </name>
+    <label> Time </label>
+    <scale><min> 0 </min><max> 2 </max></scale>
+  </xaxis>
+  <yaxis>
+    <yvar>
+      <name> Breathing.RespRate </name>
+      <nolabel>
+      <linecolor> BLUE </linecolor>
+    </yvar>
+    <scale><min> 10 </min><max> 20 </max></scale>
+  </yaxis>
+</showgraph>
+
+-----------------------------------------
+
+<infobutton>
+  <row> 3.0 </row>
+  <col> 58 </col>
+  <line> TYPICAL VALUES </line>
+  <line>  </line>
+  <line> Age = 37 Years </line>
+  <line> Height = 70.0 Inches </line>
+  <line> Weight = 171 Lbs </line>
+  <line> Gender = Male </line>
+  <line>  </line>
+  <line> Mean Blood Pressure = 97 mmHg or 12.9 kPa </line>
+  <line> S/D = 120/80 mmHg or 15.9/10.6 kPa </line>
+  <line>  </line>
+  <line> Respiratory Rate = 12 /Min </line>
+  <line> Temperature = 98.6 F or 37.0 C </line>
+  <line> Heart Rate = 72 /Min </line>
+</infobutton>
+
+<showvalue>
+   <row> 3.2 </row><col> 32.0 </col>
+   <name> Age.Years </name>
+   <format> <integer/> </format>
+   <label> Age </label>
+</showvalue>
+
+<showvalue>
+  <row> 4.2 </row><col> 32.0 </col>
+  <name> Height.Height(In) </name>
+  <label> Height </label>
+  <format><decimal> 1 </decimal></format>
+</showvalue>
+
+<showvalue>
+   <row> 5.2 </row><col> 32.0 </col>
+   <name> Weight.Weight(Lb) </name>
+   <format> <integer/> </format>
+   <label> Weight </label>
+</showvalue>
+
+<showvalue>
+   <row> 6.2 </row><col> 32.0 </col>
+   <name> Gender.Gender </name>
+   <format><list> Common.Gender </list></format>
+   <label> Gender </label>
+</showvalue>
+
+<showvalue>
+   <row> 7.6 </row><col> 32.0 </col>
+   <name> HeatCore.Temp(F) </name>
+   <format><decimal> 1 </decimal></format>
+   <label> Temperature (F) </label>
+</showvalue>
+
+<showgraph>
+  <row> 8.6 </row><col> 32.0 </col><high> 10 </high><wide> 28 </wide>
+  <leftmargin> 4 </leftmargin>
+  <xaxis>
+    <name> System.X </name>
+    <label> Time </label>
+    <scale><min> 0 </min><max> 2 </max></scale>
+  </xaxis>
+  <yaxis>
+    <yvar>
+      <name> HeatCore.Temp(F) </name>
+      <nolabel/>
+      <linecolor> BLUE </linecolor>
+    </yvar>
+    <scale><min> 90 </min><max> 100 </max></scale>
+  </yaxis>
+</showgraph>
+
+<showvalue>
+   <row> 18.6 </row><col> 32.0 </col>
+   <name> HeatCore.Temp(C) </name>
+   <format><decimal> 1 </decimal></format>
+   <label> Temperature (C) </label>
+</showvalue>
+
+<showvalue>
+   <row> 20.0 </row><col> 32.0 </col>
+   <name> Heart-Rate.Rate </name>
+   <format><decimal> 1 </decimal></format>
+   <label> Heart Rate </label>
+</showvalue>
+
+<showgraph>
+  <row> 21.0 </row><col> 32.0 </col><high> 10 </high><wide> 28 </wide>
+  <leftmargin> 4 </leftmargin>
+  <xaxis>
+    <name> System.X </name>
+    <label> Time </label>
+    <scale><min> 0 </min><max> 2 </max></scale>
+  </xaxis>
+  <yaxis>
+    <yvar>
+      <name> Heart-Rate.Rate </name>
+      <nolabel/>
+      <linecolor> BLUE </linecolor>
+    </yvar>
+    <scale><min> 70 </min><max> 80 </max></scale>
+  </yaxis>
+</showgraph>
+
+</panel>
+
+End

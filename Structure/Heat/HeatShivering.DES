@@ -1,0 +1,46 @@
+QHP 2008 / HeatShivering
+
+Created : 27-Mar-05
+Last Modified : 01-Jul-06
+Author : Tom Coleman
+Copyright Status : In Public Domain
+Solver : QHP 2008
+Schema : 2008.0
+
+<structure><name> HeatShivering </name>
+
+<variables>
+
+<var>
+  <name> Cals </name>
+</var>
+
+</variables>
+
+<functions>
+
+<curve>
+  <name> Cals </name>
+  <point><x> 0.0 </x><y>  0.0 </y><slope> 0 </slope></point>
+  <point><x> 4.0 </x><y> 70.0 </y><slope> 0 </slope></point>
+</curve>
+
+</functions>
+
+<definitions>
+<block><name> Cals </name>
+
+<def>
+  <name> Cals </name>
+  <val>
+      Cals [ HypothalamusShivering.NerveActivity ]
+    * SkeletalMuscle-Structure.Effect
+  </val>
+</def>
+
+</block>
+
+</definitions>
+</structure>
+
+End

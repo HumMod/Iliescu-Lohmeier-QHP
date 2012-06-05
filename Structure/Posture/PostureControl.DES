@@ -1,0 +1,61 @@
+QHP 2008 / PostureControl
+
+Created : 25-May-05
+Last Modified : 05-Mar-08
+Author : Tom Coleman
+Copyright : 2005-2008
+By : University of Mississippi Medical Center
+Solver : QHP 2008
+Schema : 2008.0
+
+<structure><name> PostureControl </name>
+
+<variables>
+
+<parm>
+  <name> Request </name>
+  <val> 0 </val>
+</parm>
+
+<var>
+  <name> LastValidRequest </name>
+  <val> 0 </val>
+</var>
+
+</variables>
+
+<definitions>
+
+<block><name> Parms </name>
+
+<onjustchanged><name> Request </name>
+
+  <if>
+  <test> DailyPlannerControl.Switch </test>
+  <true>
+    <message> The daily planner is controlling posture now. </message>
+    <def><name> Request </name><val> LastValidRequest </val></def>
+    <exitblock/>
+  </true>
+  </if>
+
+  <if>
+  <test> Brain-Function.Comatose </test>
+  <true>
+    <message> Subject is comatose and can't change posture. </message>
+    <def><name> Request </name><val> LastValidRequest </val></def>
+    <exitblock/>
+  </true>
+  </if>
+
+  <def><name> Status.Posture </name><val> Request </val></def>
+  <def><name> LastValidRequest </name><val> Request </val></def>
+
+</onjustchanged>
+
+</block>
+
+</definitions>
+</structure>
+
+End

@@ -1,0 +1,39 @@
+QHP 2008 / LH
+
+Created : 07-Apr-05
+Last Modified : 06-Jun-06
+Author : Tom Coleman
+Copyright Status : In Public Domain
+Solver : QHP 2008
+Schema : 2008.0
+
+<?path Structure\LH\ ?>
+
+<?include LH-Circulating.DES ?>
+<?include LH-AnteriorPituitary.DES ?>
+
+<structure><name> LH </name>
+
+<definitions>
+
+<block><name> Parms </name>
+  <call> LH-AnteriorPituitary.Parms </call>
+</block>
+
+<block><name> Initialize </name>
+  <call> LH-Circulating.Initialize </call>
+</block>
+
+<block><name> Conc </name>
+  <call> LH-Circulating.Conc </call>
+</block>
+
+<block><name> Dervs </name>
+  <call> LH-AnteriorPituitary.Dervs </call>
+  <call> LH-Circulating.Dervs </call>
+</block>
+
+</definitions>
+</structure>
+
+End

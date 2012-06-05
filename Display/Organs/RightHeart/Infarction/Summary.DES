@@ -1,0 +1,67 @@
+QHP 2008 / Summary
+
+Created : 19-Dec-05
+Last Modified : 19-Dec-05
+Author : Tom Coleman
+Copyright Status : In Public Domain
+Solver : QHP 2008
+Schema : 2008.0
+
+<groupbox>
+   <row> 2.0 </row>
+   <col> 1.0 </col>
+   <high> 8.6 </high>
+   <wide> 30.0 </wide>
+   <title> Summary </title>
+
+<structurename> RightHeart-Infarction </structurename>
+
+<slidebar>
+  <row> 1.4 </row><col> 1.0 </col>
+  <name> Area(%) </name>
+  <listname> Common.Percent </listname>
+  <label> Area(%) </label>
+</slidebar>
+
+<showvalue>
+  <row> 3.0 </row><col> 1.0 </col>
+  <name> DamagedFraction </name>
+  <format><decimal> 2 </decimal></format>
+  <label> Damaged Fraction </label>
+</showvalue>
+
+<showvalue>
+  <row> 4.0 </row><col> 3 </col>
+  <name> IschemicFraction </name>
+  <format><decimal> 2 </decimal></format>
+  <label> Ischemic Fraction </label>
+</showvalue>
+
+<showvalue>
+  <row> 5.0 </row><col> 3 </col>
+  <name> DeadTissueFraction </name>
+  <format><decimal> 2 </decimal></format>
+  <label> Dead Fraction Tissue </label>
+</showvalue>
+
+<showvalue>
+  <row> 7.0 </row><col> 1.0 </col>
+  <name> IsIschemic </name>
+  <format><list> Common.NoYes </list></format>
+  <label> Is Ischemic? </label>
+</showvalue>
+
+<infobutton>
+  <row> 1.2 </row>
+  <col> 26.0 </col>
+
+  <line> The infarcted area is typically 0%. </line>
+  <line>  </line>
+  <line> The damaged area is initially ischemic, </line>
+  <line> but the tissue then dies with a time </line>
+  <line> constant of about 4 hours. </line>
+</infobutton>
+
+</groupbox>
+
+End

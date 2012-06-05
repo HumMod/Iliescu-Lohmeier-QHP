@@ -1,0 +1,19 @@
+QHP 2008 / Heart-ECG
+
+Created : 01-Mar-08
+Last Modified : 01-Mar-08
+Author : Tom Coleman
+Copyright : 2008-2008
+By : University of Mississippi Medical Center
+Solver : DES 2005
+Schema : 2005.0
+
+The enumerated values for ECG are
+
+0 - OK
+1 - Paced
+2 - STShift
+3 - VFib
+4 - Flat
+
+End

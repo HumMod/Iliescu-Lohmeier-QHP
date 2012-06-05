@@ -1,0 +1,38 @@
+QHP 2008 / SkeletalMuscle
+
+Created : 28-Apr-05
+Last Modified : 25-Jun-06
+Author : Tom Coleman
+Copyright Status : In Public Domain
+Solver : QHP 2008
+Schema : 2008.0
+
+<panel><name> Temperature_SkeletalMuscle </name>
+
+<showbitmap>
+  <row> 0.3 </row>
+  <col> 1.0 </col>
+  <name> Heat </name>
+</showbitmap>
+
+<label>
+  <row> 0.3 </row>
+  <col> 4.5 </col>
+  <text> SkeletalMuscle </text>
+</label>
+
+<showclock>
+  <row> 0.3 </row><col> 32.0 </col>
+  <name> System.X </name>
+  <ampm/>
+  <secs/>
+  <days/>
+</showclock>
+
+<?path Display\Physiology\Temperature\SkeletalMuscle\ ?>
+
+<?include Summary.DES ?>
+
+</panel>
+
+End

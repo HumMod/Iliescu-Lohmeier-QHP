@@ -1,0 +1,41 @@
+QHP 2008 / LipidDeposits
+
+Created : 31-Mar-08
+Last Modified : 31-Mar-08
+Author : Tom Coleman
+Copyright : 2008-2008
+By : University of Mississippi Medical Center
+Solver : DES 2005
+Schema : 2005.0
+
+<panel><name> LipidDeposits </name>
+
+<showbitmap>
+  <row> 0.3 </row>
+  <col> 1.0 </col>
+  <name> Fat </name>
+</showbitmap>
+
+<label>
+  <row> 0.3 </row>
+  <col> 4.5 </col>
+  <text> Lipid Deposits </text>
+</label>
+
+<showclock>
+  <row> 0.3 </row><col> 32.0 </col>
+  <name> System.X </name>
+  <ampm/>
+  <secs/>
+  <days/>
+</showclock>
+
+<?path Display\Organs\LipidDeposits\ ?>
+
+<?include Balance.DES ?>
+<?include FattyAcidUptake.DES ?>
+<?include FattyAcidRelease.DES ?>
+
+</panel>
+
+End

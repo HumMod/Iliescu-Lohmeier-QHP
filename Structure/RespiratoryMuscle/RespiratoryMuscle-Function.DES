@@ -1,0 +1,150 @@
+QHP 2008 / RespiratoryMuscle-Function
+
+Created : 27-Mar-05
+Last Modified : 27-Mar-05
+Author : Tom Coleman
+Copyright Status : In Public Domain
+Solver : QHP 2008
+Schema : 2008.0
+
+<structure><name> RespiratoryMuscle-Function </name>
+
+<variables>
+
+<var>
+  <name> Failed </name>
+  <val> FALSE </val>
+</var>
+
+<var>
+  <name> Effect </name>
+</var>
+
+<var>
+  <name> PhEffect </name>
+</var>
+
+<var>
+  <name> ProteinEffect </name>
+</var>
+
+<var>
+  <name> FuelEffect </name>
+</var>
+
+<var>
+  <name> TemperatureEffect </name>
+</var>
+
+</variables>
+
+<functions>
+
+<curve>
+  <name> PhOnFunction </name>
+  <point><x> 6.6 </x><y> 0.0 </y><slope> 0 </slope></point>
+  <point><x> 6.7 </x><y> 1.0 </y><slope> 0 </slope></point>
+</curve>
+
+<curve>
+  <name> ProteinOnFunction </name>
+  <point><x> 3000.0 </x><y> 0.0 </y><slope> 0 </slope></point>
+  <point><x> 5200.0 </x><y> 1.0 </y><slope> 0 </slope></point>
+</curve>
+
+<curve>
+  <name> FuelOnFunction </name>
+  <point><x> 0.0 </x><y> 0.0 </y><slope> 0 </slope></point>
+  <point><x> 0.9 </x><y> 1.0 </y><slope> 0 </slope></point>
+</curve>
+
+<curve>
+  <name> TemperatureOnFunction </name>
+  <point><x> 10 </x><y> 0.0 </y><slope> 0 </slope></point>
+  <point><x> 37 </x><y> 1.0 </y><slope> 0.12 </slope></point>
+  <point><x> 40 </x><y> 1.5 </y><slope> 0 </slope></point>
+  <point><x> 46 </x><y> 0.0 </y><slope> 0 </slope></point>
+</curve>
+
+</functions>
+
+<definitions>
+
+<block><name> Calc </name>
+
+<def>
+  <name> PhEffect </name>
+  <val> PhOnFunction [ OtherTissue-Ph.Ph ] </val>
+</def>
+
+<def>
+  <name> ProteinEffect </name>
+  <val> ProteinOnFunction [ CellProtein.Mass(G) ] </val>
+</def>
+
+<def>
+  <name> FuelEffect </name>
+  <val> FuelOnFunction [ OtherTissue-Fuel.FractUseDelay ] </val>
+</def>
+
+<def>
+  <name> TemperatureEffect </name>
+  <val> TemperatureOnFunction [ HeatCore.Temp(C) ] </val>
+</def>
+
+<def>
+  <name> Effect </name>
+  <val>
+      PhEffect
+    * ProteinEffect
+    * FuelEffect
+    * TemperatureEffect
+    * RespiratoryMuscle-Structure.Effect
+  </val>
+</def>
+
+</block>
+
+<block><name> Wrapup </name>
+
+<if>
+  <test> Failed </test>
+  <true>
+  <andif>
+    <test> Effect GT 0.4 </test>
+    <true>
+    <def>
+      <name> Failed </name>
+      <val> FALSE </val>
+    </def>
+    <def>
+      <name> System.BreakFlag </name>
+      <val> TRUE </val>
+    </def>
+    </true>
+  </andif>
+  </true>
+
+  <false>
+  <andif>
+    <test> Effect LT 0.2 </test>
+    <true>
+    <def>
+      <name> Failed </name>
+      <val> TRUE </val>
+    </def>
+    <def>
+      <name> System.BreakFlag </name>
+      <val> TRUE </val>
+    </def>
+    </true>
+  </andif>
+  </false>
+</if>
+
+</block>
+
+</definitions>
+</structure>
+
+End

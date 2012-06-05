@@ -1,0 +1,31 @@
+QHP 2008 / Organs-Flow
+
+Created : 02-Apr-08
+Last Modified : 02-Apr-08
+Author : Tom Coleman
+Copyright : 2008-2008
+By : University of Mississippi Medical Center
+Solver : DES 2005
+Schema : 2005.0
+
+<structure><name> Organs-Flow </name>
+
+<definitions>
+
+<block><name> Calc </name>
+  <call> Bone-Flow.Calc </call>
+  <call> Brain-Flow.Calc </call>
+  <call> Fat-Flow.Calc </call>
+  <call> GITract-Flow.Calc </call>
+  <call> LeftHeart-Flow.Calc </call>
+  <call> OtherTissue-Flow.Calc </call>
+  <call> RespiratoryMuscle-Flow.Calc </call>
+  <call> RightHeart-Flow.Calc </call>
+  <call> SkeletalMuscle-Flow.Calc </call>
+  <call> Skin-Flow.Calc </call>
+</block>
+
+</definitions>
+</structure>
+
+End

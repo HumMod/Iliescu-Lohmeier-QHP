@@ -1,0 +1,35 @@
+QHP 2008 / Diet
+
+Created : 10-Oct-08
+Last Modified : 10-Oct-08
+Author : Tom Coleman
+Copyright : 2008-2008
+By : University of Mississippi Medical Center
+Solver : DES 2008
+Schema : 2008.0
+
+<branch>
+  <name> Diet </name>
+  <label> Diet </label>
+  <parent> LIFESTYLE </parent>
+</branch>
+
+<leaf>
+  <name> Diet_Goal </name>
+  <label> Goal </label>
+  <parent> Diet </parent>
+</leaf>
+
+<leaf>
+  <name> Diet_Appetite-Thirst </name>
+  <label> Appetite | Thirst </label>
+  <parent> Diet </parent>
+</leaf>
+
+<leaf>
+  <name> Diet_Intake </name>
+  <label> Intake </label>
+  <parent> Diet </parent>
+</leaf>
+
+End

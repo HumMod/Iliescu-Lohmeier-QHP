@@ -1,0 +1,40 @@
+QHP 2008 / Control
+
+Created : 24-Apr-05
+Last Modified : 05-Jun-06
+Author : Tom Coleman
+Copyright Status : In Public Domain
+Solver : QHP 2008
+Schema : 2008.0
+
+<panel><name> DailyPlannerControl </name>
+
+<showbitmap>
+  <row> 0.3 </row>
+  <col> 1.0 </col>
+  <name> Clock </name>
+</showbitmap>
+
+<label>
+  <row> 0.3 </row>
+  <col> 4.5 </col>
+  <text> Daily Planner - Control </text>
+</label>
+
+<showclock>
+  <row> 0.3 </row><col> 32.0 </col>
+  <name> System.X </name>
+  <ampm/><secs/><days/>
+</showclock>
+
+<?path Display\Lifestyle\DailyPlanner\Control\ ?>
+
+<?include Switch.DES ?>
+<?include CurrentState.DES ?>
+<?include Work.DES ?>
+<?include Aerobics.DES ?>
+<?include Meals.DES ?>
+
+</panel>
+
+End

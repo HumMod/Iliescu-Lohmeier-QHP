@@ -1,0 +1,61 @@
+QHP 2008 / DietFeeding
+
+Created : 11-Mar-08
+Last Modified : 11-Mar-08
+Author : Tom Coleman
+Copyright : 2008-2008
+By : University of Mississippi Medical Center
+Solver : QHP 2008
+Schema : 2008.0
+
+<structure><name> DietFeeding </name>
+
+<variables>
+
+<var><name> Time </name></var>
+<var><name> Fraction </name></var>
+
+</variables>
+
+<definitions>
+<block><name> Dervs </name>
+
+<testcase>
+
+<case>
+<test> Status.Nutrition EQ 2 </test>
+  <def><name> Time </name><val> 1440.0 </val></def>
+  <def><name> Fraction </name><val> INVERT Time </val></def>
+</case>
+
+<case>
+<test> Status.Nutrition EQ 0 </test>
+  <def><name> Time </name><val> DailyPlannerSchedule.MealCount * DailyPlannerControl.MealsDuration </val></def>
+
+  <conditional><name> Fraction </name>
+  <test> Time EQ 0.0 </test>
+  <true> 0.0 </true>
+  <false> INVERT Time </false>
+</conditional>
+</case>
+
+<case>
+<test> Status.Nutrition EQ 1 </test>
+  <def><name> Time </name><val> DailyPlannerSchedule.MealCount * DailyPlannerControl.MealsDuration </val></def>
+  <def><name> Fraction </name><val> 0.0 </val></def>
+</case>
+
+<case>
+<test> Status.Nutrition EQ 3 </test>
+  <def><name> Time </name><val> 0.0 </val></def>
+  <def><name> Fraction </name><val> 0.0 </val></def>
+</case>
+
+</testcase>
+
+</block>
+
+</definitions>
+</structure>
+
+End

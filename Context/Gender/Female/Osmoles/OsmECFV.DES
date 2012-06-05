@@ -1,0 +1,21 @@
+QHP 2008 / OsmECFV
+
+Created : 30-Sep-08
+Last Modified : 30-Sep-08
+Author : Tom Coleman
+Copyright : 2008-2008
+By : University of Mississippi Medical Center
+Solver : DES 2008
+Schema : 2008.0
+
+<def>
+  <name> OsmECFV.OtherAnions </name>
+  <val> 0.61 * OsmECFV.OtherAnions </val>
+</def>
+
+<def>
+  <name> OsmECFV.UnknownOsmoles </name>
+  <val> 0.61 * OsmECFV.UnknownOsmoles </val>
+</def>
+
+End

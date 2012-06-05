@@ -1,0 +1,21 @@
+QHP 2008 / Lifestyle
+
+Created : 24-Jun-06
+Created : 03-Mar-08
+Last Modified : 03-Mar-08
+Author : Tom Coleman
+Copyright : 2008-2008
+By : University of Mississippi Medical Center
+Solver : DES 2005
+Schema : 2005.0
+
+<?path Display\Tree\Lifestyle\ ?>
+
+<?include AirSupply.DES ?>
+<?include DailyPlanner.DES ?>
+<?include Diet.DES ?>
+<?include Environment.DES ?>
+<?include Exercise.DES ?>
+<?include Posture.DES ?>
+
+End

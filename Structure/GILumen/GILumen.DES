@@ -1,0 +1,38 @@
+QHP 2008 / GILumen
+
+Created : 21-Oct-04
+Last Modified : 13-Mar-08
+Author : Tom Coleman
+Copyright : 2004-2008
+By : University of Mississippi Medical Center
+Solver : QHP 2008
+Schema : 2008.0
+
+<?path Structure\GILumen\ ?>
+
+<?include GILumenElectrolytes\GILumenElectrolytes.DES ?>
+<?include GILumenFood\GILumenFood.DES ?>
+<?include GILumenH2O\GILumenH2O.DES ?>
+<?include GILumenOther\GILumenOther.DES ?>
+
+<structure><name> GILumen </name>
+
+<definitions>
+
+<block><name> Conc </name>
+  <call> GILumenElectrolytes.Conc </call>
+  <call> GILumenFood.Conc </call>
+  <call> GILumenH2O.Conc </call>
+</block>
+
+<block><name> Dervs </name>
+  <call> GILumenOther.Dervs </call>
+  <call> GILumenElectrolytes.Dervs </call>
+  <call> GILumenFood.Dervs </call>
+  <call> GILumenH2O.Dervs </call>
+</block>
+
+</definitions>
+</structure>
+
+End

@@ -1,0 +1,39 @@
+QHP 2008 / BasicANP
+
+Created : 30-Sep-06
+Last Modified : 30-Sep-06
+Author : Tom Coleman
+Copyright : 2006
+By : University of Mississippi Medical Center
+Solver : QHP 2008
+Schema : 2008.0
+
+<panel><name> Hormones_ANP </name>
+
+<showbitmap>
+  <row> 0.3 </row>
+  <col> 1.0 </col>
+  <name> Hormone </name>
+</showbitmap>
+
+<label>
+  <row> 0.3 </row>
+  <col> 4.5 </col>
+  <text> Atrial Natriuretic Peptide </text>
+</label>
+
+<showclock>
+  <row> 0.3 </row><col> 32.0 </col>
+  <name> System.X </name>
+  <ampm/>
+  <secs/>
+  <days/>
+</showclock>
+
+<?path Display\Physiology\Hormones\ANP\ ?>
+
+<?include Summary.DES ?>
+
+</panel>
+
+End

@@ -1,0 +1,15 @@
+QHP 2008 / Sweat
+
+Created : 17-Apr-05
+Last Modified : 28-Jun-06
+Author : Tom Coleman
+Copyright Status : In Public Domain
+Solver : QHP 2008
+Schema : 2008.0
+
+<?path Display\Organs\Sweat\ ?>
+
+<?include SweatDuct\SweatDuct.DES ?>
+<?include SweatGland\SweatGland.DES ?>
+
+End

@@ -1,0 +1,21 @@
+QHP 2008 / Wind
+
+Created : 21-Dec-05
+Last Modified : 20-Sep-08
+Author : Tom Coleman
+Copyright : 2008-2008
+By : University of Mississippi Medical Center
+Solver : DES 2008
+Schema : 2008.0
+
+<structure><name> Wind </name>
+
+<variables>
+
+<parm><name> MPH </name><val> 0.0 </val></parm>
+
+</variables>
+
+</structure>
+
+End

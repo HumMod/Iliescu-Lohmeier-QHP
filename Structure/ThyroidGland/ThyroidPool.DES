@@ -1,0 +1,84 @@
+QHP 2008 / ThyroidPool
+
+Created : 07-Apr-05
+Last Modified : 30-Sep-08
+Author : Tom Coleman
+Copyright : 2008-2008
+By : University of Mississippi Medical Center
+Solver : DES 2008
+Schema : 2008.0
+
+<structure><name> ThyroidPool </name>
+
+<variables>
+
+<var><name> [Total_T4-T3] </name></var>
+<var><name> [Free_T4-T3] </name></var>
+<constant><name> ML_TO_DL </name><val> 0.01 </val></constant>
+<constant><name> TOTAL_TO_FREE </name><val> 0.5 </val></constant>
+<var><name> Gain </name></var>
+<var><name> Loss </name></var>
+<parm><name> Initial[Total_T4-T3] </name><val> 8.0 </val></parm>
+
+</variables>
+
+<equations>
+
+<diffeq>
+  <name> Mass </name>
+  <integralname> Mass </integralname>
+  <initialval> -1 </initialval>
+  <dervname> Change </dervname>
+  <errorlim> 12.00 </errorlim>
+</diffeq>
+
+</equations>
+
+<definitions>
+
+<block><name> Initialize </name>
+
+<def>
+  <name> Mass </name>
+  <val> 0.01 * Initial[Total_T4-T3] * ECFV.Vol </val>
+</def>
+
+</block>
+
+<block><name> CalcConc </name>
+
+<def>
+  <name> [Total_T4-T3] </name>
+  <val> Mass / ( ML_TO_DL * ECFV.Vol ) </val>
+</def>
+
+<def>
+  <name> [Free_T4-T3] </name>
+  <val> TOTAL_TO_FREE * [Total_T4-T3] </val>
+</def>
+
+</block>
+
+<block><name> Dervs </name>
+
+<def>
+  <name> Gain </name>
+  <val> ThyroidSecretion.Rate + ThyroidPump.Rate </val>
+</def>
+
+<def>
+  <name> Loss </name>
+  <val> ThyroidClearance.Rate </val>
+</def>
+
+<def>
+  <name> Change </name>
+  <val> Gain - Loss </val>
+</def>
+
+</block>
+
+</definitions>
+</structure>
+
+End

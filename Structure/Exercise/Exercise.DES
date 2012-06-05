@@ -1,0 +1,20 @@
+QHP 2008 / Exercise
+
+Created : 21-Oct-04
+Last Modified : 04-Mar-08
+Author : Tom Coleman
+Copyright : 2004-2008
+By : University of Mississippi Medical Center
+Solver : QHP 2008
+Schema : 2008.0
+
+<?path Structure\Exercise\ ?>
+
+<?include Exercise-Control.DES ?>
+<?include Exercise-Bike.DES ?>
+<?include Exercise-Treadmill.DES ?>
+<?include Exercise-MusclePump.DES ?>
+<?include Exercise-Metabolism.DES ?>
+<?include Exercise-Motivation.DES ?>
+
+End

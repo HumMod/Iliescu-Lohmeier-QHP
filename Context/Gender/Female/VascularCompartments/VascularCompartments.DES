@@ -1,0 +1,25 @@
+QHP 2008 / VascularCompartments
+
+Created : 29-Sep-08
+Last Modified : 29-Sep-08
+Author : Tom Coleman
+Copyright : 2008-2008
+By : University of Mississippi Medical Center
+Solver : DES 2008
+Schema : 2008.0
+
+<?path Context\Gender\Female\VascularCompartments\ ?>
+
+<?include LeftVentricle\LeftVentricle.DES ?>
+<?include RightVentricle\RightVentricle.DES ?>
+
+<?include LeftAtrium.DES ?>
+<?include PulmArty.DES ?>
+<?include PulmCapys.DES ?>
+<?include PulmVeins.DES ?>
+<?include RightAtrium.DES ?>
+<?include SplanchnicVeins.DES ?>
+<?include SystemicArtys.DES ?>
+<?include SystemicVeins.DES ?>
+
+End

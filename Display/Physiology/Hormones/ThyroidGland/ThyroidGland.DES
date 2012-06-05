@@ -1,0 +1,15 @@
+QHP 2008 / ThyroidGland
+
+Created : 28-Apr-05
+Last Modified : 21-Jun-06
+Author : Tom Coleman
+Copyright Status : In Public Domain
+Solver : QHP 2008
+Schema : 2008.0
+
+<?path Display\Physiology\Hormones\ThyroidGland\ ?>
+
+<?include T4-T3\T4-T3.DES ?>
+<?include TSH\TSH.DES ?>
+
+End

@@ -1,0 +1,71 @@
+QHP 2008 / CreatininePool
+
+Created : 28-Mar-08
+Last Modified : 28-Mar-08
+Author : Tom Coleman
+Copyright : 2008-2008
+By : University of Mississippi Medical Center
+Solver : DES 2005
+Schema : 2005.0
+
+<structure><name> CreatininePool </name>
+
+<variables>
+
+<var><name> Gain </name></var>
+<var><name> Loss </name></var>
+
+<var><name> RenalLoss </name></var>
+<var><name> ExtrarenalLoss </name></var>
+
+<var><name> [Creatinine] </name></var>
+<var><name> [Creatinine(mG/dL)] </name></var>
+<var><name> [Creatinine(uMol/L)] </name></var>
+
+<var><name> VolDist </name></var>
+<parm><name> VolDistFract </name><val> 0.87 </val></parm>
+
+<constant><name> PER_ML_TO_PER_DL </name><val> 100.0 </val></constant>
+<constant><name> MG_TO_UMOL </name><val> 8840.0 </val></constant>
+
+</variables>
+
+<equations>
+
+<diffeq>
+  <name> Mass </name>
+  <integralname> Mass </integralname>
+  <initialval> 310.0 </initialval>
+  <dervname> Change </dervname>
+  <errorlim> 3.10 </errorlim>
+</diffeq>
+
+</equations>
+
+<definitions>
+
+<block><name> Conc </name>
+
+<def><name> VolDist </name><val> VolDistFract * BodyH2O.Vol </val></def>
+<def><name> [Creatinine] </name><val> Mass / VolDist </val></def>
+<def><name> [Creatinine(mG/dL)] </name><val> PER_ML_TO_PER_DL * [Creatinine] </val></def>
+<def><name> [Creatinine(uMol/L)] </name><val> MG_TO_UMOL * [Creatinine] </val></def>
+
+</block>
+
+<block><name> Dervs </name>
+
+<def><name> RenalLoss </name><val> CD_Creatinine.Outflow </val></def>
+<def><name> ExtrarenalLoss </name><val> 0.02 * [Creatinine(mG/dL)] </val></def>
+
+<def><name> Gain </name><val> CreatineCells.CreatineToCreatinine </val></def>
+<def><name> Loss </name><val> RenalLoss + ExtrarenalLoss </val></def>
+
+<def><name> Change </name><val> Gain - Loss </val></def>
+
+</block>
+
+</definitions>
+</structure>
+
+End

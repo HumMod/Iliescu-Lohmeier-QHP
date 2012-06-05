@@ -1,0 +1,18 @@
+QHP 2008 / SkeletalMuscle
+
+Created : 29-Sep-08
+Last Modified : 29-Sep-08
+Author : Tom Coleman
+Copyright : 2008-2008
+By : University of Mississippi Medical Center
+Solver : DES 2008
+Schema : 2008.0
+
+<?path Context\Gender\Female\SkeletalMuscle\ ?>
+
+<?include SkeletalMuscle-ContractileProtein.DES ?>
+<?include SkeletalMuscle-Flow.DES ?>
+<?include SkeletalMuscle-Metabolism.DES ?>
+<?include SkeletalMuscle-Size.DES ?>
+
+End

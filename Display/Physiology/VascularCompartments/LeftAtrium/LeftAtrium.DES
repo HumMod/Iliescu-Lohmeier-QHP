@@ -1,0 +1,33 @@
+QHP 2008 / LeftAtrium
+
+Created : 16-May-05
+Last Modified : 16-May-05
+Author : Tom Coleman
+Copyright Status : In Public Domain
+Solver : QHP 2008
+Schema : 2008.0
+
+<panel><name> VascularCompartments_LeftAtrium </name>
+
+<label>
+  <row> 0.3 </row><col> 1.0 </col>
+  <text> Left Atrium </text>
+</label>
+
+<showclock>
+  <row> 0.3 </row><col> 32.0 </col>
+  <name> System.X </name>
+  <ampm/>
+  <secs/>
+  <days/>
+</showclock>
+
+<?path Display\Physiology\VascularCompartments\LeftAtrium\ ?>
+
+<?include Volume.DES ?>
+<?include Technical.DES ?>
+<?include Pressure.DES ?>
+
+</panel>
+
+End

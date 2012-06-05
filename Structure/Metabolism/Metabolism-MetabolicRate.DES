@@ -1,0 +1,35 @@
+QHP 2008 / Metabolism-MetabolicRate
+
+Created : 23-May-05
+Last Modified : 30-Mar-08
+Author : Tom Coleman
+Copyright : 2008-2008
+By : University of Mississippi Medical Center
+Solver : DES 2005
+Schema : 2005.0
+
+<structure><name> Metabolism-MetabolicRate </name>
+
+<variables>
+
+<var><name> Total(kCal/Min) </name></var>
+<var><name> BMRUnits </name></var>
+<parm><name> BMRNormal </name><val> 36.9 </val></parm>
+<var><name> BMR(%) </name></var>
+<var><name> Watts </name></var>
+
+</variables>
+
+<definitions>
+<block><name> Calc </name>
+
+<def><name> Total(kCal/Min) </name><val> 0.001 * Metabolism-CaloriesUsed.Total </val></def>
+<def><name> BMRUnits </name><val> 60.0 * Total(kCal/Min) / SurfaceArea.Area </val></def>
+<def><name> BMR(%) </name><val> 100.0 * ( ( BMRUnits / BMRNormal ) - 1.0 ) </val></def>
+<def><name> Watts </name><val> Metabolism-Tools.KCalToWatt * Total(kCal/Min) </val></def>
+
+</block>
+</definitions>
+</structure>
+
+End

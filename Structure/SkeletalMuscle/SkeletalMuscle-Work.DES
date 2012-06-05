@@ -1,0 +1,64 @@
+QHP 2008 / SkeletalMuscle-Work
+
+Created : 23-May-05
+Last Modified : 23-May-05
+Author : Tom Coleman
+Copyright Status : In Public Domain
+Solver : QHP 2008
+Schema : 2008.0
+
+<structure><name> SkeletalMuscle-Work </name>
+
+<variables>
+
+<parm>
+  <name> MechanicalEfficiency(%) </name>
+  <val> 30.0 </val>
+</parm>
+
+<var>
+  <name> MechanicalEfficiency </name>
+</var>
+
+<var>
+  <name> TotalCals </name>
+</var>
+
+<var>
+  <name> MotionCals </name>
+</var>
+
+<var>
+  <name> HeatCals </name>
+</var>
+
+</variables>
+
+<definitions>
+<block><name> Calc </name>
+
+<def>
+  <name> MechanicalEfficiency </name>
+  <val> MechanicalEfficiency(%) / 100.0 </val>
+</def>
+
+<def>
+  <name> MotionCals </name>
+  <val> Exercise-Metabolism.MotionCals </val>
+</def>
+
+<def>
+  <name> TotalCals </name>
+  <val> MotionCals / MechanicalEfficiency </val>
+</def>
+
+<def>
+  <name> HeatCals </name>
+  <val> TotalCals - MotionCals </val>
+</def>
+
+</block>
+</definitions>
+</structure>
+
+End

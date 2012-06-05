@@ -1,0 +1,32 @@
+QHP 2008 / PostureControl.REF
+
+Created : 25-May-05
+Last Modified : 05-Mar-08
+Author : Tom Coleman
+Copyright : 2005-2008
+By : University of Mississippi Medical Center
+Solver : QHP 2008
+Schema : 2008.0
+
+Posture is enumerated.
+
+  0 - Lying
+  1 - Sitting
+  2 - Standing
+  3 - Tilting
+
+These values are used for two purposes.
+
+# To request a posture.
+# To report a posture.
+
+The requested posture becomes the reported
+posture when possible.
+
+If the daily planner is active, then the daily
+planner determines posture.
+
+If the subject is comatose, then the posture
+is lying.
+
+End

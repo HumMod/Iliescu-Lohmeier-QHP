@@ -1,0 +1,32 @@
+QHP 2008 / BasicANP
+
+Created : 30-Sep-06
+Last Modified : 30-Sep-06
+Author : Tom Coleman
+Copyright : 2006
+By : University of Mississippi Medical Center
+Solver : QHP 2008
+Schema : 2008.0
+
+<?path Structure\ANP\ ?>
+
+<?include BasicANPPool.DES ?>
+
+<structure><name> ANP </name>
+
+<definitions>
+
+<block><name> Parms </name>
+</block>
+
+<block><name> CalcConc </name>
+  <call> ANPPool.CalcConc </call>
+</block>
+
+<block><name> Dervs </name>
+</block>
+
+</definitions>
+</structure>
+
+End

@@ -1,0 +1,161 @@
+QHP 2008 / Fat-Size
+
+Created : 05-Jun-05
+Last Modified : 06-Jun-05
+Author : Tom Coleman
+Copyright Status : In Public Domain
+Solver : QHP 2008
+Schema : 2008.0
+
+<structure><name> Fat-Size </name>
+
+<variables>
+
+<var>
+  <name> Vol </name>
+</var>
+
+<var>
+  <name> Mass </name>
+</var>
+
+<var>
+  <name> Density </name>
+</var>
+
+<var>
+  <name> LiquidMass </name>
+</var>
+
+<constant>
+  <name> LiquidDensity </name>
+  <val> 1.00 </val>
+</constant>
+
+<var>
+  <name> LiquidVol </name>
+</var>
+
+<var>
+  <name> SolidMass </name>
+</var>
+
+<var>
+  <name> LipidMass </name>
+</var>
+
+<constant>
+  <name> LipidDensity </name>
+  <val> 0.905 </val>
+</constant>
+
+<constant>
+  <name> OtherMass </name>
+  <val> 830.0 </val>
+</constant>
+
+<constant>
+  <name> OtherDensity </name>
+  <val> 1.38 </val>
+</constant>
+
+<var>
+  <name> LipidVol </name>
+</var>
+
+<var>
+  <name> OtherVol </name>
+</var>
+
+<var>
+  <name> SolidVol </name>
+</var>
+
+<var>
+  <name> IFV </name>
+</var>
+
+<constant>
+  <name> FractIFV </name>
+  <val> 0.062 </val>
+</constant>
+
+<var>
+  <name> OrganH2O </name>
+</var>
+
+<constant>
+  <name> FractOrganH2O </name>
+  <val> 0.066 </val>
+</constant>
+
+</variables>
+
+<definitions>
+<block><name> Calc </name>
+
+<def>
+  <name> IFV </name>
+  <val> FractIFV * InterstitialWater.Vol </val>
+</def>
+
+<def>
+  <name> OrganH2O </name>
+  <val> FractOrganH2O * CellH2O.Vol </val>
+</def>
+
+<def>
+  <name> LiquidVol </name>
+  <val> IFV + OrganH2O </val>
+</def>
+
+<def>
+  <name> LiquidMass </name>
+  <val> LiquidVol * LiquidDensity </val>
+</def>
+
+<def>
+  <name> LipidMass </name>
+  <val> LipidDeposits.Mass </val>
+</def>
+
+<def>
+  <name> SolidMass </name>
+  <val> LipidMass + OtherMass </val>
+</def>
+
+<def>
+  <name> LipidVol </name>
+  <val> LipidMass / LipidDensity </val>
+</def>
+
+<def>
+  <name> OtherVol </name>
+  <val> OtherMass / OtherDensity </val>
+</def>
+
+<def>
+  <name> SolidVol </name>
+  <val> LipidVol + OtherVol </val>
+</def>
+
+<def>
+  <name> Mass </name>
+  <val> LiquidMass + SolidMass </val>
+</def>
+
+<def>
+  <name> Vol </name>
+  <val> LiquidVol + SolidVol </val>
+</def>
+
+<def>
+  <name> Density </name>
+  <val> Mass / Vol </val>
+</def>
+
+</block>
+</definitions>
+</structure>
+
+End

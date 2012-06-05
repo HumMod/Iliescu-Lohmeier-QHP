@@ -1,0 +1,33 @@
+QHP 2006 / Anesthesia Reference
+
+Created : 28-Sep-06
+Last Modified : 28-Sep-06
+Author : Tom Coleman
+Copyright : 2006
+By : University of Mississippi Medical Center
+Solver : DES 2005
+Schema : 2005.0
+
+Here are the hooks for anesthesia.
+
+# In structure, calls to Parms, Calc and
+  Dervs. In the stub, only the call to
+  Calc has code.
+
+# A top level menu item and submenus in
+  Tree.DES.
+
+# Panels for gas and IV anesthesia in
+  Display.DES. There is also a conditional
+  panel under Organs | Brain | Brain Insult.
+
+The stub is NoAnesthesia.DES. Four variables
+are defined, all at 1.0 x Normal, in the block
+named Calc.
+
+  BrainFuncion
+  TidalVolume
+  HeartContractility
+  VascularConductance
+
+End

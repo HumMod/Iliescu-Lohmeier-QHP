@@ -1,0 +1,28 @@
+QHP 2008 / Kidney-Alpha
+
+Created : 10-Apr-05
+Last Modified : 29-Apr-05
+Author : Tom Coleman
+Copyright Status : In Public Domain
+Solver : QHP 2008
+Schema : 2008.0
+
+<structure><name> Kidney-Alpha </name>
+
+<variables>
+
+<parm>
+  <name> NA </name>
+  <val> 1.0 </val>
+</parm>
+
+<parm>
+  <name> PT_NA </name>
+  <val> 1.0 </val>
+</parm>
+
+</variables>
+
+</structure>
+
+End

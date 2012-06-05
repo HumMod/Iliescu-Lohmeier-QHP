@@ -1,0 +1,15 @@
+QHP 2008 / Diagnosis
+
+Created : 21-May-05
+Last Modified : 21-May-05
+Author : Tom Coleman
+Copyright Status : In Public Domain
+Solver : QHP 2008
+Schema : 2008.0
+
+<?path Structure\Diagnosis\ ?>
+
+<?include Autopsy\Autopsy.DES ?>
+<?include Symptoms\Symptoms.DES ?>
+
+End

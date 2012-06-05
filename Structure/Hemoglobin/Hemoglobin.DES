@@ -1,0 +1,17 @@
+QHP 2008 / Hemoglobin
+
+Created : 21-Oct-04
+Last Modified : 29-Mar-05
+Author : Tom Coleman
+Copyright Status : In Public Domain
+Solver : QHP 2008
+Schema : 2008.0
+
+<?path Structure\Hemoglobin\ ?>
+
+<?include HgbProps.DES ?>
+<?include HgbConc.DES ?>
+<?include HgbTissue.DES ?>
+<?include HgbLung.DES ?>
+
+End

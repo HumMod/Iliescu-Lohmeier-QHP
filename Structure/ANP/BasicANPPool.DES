@@ -1,0 +1,70 @@
+QHP 2008 / BasicANPPool
+
+Created : 30-Sep-06
+Last Modified : 30-Sep-06
+Author : Tom Coleman
+Copyright : 2006
+By : University of Mississippi Medical Center
+Solver : QHP 2008
+Schema : 2008.0
+
+<structure><name> ANPPool </name>
+
+<variables>
+
+<var>
+  <name> [ANP] </name>
+</var>
+
+<var>
+  <name> Log10Conc </name>
+</var>
+
+<parm>
+  <name> Base </name>
+  <val> 20.0 </val>
+</parm>
+
+<var>
+  <name> RAPEffect </name>
+</var>
+
+</variables>
+
+<functions>
+
+<curve>
+  <name> RAPEffect </name>
+  <point><x>  0.0 </x><y>  0.0 </y><slope> 0 </slope></point>
+  <point><x>  4.0 </x><y>  1.0 </y><slope> 0.4 </slope></point>
+  <point><x> 20.0 </x><y> 10.0 </y><slope> 0 </slope></point>
+</curve>
+
+</functions>
+
+<definitions>
+<block><name> CalcConc </name>
+
+<def>
+  <name> RAPEffect </name>
+  <val> RAPEffect [ RightAtrium.TMP ] </val>
+</def>
+
+<def>
+  <name> [ANP] </name>
+  <val> Base * RAPEffect </val>
+</def>
+
+<conditional>
+  <name> Log10Conc </name>
+  <test> [ANP] GT 1.0 </test>
+  <true> LOG10 [ANP] </true>
+  <false> 0.0 </false>
+</conditional>
+
+</block>
+
+</definitions>
+</structure>
+
+End

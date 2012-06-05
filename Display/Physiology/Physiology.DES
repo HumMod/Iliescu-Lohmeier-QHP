@@ -1,0 +1,38 @@
+QHP 2008 / Physiology
+
+Created : 28-Feb-08
+Last Modified : 03-Aug-08
+Author : Tom Coleman
+Copyright : 2008-2008
+By : University of Mississippi Medical Center
+Solver : DES 2008
+Schema : 2008.0
+
+<?path Display\Physiology\ ?>
+
+<?include AcidBase\AcidBase.DES ?>
+<?include AutonomicNerves\AutonomicNerves.DES ?>
+<?include Blood\Blood.DES ?>
+<?include Catechols\Catechols.DES ?>
+<?include CellProtein\CellProtein.DES ?>
+<?include Circulation\Circulation.DES ?>
+<?include CircyProtein\CircyProtein.DES ?>
+<?include CO2\CO2.DES ?>
+<?include Electrolytes\Electrolytes.DES ?>
+<?include H2O\H2O.DES ?>
+<?include HeartRate\HeartRate.DES ?>
+<?include Hormones\Hormones.DES ?>
+<?include Lactate\Lactate.DES ?>
+<?include Lungs\Lungs.DES ?>
+<?include Metabolism\Metabolism.DES ?>
+<?include Nephrons\Nephrons.DES ?>
+<?include O2\O2.DES ?>
+<?include Orthostasis\Orthostasis.DES ?>
+<?include Osmoles\Osmoles.DES ?>
+<?include PKs\PKs.DES ?>
+<?include Status\Status.DES ?>
+<?include Temperature\Temperature.DES ?>
+<?include TissueH2O\TissueH2O.DES ?>
+<?include VascularCompartments\VascularCompartments.DES ?>
+
+End

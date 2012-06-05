@@ -1,0 +1,41 @@
+QHP 2008 / LowerExternalPressure
+
+Created : 19-Jun-05
+Last Modified : 19-Jun-05
+Author : Tom Coleman
+Copyright Status : In Public Domain
+Solver : QHP 2008
+Schema : 2008.0
+
+<groupbox>
+   <row> 9.2 </row>
+   <col> 32.0 </col>
+   <high> 3.2 </high>
+   <wide> 30.0 </wide>
+   <title> Lower Body External Pressure </title>
+
+<repeatlist>
+  <name> LowerExternalPressure.Pressure </name>
+  <firstval> -100.0 </firstval>
+  <repeat><reps> 100 </reps><stepsize> 2.0 </stepsize></repeat>
+</repeatlist>
+
+<slidebar>
+  <row> 1.4 </row><col> 1.0 </col>
+  <name> LowerExternalPressure.Pressure </name>
+  <listname> LowerExternalPressure.Pressure </listname>
+  <label> Pressure </label>
+</slidebar>
+
+<infobutton>
+  <row> 1.2 </row>
+  <col> 26.0 </col>
+
+  <line> This pressure acts on the outside </line>
+  <line> of arteries and veins, changing </line>
+  <line> the amount of sequestered blood. </line>
+</infobutton>
+
+</groupbox>
+
+End

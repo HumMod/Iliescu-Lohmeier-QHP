@@ -1,0 +1,36 @@
+QHP 2008 / CNSTrophicFactor DES
+
+Created : 21-Oct-04
+Last Modified : 24-Oct-04
+Author : Tom Coleman
+Copyright Status : In Public Domain
+Solver : QHP 2008
+Schema : 2008.0
+
+<structure><name> CNSTrophicFactor </name>
+
+<equations>
+
+<diffeq>
+  <name> Effect </name>
+  <integralname> Effect </integralname>
+  <initialval> 1.0 </initialval>
+  <dervname> EffectChange </dervname>
+  <errorlim> 0.01 </errorlim>
+</diffeq>
+
+</equations>
+
+<definitions>
+
+<block><name> Dervs </name>
+<def>
+  <name> EffectChange </name>
+  <val> 0.0 </val>
+</def>
+
+</block>
+</definitions>
+</structure>
+
+End

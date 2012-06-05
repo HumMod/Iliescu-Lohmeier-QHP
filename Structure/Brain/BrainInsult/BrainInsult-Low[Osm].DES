@@ -1,0 +1,42 @@
+QHP 2008 / Low[Osm]
+
+Created : 11-Jun-05
+Last Modified : 11-Jun-05
+Author : Tom Coleman
+Copyright Status : In Public Domain
+Solver : QHP 2008
+Schema : 2008.0
+
+<structure><name> BrainInsult-Low[Osm] </name>
+
+<variables>
+
+<var>
+  <name> Effect </name>
+</var>
+
+</variables>
+
+<functions>
+
+<curve>
+  <name> Low[Osm] </name>
+  <point><x> 170 </x><y> 0.0 </y><slope> 0 </slope></point>
+  <point><x> 230 </x><y> 1.0 </y><slope> 0 </slope></point>
+</curve>
+
+</functions>
+
+<definitions>
+<block><name> Calc </name>
+
+<def>
+  <name> Effect </name>
+  <val> Low[Osm] [ OsmBody.[Osm(mOsm/L)]-CellWall ] </val>
+</def>
+
+</block>
+</definitions>
+</structure>
+
+End

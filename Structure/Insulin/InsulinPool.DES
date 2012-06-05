@@ -1,0 +1,61 @@
+QHP 2008 / InsulinPool
+
+Created : 07-Apr-05
+Last Modified : 30-Mar-08
+Author : Tom Coleman
+Copyright : 2005-2008
+By : University of Mississippi Medical Center
+Solver : DES 2005
+Schema : 2005.0
+
+<structure><name> InsulinPool </name>
+
+<variables>
+
+<var><name> [Insulin] </name></var>
+
+<var><name> Gain </name></var>
+<var><name> Loss </name></var>
+
+<constant><name> InitialConc </name><val> 15.0 </val></constant>
+
+</variables>
+
+<equations>
+
+<diffeq>
+  <name> Mass </name>
+  <integralname> Mass </integralname>
+  <initialval> -1 </initialval>
+  <dervname> Change </dervname>
+  <errorlim> 1.0 </errorlim>
+</diffeq>
+
+</equations>
+
+<definitions>
+<block><name> Initialize </name>
+
+<def><name> Mass </name><val> InitialConc * ECFV.Vol(L) </val></def>
+
+</block>
+
+<block><name> CalcConc </name>
+
+<def><name> [Insulin] </name><val> Mass / ECFV.Vol(L) </val></def>
+
+</block>
+
+<block><name> Dervs </name>
+
+<def><name> Gain </name><val> InsulinSecretion.Rate + InsulinPump.Rate </val></def>
+<def><name> Loss </name><val> InsulinClearance.Rate </val></def>
+
+<def><name> Change </name><val> Gain - Loss </val></def>
+
+</block>
+
+</definitions>
+</structure>
+
+End

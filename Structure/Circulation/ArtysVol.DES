@@ -1,0 +1,50 @@
+QHP 2008 / ArtysVol DES
+
+Created : 10-May-05
+Last Modified : 27-Jun-05
+Author : Tom Coleman
+Copyright Status : In Public Domain
+Solver : QHP 2008
+Schema : 2008.0
+
+<structure><name> ArtysVol </name>
+
+<variables>
+
+<var>
+  <name> Vol </name>
+</var>
+
+<var>
+  <name> Vol(L) </name>
+</var>
+
+</variables>
+
+<definitions>
+
+<block><name> Calc </name>
+
+<def>
+  <name> Vol </name>
+  <val>
+      PulmCapys.Vol
+    + PulmVeins.Vol
+    + LeftAtrium.Vol
+    + LeftVentricle-Compartment.Vol
+    + SystemicArtys.Vol
+    + BVSeqArtys.Vol
+  </val>
+</def>
+
+<def>
+  <name> Vol(L) </name>
+  <val> Vol / 1000.0 </val>
+</def>
+
+</block>
+
+</definitions>
+</structure>
+
+End

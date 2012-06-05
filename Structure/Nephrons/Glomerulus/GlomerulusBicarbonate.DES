@@ -1,0 +1,39 @@
+QHP 2008 / GlomerulusBicarbonate
+
+Created : 17-Mar-08
+Last Modified : 17-Mar-08
+Author : Tom Coleman
+Copyright : 2008-2008
+By : University of Mississippi Medical Center
+Solver : QHP 2008
+Schema : 2008.0
+
+<structure><name> GlomerulusBicarbonate </name>
+
+<variables>
+
+<var><name> Rate </name></var>
+<var><name> [HCO3-] </name></var>
+
+</variables>
+
+<definitions>
+
+<block><name> Calc </name>
+
+<def><name> [HCO3-] </name><val> CO2Veins.[HCO3] * GlomerulusFiltrate.AnionAdjustment </val></def>
+<def><name> Rate </name><val> [HCO3-] * GlomerulusFiltrate.GFR </val></def>
+
+</block>
+
+<block><name> Failed </name>
+
+<def><name> [HCO3-] </name><val> 0.0 </val></def>
+<def><name> Rate </name><val> 0.0 </val></def>
+
+</block>
+
+</definitions>
+</structure>
+
+End

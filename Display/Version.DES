@@ -1,0 +1,17 @@
+QHP 2008 / Version.DES
+
+Created : 07-Sep-08
+Last Modified : 13-Oct-08
+Author : Tom Coleman
+Copyright : 2008-2008
+By : University of Mississippi Medical Center
+Solver : DES 2008
+Schema : 2008.0
+
+<label>
+  <row> 1.7 </row><col> 32.0 </col>
+  <text> Version : 21-Oct-08 (Beta 3) </text>
+  <color> DARKRED </color>
+</label>
+
+End

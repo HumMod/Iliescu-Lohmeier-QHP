@@ -1,0 +1,59 @@
+QHP 2008 / RespiratoryCenter-Integration
+
+Created : 23-Jan-06
+Last Modified : 03-Aug-08
+Author : Tom Coleman
+Copyright : 2008-2008
+By : University of Mississippi Medical Center
+Solver : DES 2008
+Schema : 2008.0
+
+<structure><name> RespiratoryCenter-Integration </name>
+
+<variables>
+
+<var><name> TotalDrive </name></var>
+<parm><name> Clamp </name><val> FALSE </val></parm>
+<parm><name> Level </name><val> 0.0 </val></parm>
+
+</variables>
+
+<definitions>
+<block><name> Calc </name>
+
+<testcase>
+
+<case>
+<test> Brain-Function.NotBreathing </test>
+<def>
+  <name> TotalDrive </name>
+  <val> 0.0 </val>
+</def>
+</case>
+
+<case>
+<test> Clamp </test>
+<def>
+  <name> TotalDrive </name>
+  <val> Level </val>
+</def>
+</case>
+
+<case>
+<test> TRUE </test>
+<def>
+  <name> TotalDrive </name>
+  <val>
+      RespiratoryCenter-Chemical.TotalDrive
+    + RespiratoryCenter-Exercise.TotalDrive
+  </val>
+</def>
+</case>
+
+</testcase>
+
+</block>
+</definitions>
+</structure>
+
+End

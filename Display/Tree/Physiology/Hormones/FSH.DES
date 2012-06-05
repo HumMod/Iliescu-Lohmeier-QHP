@@ -1,0 +1,41 @@
+QHP 2008 / FSH
+
+Created : 10-Oct-08
+Last Modified : 10-Oct-08
+Author : Tom Coleman
+Copyright : 2008-2008
+By : University of Mississippi Medical Center
+Solver : DES 2008
+Schema : 2008.0
+
+<branch>
+  <name> FSH </name>
+  <label> FSH </label>
+  <parent> Hormones </parent>
+</branch>
+
+<leaf>
+  <name> FSH-Circulating </name>
+  <label> Circulating </label>
+  <parent> FSH </parent>
+</leaf>
+
+<branch>
+  <name> FSH-AnteriorPituitary </name>
+  <label> Anterioir Pituitary </label>
+  <parent> FSH </parent>
+</branch>
+
+<leaf>
+  <name> FSH-Secretion </name>
+  <label> Secretion </label>
+  <parent> FSH-AnteriorPituitary </parent>
+</leaf>
+
+<leaf>
+  <name> FSH-Stimuli </name>
+  <label> Stimuli </label>
+  <parent> FSH-AnteriorPituitary </parent>
+</leaf>
+
+End

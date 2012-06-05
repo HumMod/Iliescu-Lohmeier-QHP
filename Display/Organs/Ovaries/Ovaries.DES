@@ -1,0 +1,22 @@
+QHP 2008 / Ovaries
+
+Created : 02-Oct-08
+Last Modified : 02-Oct-08
+Author : Tom Coleman
+Copyright : 2008-2008
+By : University of Mississippi Medical Center
+Solver : DES 2008
+Schema : 2008.0
+
+<?path Display\Organs\Ovaries\ ?>
+
+<?include Summary\Summary.DES ?>
+<?include Follicle\Follicle.DES ?>
+<?include CorpusLuteum\CorpusLuteum.DES ?>
+
+<?include Estradiol\Estradiol.DES ?>
+<?include Progesterone\Progesterone.DES ?>
+<?include Testosterone\Testosterone.DES ?>
+<?include Inhibin\Inhibin.DES ?>
+
+End

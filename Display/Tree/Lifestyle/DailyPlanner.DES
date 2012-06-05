@@ -1,0 +1,29 @@
+QHP 2008 / DailyPlanner
+
+Created : 10-Oct-08
+Last Modified : 10-Oct-08
+Author : Tom Coleman
+Copyright : 2008-2008
+By : University of Mississippi Medical Center
+Solver : DES 2008
+Schema : 2008.0
+
+<branch>
+  <name> DailyPlanner </name>
+  <label> Daily Planner </label>
+  <parent> LIFESTYLE </parent>
+</branch>
+
+<leaf>
+  <name> DailyPlannerControl </name>
+  <label> Control </label>
+  <parent> DailyPlanner </parent>
+</leaf>
+
+<leaf>
+  <name> DailyPlannerSchedule </name>
+  <label> Schedule </label>
+  <parent> DailyPlanner </parent>
+</leaf>
+
+End

@@ -1,0 +1,16 @@
+QHP 2008 / AutonomicNerves
+
+Created : 15-Apr-05
+Last Modified : 19-Jun-06
+Author : Tom Coleman
+Copyright Status : In Public Domain
+Solver : QHP 2008
+Schema : 2008.0
+
+<?path Display\Physiology\AutonomicNerves\ ?>
+
+<?include Afferents\Afferents.DES ?>
+<?include CNS\CNS.DES ?>
+<?include Efferents\Efferents.DES ?>
+
+End

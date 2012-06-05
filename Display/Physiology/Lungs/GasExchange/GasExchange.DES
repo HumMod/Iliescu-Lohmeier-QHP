@@ -1,0 +1,43 @@
+QHP 2008 / GasExchange
+
+Created : 29-Apr-05
+Last Modified : 10-Feb-06
+Author : Tom Coleman
+Copyright Status : In Public Domain
+Solver : QHP 2008
+Schema : 2008.0
+
+<panel><name> Lungs_GasExchange </name>
+
+<showbitmap>
+  <row> 0.3 </row>
+  <col> 1.0 </col>
+  <name> Lungs </name>
+</showbitmap>
+
+<label>
+  <row> 0.3 </row>
+  <col> 4.5 </col>
+  <text> Gas Exchange </text>
+</label>
+
+<showclock>
+  <row> 0.3 </row><col> 32.0 </col>
+  <name> System.X </name>
+  <ampm/>
+  <secs/>
+  <days/>
+</showclock>
+
+<?path Display\Physiology\Lungs\GasExchange\ ?>
+
+<?include O2Uptake.DES ?>
+<?include LungPO2.DES ?>
+<?include GasExchangeRatio.DES ?>
+
+<?include CO2Expired.DES ?>
+<?include LungPCO2.DES ?>
+
+</panel>
+
+End

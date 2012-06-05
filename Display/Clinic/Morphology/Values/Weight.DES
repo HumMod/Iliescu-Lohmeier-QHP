@@ -1,0 +1,161 @@
+QHP 2008 / Weight
+
+Created : 06-Jun-05
+Last Modified : 24-Jun-06
+Author : Tom Coleman
+Copyright Status : In Public Domain
+Solver : QHP 2008
+Schema : 2008.0
+
+<groupbox>
+   <row> 2.0 </row>
+   <col> 1.0 </col>
+   <high> 26.6 </high>
+   <wide> 30.0 </wide>
+   <title> Mass </title>
+
+<showvalue>
+   <row> 1.4 </row><col> 1.0 </col>
+   <name> Weight.Weight(kG) </name>
+   <format><decimal> 1 </decimal></format>
+   <label> Mass </label>
+</showvalue>
+
+<showgraph>
+  <row> 2.4 </row><col> 1.0 </col><high> 7 </high><wide> 28 </wide>
+  <leftmargin> 6 </leftmargin>
+  <xaxis>
+    <name> System.X </name>
+    <label> Time </label>
+    <scale><min> 0 </min><max> 2 </max></scale>
+  </xaxis>
+  <yaxis>
+    <yvar>
+      <name> Weight.Weight(kG) </name>
+      <nolabel/>
+      <linecolor> BLUE </linecolor>
+    </yvar>
+    <scale>
+      <min> 70 </min><max> 80 </max>
+    </scale>
+  </yaxis>
+</showgraph>
+
+<showvalue>
+   <row> 9.8 </row><col> 1.0 </col>
+   <name> Weight.Weight(Lb) </name>
+   <format><decimal> 1 </decimal></format>
+   <label> Weight (Lbs) </label>
+</showvalue>
+
+<showvalue>
+   <row> 11.2 </row><col> 1.0 </col>
+   <name> Bone-Size.Mass </name>
+   <format> <integer/> </format>
+   <label> Bone </label>
+</showvalue>
+
+<showvalue>
+   <row> 12.2 </row><col> 1.0 </col>
+   <name> Brain-Size.Mass </name>
+   <format> <integer/> </format>
+   <label> Brain </label>
+</showvalue>
+
+<showvalue>
+   <row> 13.2 </row><col> 1.0 </col>
+   <name> Fat-Size.Mass </name>
+   <format> <integer/> </format>
+   <label> Fat </label>
+</showvalue>
+
+<showvalue>
+   <row> 14.2 </row><col> 1.0 </col>
+   <name> GITract-Size.Mass </name>
+   <format> <integer/> </format>
+   <label> GI Tract </label>
+</showvalue>
+
+<showvalue>
+   <row> 15.2 </row><col> 1.0 </col>
+   <name> Kidney-Size.Mass </name>
+   <format> <integer/> </format>
+   <label> Kidney </label>
+</showvalue>
+
+<showvalue>
+   <row> 16.2 </row><col> 1.0 </col>
+   <name> LeftHeart-Size.Mass </name>
+   <format> <integer/> </format>
+   <label> Left Heart </label>
+</showvalue>
+
+<showvalue>
+   <row> 17.2 </row><col> 1.0 </col>
+   <name> Liver-Size.Mass </name>
+   <format> <integer/> </format>
+   <label> Liver </label>
+</showvalue>
+
+<showvalue>
+   <row> 18.2 </row><col> 1.0 </col>
+   <name> OtherTissue-Size.Mass </name>
+   <format> <integer/> </format>
+   <label> Other Tissue </label>
+</showvalue>
+
+<showvalue>
+   <row> 19.2 </row><col> 1.0 </col>
+   <name> RespiratoryMuscle-Size.Mass </name>
+   <format> <integer/> </format>
+   <label> Respiratory Muscle </label>
+</showvalue>
+
+<showvalue>
+   <row> 20.2 </row><col> 1.0 </col>
+   <name> RightHeart-Size.Mass </name>
+   <format> <integer/> </format>
+   <label> Right Heart </label>
+</showvalue>
+
+<showvalue>
+   <row> 21.2 </row><col> 1.0 </col>
+   <name> SkeletalMuscle-Size.Mass </name>
+   <format> <integer/> </format>
+   <label> Skeletal Muscle </label>
+</showvalue>
+
+<showvalue>
+   <row> 22.2 </row><col> 1.0 </col>
+   <name> Skin-Size.Mass </name>
+   <format> <integer/> </format>
+   <label> Skin </label>
+</showvalue>
+
+<showvalue>
+   <row> 23.6 </row><col> 1.0 </col>
+   <name> BloodVol.Vol </name>
+   <format> <integer/> </format>
+   <label> Blood </label>
+</showvalue>
+
+<showvalue>
+   <row> 25.0 </row><col> 1.0 </col>
+   <name> Weight.Core(kG) </name>
+   <format><decimal> 1 </decimal></format>
+   <label> Core (kG) </label>
+</showvalue>
+
+<infobutton>
+  <row> 1.2 </row>
+  <col> 26.0 </col>
+
+  <line> NORMAL VALUES AND UNITS </line>
+  <line>  </line>
+  <line> Weight = 77.5 kG </line>
+  <line> Weight (Lbs) = 171 Lbs </line>
+</infobutton>
+
+</groupbox>
+
+End

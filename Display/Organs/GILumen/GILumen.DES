@@ -1,0 +1,17 @@
+QHP 2008 / GILumen
+
+Created : 17-Apr-05
+Last Modified : 18-Apr-05
+Author : Tom Coleman
+Copyright Status : In Public Domain
+Solver : QHP 2008
+Schema : 2008.0
+
+<?path Display\Organs\GILumen\ ?>
+
+<?include Electrolytes\Electrolytes.DES ?>
+<?include Food\Food.DES ?>
+<?include H2O\H2O.DES ?>
+<?include Other\Other.DES ?>
+
+End

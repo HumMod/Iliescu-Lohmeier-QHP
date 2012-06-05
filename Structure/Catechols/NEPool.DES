@@ -1,0 +1,95 @@
+QHP 2008 / NEPool
+
+Created : 28-Jun-05
+Last Modified : 20-Oct-08
+Author : Tom Coleman
+Copyright : 2008-2008
+By : University of Mississippi Medical Center
+Solver : DES 2008
+Schema : 2008.0
+
+<structure><name> NEPool </name>
+
+<variables>
+
+<var><name> [NE] </name></var>
+<var><name> [NE(nMol/L)] </name></var>
+<var><name> Gain </name></var>
+<var><name> Loss </name></var>
+
+<constant><name> InitialConc </name><val> 0.240 </val></constant>
+
+</variables>
+
+<equations>
+
+<backwardeuler>
+  <name> Mass </name>
+  <integralname> Mass </integralname>
+  <initialval> -1 </initialval>
+  <f1name> F1 </f1name>
+  <f2name> F2 </f2name>
+  <dervname> Change </dervname>
+  <errorlim> 36.0 </errorlim>
+</backwardeuler>
+
+</equations>
+
+<definitions>
+<block><name> Initialize </name>
+
+<def><name> Mass </name><val> InitialConc * ECFV.Vol </val></def>
+
+</block>
+
+<block><name> CalcConc </name>
+
+<def>
+  <name> [NE] </name>
+  <val> 1000.0 * Mass / ECFV.Vol </val>
+</def>
+
+<def>
+  <name> [NE(nMol/L)] </name>
+  <val> 0.00592 * [NE] </val>
+</def>
+
+</block>
+
+<block><name> Dervs </name>
+
+<def>
+  <name> Gain </name>
+  <val>
+       NESecretion.Rate
+     + NESecretion.Spillover
+     + NEPump.Rate </val>
+     + Pheochromocytoma.NERate
+</def>
+
+<def>
+  <name> Loss </name>
+  <val> NEClearance.Rate </val>
+</def>
+
+<def>
+  <name> Change </name>
+  <val> Gain - Loss </val>
+</def>
+
+<def>
+  <name> F1 </name>
+  <val> Gain </val>
+</def>
+
+<def>
+  <name> F2 </name>
+  <val> 1000 * NEClearance.K / ECFV.Vol </val>
+</def>
+
+</block>
+
+</definitions>
+</structure>
+
+End

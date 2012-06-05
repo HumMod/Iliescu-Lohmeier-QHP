@@ -1,0 +1,25 @@
+QHP 2008 / Organs-BetaReceptors
+
+Created : 02-Apr-08
+Last Modified : 02-Apr-08
+Author : Tom Coleman
+Copyright : 2008-2008
+By : University of Mississippi Medical Center
+Solver : DES 2005
+Schema : 2005.0
+
+<structure><name> Organs-BetaReceptors </name>
+
+<definitions>
+
+<block><name> Calc </name>
+  <call> Kidney-BetaReceptors.Calc </call>
+  <call> LeftHeart-BetaReceptors.Calc </call>
+  <call> RightHeart-BetaReceptors.Calc </call>
+  <call> SANode-BetaReceptors.Calc </call>
+</block>
+
+</definitions>
+</structure>
+
+End

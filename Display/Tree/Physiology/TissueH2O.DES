@@ -1,0 +1,53 @@
+QHP 2008 / TissueH2O
+
+Created : 24-Mar-08
+Last Modified : 16-Aug-08
+Author : Tom Coleman
+Copyright : 2008-2008
+By : University of Mississippi Medical Center
+Solver : DES 2008
+Schema : 2008.0
+
+<branch>
+  <name> TissueH2O </name>
+  <label> Tissue H2O </label>
+  <parent> PHYSIOLOGY </parent>
+</branch>
+
+<branch>
+  <name> InterstitialH2O </name>
+  <label> Interstitium </label>
+  <parent> TissueH2O </parent>
+</branch>
+
+<leaf>
+  <name> InterstitialH2O-Summary </name>
+  <label> Summary </label>
+  <parent> InterstitialH2O </parent>
+</leaf>
+
+<leaf>
+  <name> InterstitialH2O-UpperTorso </name>
+  <label> Upper Torso </label>
+  <parent> InterstitialH2O </parent>
+</leaf>
+
+<leaf>
+  <name> InterstitialH2O-MiddleTorso </name>
+  <label> Middle Torso </label>
+  <parent> InterstitialH2O </parent>
+</leaf>
+
+<leaf>
+  <name> InterstitialH2O-LowerTorso </name>
+  <label> Lower Torso </label>
+  <parent> InterstitialH2O </parent>
+</leaf>
+
+<leaf>
+  <name> TissueH2O-Cells </name>
+  <label> Cells </label>
+  <parent> TissueH2O </parent>
+</leaf>
+
+End

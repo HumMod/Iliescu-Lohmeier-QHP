@@ -1,0 +1,37 @@
+QHP 2008 / RightVentricle
+
+Created : 16-May-05
+Last Modified : 05-Aug-08
+Author : Tom Coleman
+Copyright : 2008-2008
+By : University of Mississippi Medical Center
+Solver : DES 2008
+Schema : 2008.0
+
+<?path Structure\VascularCompartments\RightVentricle\ ?>
+
+<?include RightVentricle-Compartment.DES ?>
+<?include RightVentricle-Pumping.DES ?>
+<?include RightVentricle-Diastole.DES ?>
+<?include RightVentricle-Systole.DES ?>
+
+
+<structure><name> RightVentricle </name>
+
+<definitions>
+
+<block><name> CalcPressure </name>
+  <call> RightVentricle-Compartment.CalcPressure </call>
+</block>
+
+<block><name> Dervs </name>
+  <call> RightVentricle-Diastole.Calc </call>
+  <call> RightVentricle-Systole.Calc </call>
+  <call> RightVentricle-Pumping.Calc </call>
+  <call> RightVentricle-Compartment.Dervs </call>
+</block>
+
+</definitions>
+</structure>
+
+End

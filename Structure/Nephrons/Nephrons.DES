@@ -1,0 +1,31 @@
+QHP 2008 / Nephrons
+
+Created : 21-Oct-04
+Last Modified : 08-Apr-08
+Author : Tom Coleman
+Copyright : 2004-2008
+By : University of Mississippi Medical Center
+Solver : DES 2005
+Schema : 2005.0
+
+<?path Structure\Nephrons\ ?>
+
+<?include FractReab.DES ?>
+
+<?include CollectingDuct\CollectingDuct.DES ?>
+<?include DistalTubule\DistalTubule.DES ?>
+<?include Glomerulus\Glomerulus.DES ?>
+<?include LoopOfHenle\LoopOfHenle.DES ?>
+<?include Medulla\Medulla.DES ?>
+<?include MaculaDensa\MaculaDensa.DES ?>
+<?include ProximalTubule\ProximalTubule.DES ?>
+
+<?include NephronIFP.DES ?>
+<?include NephronAldo.DES ?>
+<?include NephronADH.DES ?>
+<?include VasaRecta.DES ?>
+<?include NephronGlucose.DES ?>
+<?include NephronKetoacids.DES ?>
+<?include NephronANP.DES ?>
+
+End

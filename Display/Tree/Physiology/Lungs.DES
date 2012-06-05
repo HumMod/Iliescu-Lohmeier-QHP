@@ -1,0 +1,52 @@
+QHP 2008 / Lungs
+
+Created : 19-Jun-06
+Last Modified : 19-Jun-06
+Author : Tom Coleman
+Copyright Status : In Public Domain
+Solver : QHP 2008
+Schema : 2008.0
+
+<branch>
+  <name> Lungs </name>
+  <label> Lungs </label>
+  <parent> PHYSIOLOGY </parent>
+</branch>
+
+<leaf>
+  <name> Lungs_Bronchi </name>
+  <label> Bronchi </label>
+  <parent> Lungs </parent>
+</leaf>
+
+<leaf>
+  <name> Lungs_Breathing </name>
+  <label> Breathing </label>
+  <parent> Lungs </parent>
+</leaf>
+
+<leaf>
+  <name> Lungs_GasExchange </name>
+  <label> Gas Exchange </label>
+  <parent> Lungs </parent>
+</leaf>
+
+<leaf>
+  <name> Lungs_Hemodynamics </name>
+  <label> Lung Hemodynamics </label>
+  <parent> Lungs </parent>
+</leaf>
+
+<leaf>
+  <name> Lungs_Thorax </name>
+  <label> Thorax </label>
+  <parent> Lungs </parent>
+</leaf>
+
+<leaf>
+  <name> Lungs_Fluids </name>
+  <label> Lung Fluids </label>
+  <parent> Lungs </parent>
+</leaf>
+
+End

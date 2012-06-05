@@ -1,0 +1,106 @@
+QHP 2008 / OtherTissue
+
+Created : 08-Dec-05
+Last Modified : 28-Jun-06
+Author : Tom Coleman
+Copyright Status : In Public Domain
+Solver : QHP 2008
+Schema : 2008.0
+
+<branch>
+  <name> OtherTissue </name>
+  <label> Other Tissue </label>
+  <parent> ORGANS </parent>
+</branch>
+
+<leaf>
+  <name> OtherTissue-Circulation </name>
+  <label> Circulation </label>
+  <parent> OtherTissue </parent>
+</leaf>
+
+<leaf>
+  <name> OtherTissue-Metabolism </name>
+  <label> Metabolism </label>
+  <parent> OtherTissue </parent>
+</leaf>
+
+<branch>
+  <name> OtherTissue-Fuel </name>
+  <label> Fuel </label>
+  <parent> OtherTissue </parent>
+</branch>
+
+<leaf>
+  <name> OtherTissueFuel-Selection </name>
+  <label> Selection </label>
+  <parent> OtherTissue-Fuel </parent>
+</leaf>
+
+<leaf>
+  <name> OtherTissueFuel-AerobicUse </name>
+  <label> Aerobic Use </label>
+  <parent> OtherTissue-Fuel </parent>
+</leaf>
+
+<leaf>
+  <name> OtherTissueFuel-AnaerobicUse </name>
+  <label> Anaerobic Use </label>
+  <parent> OtherTissue-Fuel </parent>
+</leaf>
+
+<leaf>
+  <name> OtherTissueFuel-Adequacy </name>
+  <label> Adequacy </label>
+  <parent> OtherTissue-Fuel </parent>
+</leaf>
+
+<leaf>
+  <name> OtherTissue-CO2 </name>
+  <label> CO2 </label>
+  <parent> OtherTissue </parent>
+</leaf>
+
+<leaf>
+  <name> OtherTissue-Lactate </name>
+  <label> Lactate </label>
+  <parent> OtherTissue </parent>
+</leaf>
+
+<leaf>
+  <name> OtherTissue-AcidBase </name>
+  <label> Acid-Base </label>
+  <parent> OtherTissue </parent>
+</leaf>
+
+<leaf>
+  <name> OtherTissue-Nerves </name>
+  <label> Nerves </label>
+  <parent> OtherTissue </parent>
+</leaf>
+
+<leaf>
+  <name> OtherTissue-Function </name>
+  <label> Function </label>
+  <parent> OtherTissue </parent>
+</leaf>
+
+<leaf>
+  <name> OtherTissue-Structure </name>
+  <label> Structure </label>
+  <parent> OtherTissue </parent>
+</leaf>
+
+<leaf>
+  <name> OtherTissue-Size </name>
+  <label> Size </label>
+  <parent> OtherTissue </parent>
+</leaf>
+
+<leaf>
+  <name> OtherTissue-Vasculature </name>
+  <label> Vasculature </label>
+  <parent> OtherTissue </parent>
+</leaf>
+
+End

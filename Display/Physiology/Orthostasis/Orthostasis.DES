@@ -1,0 +1,16 @@
+QHP 2008 / Orthostasis
+
+Created : 15-Apr-05
+Last Modified : 24-Apr-05
+Author : Tom Coleman
+Copyright Status : In Public Domain
+Solver : QHP 2008
+Schema : 2008.0
+
+<?path Display\Physiology\Orthostasis\ ?>
+
+<?include RegionalPressures\RegionalPressures.DES ?>
+<?include SequesteredBlood\SequesteredBlood.DES ?>
+<?include PostureEnergy\PostureEnergy.DES ?>
+
+End

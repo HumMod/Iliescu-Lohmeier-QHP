@@ -1,0 +1,25 @@
+QHP 2008 / Circulation
+
+Created : 21-Oct-04
+Last Modified : 26-Jun-05
+Author : Tom Coleman
+Copyright Status : In Public Domain
+Solver : QHP 2008
+Schema : 2008.0
+
+<?path Structure\Circulation\ ?>
+
+<?include CircyManager.DES ?>
+
+<?include CardiacOutput.DES ?>
+<?include PeripheralResistance.DES ?>
+<?include HepaticArty.DES ?>
+<?include OrganFlow.DES ?>
+<?include Viscosity.DES ?>
+
+<?include ArtysVol.DES ?>
+<?include VeinsVol.DES ?>
+
+<?include CarotidSinus.DES ?>
+
+End

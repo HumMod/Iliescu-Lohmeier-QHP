@@ -1,0 +1,18 @@
+QHP 2008 / Segments
+
+Created : 18-Apr-05
+Last Modified : 13-Apr-08
+Author : Tom Coleman
+Copyright : 2005-2008
+By : University of Mississippi Medical Center
+Solver : DES 2005
+Schema : 2005.0
+
+<?path Display\Organs\Kidney\VascularSegments\ ?>
+
+<?include AfferentArtery\AfferentArtery.DES ?>
+<?include MyogenicResponse\MyogenicResponse.DES ?>
+<?include EfferentArtery\EfferentArtery.DES ?>
+<?include RenalVein\RenalVein.DES ?>
+
+End

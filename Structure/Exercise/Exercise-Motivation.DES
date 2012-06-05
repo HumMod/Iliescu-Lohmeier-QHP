@@ -1,0 +1,24 @@
+QHP 2008 / Exercise-Motivation
+
+Created : 10-Mar-08
+Last Modified : 10-Mar-08
+Author : Tom Coleman
+Copyright : 2008-2008
+By : University of Mississippi Medical Center
+Solver : QHP 2008
+Schema : 2008.0
+
+<structure><name> Exercise-Motivation </name>
+
+<variables>
+
+<parm>
+  <name> Motivation </name>
+  <val> 0.04 </val>
+</parm>
+
+</variables>
+
+</structure>
+
+End

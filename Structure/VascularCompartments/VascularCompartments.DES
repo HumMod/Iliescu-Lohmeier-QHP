@@ -1,0 +1,61 @@
+QHP 2008 / Compartments
+
+Created : 16-May-05
+Last Modified : 05-Aug-08
+Author : Tom Coleman
+Copyright : 2008-2008
+By : University of Mississippi Medical Center
+Solver : DES 2008
+Schema : 2008.0
+
+<?path Structure\VascularCompartments\ ?>
+
+<?include LeftAtrium.DES ?>
+<?include PulmArty.DES ?>
+<?include PulmCapys.DES ?>
+<?include PulmVeins.DES ?>
+<?include RightAtrium.DES ?>
+<?include SplanchnicVeins.DES ?>
+<?include SystemicArtys.DES ?>
+<?include SystemicVeins.DES ?>
+
+<?include LeftVentricle\LeftVentricle.DES ?>
+<?include RightVentricle\RightVentricle.DES ?>
+
+<structure><name> VascularCompartments </name>
+
+<definitions>
+
+<block><name> CalcPressure(1) </name>
+  <call> RightAtrium.CalcPressure </call>
+  <call> LeftAtrium.CalcPressure </call>
+  <call> SystemicArtys.CalcPressure </call>
+</block>
+
+<block><name> CalcPressure(2) </name>
+  <call> SystemicVeins.CalcPressure </call>
+  <call> SplanchnicVeins.CalcPressure </call>
+  <call> RightVentricle.CalcPressure </call>
+  <call> PulmArty.CalcPressure </call>
+  <call> PulmCapys.CalcPressure </call>
+  <call> PulmVeins.CalcPressure </call>
+  <call> LeftVentricle.CalcPressure </call>
+</block>
+
+<block><name> Dervs </name>
+  <call> RightVentricle.Dervs </call>
+
+  <call> SystemicVeins.Dervs </call>
+  <call> SplanchnicVeins.Dervs </call>
+  <call> RightAtrium.Dervs </call>
+  <call> PulmArty.Dervs </call>
+  <call> PulmCapys.Dervs </call>
+  <call> PulmVeins.Dervs </call>
+  <call> LeftAtrium.Dervs </call>
+  <call> SystemicArtys.Dervs </call>
+</block>
+
+</definitions>
+</structure>
+
+End

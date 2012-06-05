@@ -1,0 +1,38 @@
+QHP 2008 / MembranePotential
+
+Created : 25-May-05
+Last Modified : 25-May-05
+Author : Tom Coleman
+Copyright Status : In Public Domain
+Solver : QHP 2008
+Schema : 2008.0
+
+<groupbox>
+   <row> 16.4 </row>
+   <col> 32.0 </col>
+   <high> 3.2 </high>
+   <wide> 30.0 </wide>
+   <title> Membrane Potential </title>
+
+<structurename> KMembrane </structurename>
+
+<showvalue>
+  <row> 1.4 </row><col> 1.0 </col>
+  <name> MembranePotential </name>
+  <format><decimal> 1 </decimal></format>
+  <label> V (mV) </label>
+</showvalue>
+
+
+<infobutton>
+  <row> 1.2 </row>
+  <col> 26.0 </col>
+  <line> From the Nernst equation </line>
+  <line>  </line>
+  <line> V = -61.0 * LOG10 ( [K+ In] / [K+ Out] ) </line>
+  <line>  </line>
+</infobutton>
+
+</groupbox>
+
+End

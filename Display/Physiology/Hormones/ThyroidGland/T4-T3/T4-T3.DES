@@ -1,0 +1,42 @@
+QHP 2008 / T4-T3
+
+Created : 21-Jun-06
+Last Modified : 21-Jun-06
+Author : Tom Coleman
+Copyright Status : In Public Domain
+Solver : QHP 2008
+Schema : 2008.0
+
+<panel><name> Hormones_Thyroid_T4-T3 </name>
+
+<showbitmap>
+  <row> 0.3 </row>
+  <col> 1.0 </col>
+  <name> Hormone </name>
+</showbitmap>
+
+<label>
+  <row> 0.3 </row>
+  <col> 4.5 </col>
+  <text> T4-T3 </text>
+</label>
+
+<showclock>
+  <row> 0.3 </row><col> 32.0 </col>
+  <name> System.X </name>
+  <ampm/>
+  <secs/>
+  <days/>
+</showclock>
+
+<?path Display\Physiology\Hormones\ThyroidGland\ ?>
+
+<?include T4-T3\Pool.DES ?>
+<?include T4-T3\Pump.DES ?>
+<?include T4-T3\Clearance.DES ?>
+
+<?include T4-T3\Secretion.DES ?>
+
+</panel>
+
+End

@@ -1,0 +1,16 @@
+QHP 2006 / Config
+
+Created : 28-Sep-06
+Last Modified : 11-Oct-06
+Author : Tom Coleman
+Copyright : 2006
+By : University of Mississippi Medical Center
+Solver : QHP 2008
+Schema : 2008.0
+
+<!-- {?strict NO ?} -->
+
+<?create ANESTHESIA ?>
+<?create ANP ?>
+
+End

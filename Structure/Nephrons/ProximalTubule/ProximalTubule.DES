@@ -1,0 +1,16 @@
+QHP 2008 / ProximalTubule
+
+Created : 09-Apr-05
+Last Modified : 10-Apr-05
+Author : Tom Coleman
+Copyright Status : In Public Domain
+Solver : QHP 2008
+Schema : 2008.0
+
+<?path Structure\Nephrons\ProximalTubule\ ?>
+
+<?include PT_Na.DES ?>
+<?include PT_H2O.DES ?>
+<?include PT_NH3.DES ?>
+
+End

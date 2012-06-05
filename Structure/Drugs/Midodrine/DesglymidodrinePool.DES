@@ -1,0 +1,85 @@
+QHP 2008 / DesglymidodrinePool
+
+Created : 28-Jun-05
+Last Modified : 06-Jun-06
+Author : Tom Coleman
+Copyright Status : In Public Domain
+Solver : QHP 2008
+Schema : 2008.0
+
+<structure><name> DesglymidodrinePool </name>
+
+<variables>
+
+<var>
+  <name> [Desglymidodrine] </name>
+</var>
+
+<var>
+  <name> Gain </name>
+</var>
+
+<var>
+  <name> Loss </name>
+</var>
+
+<parm>
+  <name> VolDist </name>
+  <val> 180.0 </val>
+</parm>
+
+<constant>
+  <name> NIPGLYCINE </name>
+  <val> 0.705 </val>
+</constant>
+
+</variables>
+
+<equations>
+
+<diffeq>
+  <name> Mass </name>
+  <integralname> Mass </integralname>
+  <initialval> 0.0 </initialval>
+  <dervname> Change </dervname>
+  <errorlim> 40.0 </errorlim>
+</diffeq>
+
+</equations>
+
+<definitions>
+
+<block><name> CalcConc </name>
+
+<def>
+  <name> [Desglymidodrine] </name>
+  <val> Mass / VolDist </val>
+</def>
+
+</block>
+
+<block><name> Dervs </name>
+
+<def>
+  <name> Gain </name>
+  <val> NIPGLYCINE * MidodrinePool.Loss
+  </val>
+</def>
+
+<def>
+  <name> Loss </name>
+  <val> DesglymidodrineKidney.UrineLoss
+  </val>
+</def>
+
+<def>
+  <name> Change </name>
+  <val> Gain - Loss </val>
+</def>
+
+</block>
+
+</definitions>
+</structure>
+
+End

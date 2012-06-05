@@ -1,0 +1,19 @@
+QHP 2008 / Afferents
+
+Created : 24-Apr-05
+Last Modified : 26-Jun-05
+Author : Tom Coleman
+Copyright Status : In Public Domain
+Solver : QHP 2008
+Schema : 2008.0
+
+<?path Display\Physiology\AutonomicNerves\Afferents\ ?>
+
+<?include Baroreflex\Baroreflex.DES ?>
+<?include Chemoreceptors\Chemoreceptors.DES ?>
+<?include LowPressureReceptors\LowPressureReceptors.DES ?>
+<?include Mechanoreceptors\Mechanoreceptors.DES ?>
+<?include Metaboreflex\Metaboreflex.DES ?>
+<?include Summary\Summary.DES ?>
+
+End

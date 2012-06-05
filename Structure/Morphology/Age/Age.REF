@@ -1,0 +1,19 @@
+QHP 2008 / Age REF
+
+Created : 20-Oct-08
+Last Modified : 20-Oct-08
+Author : Tom Coleman
+Copyright : 2008-2008
+By : University of Mississippi Medical Center
+Solver : DES 2008
+Schema : 2008.0
+
+The age trait is enumerated.
+
+  AGE-YOUNG      0
+  AGE-YOUNGISH   1
+  AGE-MIDDLEAGED 2 (D)
+  AGE-OLD        3
+  AGE-VERYOLD    4
+
+End

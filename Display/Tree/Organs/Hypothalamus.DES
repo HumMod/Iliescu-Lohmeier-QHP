@@ -1,0 +1,40 @@
+QHP 2008 / Organs
+
+Created : 08-Dec-05
+Last Modified : 28-Jun-06
+Author : Tom Coleman
+Copyright Status : In Public Domain
+Solver : QHP 2008
+Schema : 2008.0
+
+<branch>
+  <name> Hypothalamus </name>
+  <label> Hypothalamus </label>
+  <parent> ORGANS </parent>
+</branch>
+
+<leaf>
+  <name> Hypothalamus_Sweating </name>
+  <label> Sweating </label>
+  <parent> Hypothalamus </parent>
+</leaf>
+
+<leaf>
+  <name> Hypothalamus_Shivering </name>
+  <label> Shivering </label>
+  <parent> Hypothalamus </parent>
+</leaf>
+
+<leaf>
+  <name> Hypothalamus_SkinFlow </name>
+  <label> Skin Flow </label>
+  <parent> Hypothalamus </parent>
+</leaf>
+
+<leaf>
+  <name> Hypothalamus_TSH </name>
+  <label> TSH </label>
+  <parent> Hypothalamus </parent>
+</leaf>
+
+End

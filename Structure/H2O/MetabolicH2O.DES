@@ -1,0 +1,38 @@
+QHP 2008 / MetabolicH2O
+
+Created : 27-Jun-06
+Last Modified : 27-Jun-06
+Author : Tom Coleman
+Copyright Status : In Public Domain
+Solver : QHP 2008
+Schema : 2008.0
+
+<structure><name> MetabolicH2O </name>
+
+<variables>
+
+<var>
+  <name> Rate </name>
+</var>
+
+<constant>
+  <name> K </name>
+  <val> 0.000176 </val>
+</constant>
+
+</variables>
+
+<definitions>
+<block><name> Dervs </name>
+
+<def>
+  <name> Rate </name>
+  <val> K * Metabolism-CaloriesUsed.Total </val>
+</def>
+
+</block>
+
+</definitions>
+</structure>
+
+End

@@ -1,0 +1,42 @@
+QHP 2008 / Testes
+
+Created : 07-Apr-05
+Last Modified : 03-Oct-08
+Author : Tom Coleman
+Copyright : 2008-2008
+By : University of Mississippi Medical Center
+Solver : DES 2008
+Schema : 2008.0
+
+<?path Structure\Testes\ ?>
+
+<?include Testes-Testosterone.DES ?>
+<?include Testes-Estradiol.DES ?>
+<?include Testes-Progesterone.DES ?>
+<?include Testes-Inhibin.DES ?>
+
+<structure><name> Testes </name>
+
+<variables>
+
+<!--
+<var><name>  </name></var>
+-->
+
+</variables>
+
+<definitions>
+
+<block><name> Dervs </name>
+
+  <call> Testes-Estradiol.Dervs </call>
+  <call> Testes-Progesterone.Dervs </call>
+  <call> Testes-Testosterone.Dervs </call>
+  <call> Testes-Inhibin.Dervs </call>
+
+</block>
+
+</definitions>
+</structure>
+
+End

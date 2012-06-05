@@ -1,0 +1,19 @@
+QHP 2008 / Acid-Base
+
+Created : 21-Oct-04
+Last Modified : 15-May-05
+Author : Tom Coleman
+Copyright Status : In Public Domain
+Solver : QHP 2008
+Schema : 2008.0
+
+<?path Structure\AcidBase\ ?>
+
+
+<?include PhGeneral.DES ?>
+<?include PhBlood.DES ?>
+<?include PhCells.DES ?>
+
+<?include BloodPh.DES ?>
+
+End

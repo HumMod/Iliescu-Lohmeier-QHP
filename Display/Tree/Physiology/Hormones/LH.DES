@@ -1,0 +1,41 @@
+QHP 2008 / LH
+
+Created : 10-Oct-08
+Last Modified : 10-Oct-08
+Author : Tom Coleman
+Copyright : 2008-2008
+By : University of Mississippi Medical Center
+Solver : DES 2008
+Schema : 2008.0
+
+<branch>
+  <name> LH </name>
+  <label> LH </label>
+  <parent> Hormones </parent>
+</branch>
+
+<leaf>
+  <name> LH-Circulating </name>
+  <label> Circulating </label>
+  <parent> LH </parent>
+</leaf>
+
+<branch>
+  <name> LH-AnteriorPituitary </name>
+  <label> Anterioir Pituitary </label>
+  <parent> LH </parent>
+</branch>
+
+<leaf>
+  <name> LH-Secretion </name>
+  <label> Secretion </label>
+  <parent> LH-AnteriorPituitary </parent>
+</leaf>
+
+<leaf>
+  <name> LH-Stimuli </name>
+  <label> Stimuli </label>
+  <parent> LH-AnteriorPituitary </parent>
+</leaf>
+
+End

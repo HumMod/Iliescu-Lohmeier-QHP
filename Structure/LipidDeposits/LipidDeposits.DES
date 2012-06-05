@@ -1,0 +1,54 @@
+QHP 2008 / LipidDeposits
+
+Created : 30-Mar-08
+Last Modified : 30-Mar-08
+Author : Tom Coleman
+Copyright : 2008-2008
+By : University of Mississippi Medical Center
+Solver : DES 2005
+Schema : 2005.0
+
+<?path Structure\LipidDeposits\ ?>
+
+<?include LipidDeposits-Uptake.DES ?>
+<?include LipidDeposits-Release.DES ?>
+
+<structure><name> LipidDeposits </name>
+
+<variables>
+
+<var><name> Gain </name></var>
+<var><name> Loss </name></var>
+
+</variables>
+
+<equations>
+
+<diffeq>
+  <name> Mass </name>
+  <integralname> Mass </integralname>
+  <initialval> 13280.0 </initialval>
+  <dervname> Change </dervname>
+  <errorlim> 132.8 </errorlim>
+</diffeq>
+
+</equations>
+
+<definitions>
+
+<block><name> Dervs </name>
+
+<call> LipidDeposits-Uptake.Dervs </call>
+<call> LipidDeposits-Release.Dervs </call>
+
+<def><name> Gain </name><val> LipidDeposits-Uptake.Rate </val></def>
+<def><name> Loss </name><val> LipidDeposits-Release.Rate </val></def>
+
+<def><name> Change </name><val> 0.001 * ( Gain - Loss ) </val></def>
+
+</block>
+
+</definitions>
+</structure>
+
+End

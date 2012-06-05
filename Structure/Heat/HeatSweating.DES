@@ -1,0 +1,41 @@
+QHP 2008 / HeatSweating
+
+Created : 27-Mar-05
+Last Modified : 01-Jul-06
+Author : Tom Coleman
+Copyright Status : In Public Domain
+Solver : QHP 2008
+Schema : 2008.0
+
+<structure><name> HeatSweating </name>
+
+<variables>
+
+<var>
+  <name> Flux </name>
+</var>
+
+<var>
+  <name> H2O </name>
+</var>
+
+</variables>
+
+<definitions>
+<block><name> Flux </name>
+
+<def>
+  <name> Flux </name>
+  <val> 0.0 </val>
+</def>
+
+<def>
+  <name> H2O </name>
+  <val> 0.0 </val>
+</def>
+
+</block>
+</definitions>
+</structure>
+
+End

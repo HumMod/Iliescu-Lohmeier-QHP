@@ -1,0 +1,57 @@
+QHP 2008 / OrganFlow
+
+Created : 21-Oct-04
+Last Modified : 17-May-05
+Author : Tom Coleman
+Copyright Status : In Public Domain
+Solver : QHP 2008
+Schema : 2008.0
+
+<structure><name> OrganFlow </name>
+
+<variables>
+
+<var>
+  <name> PeripheralFlow </name>
+</var>
+
+<var>
+  <name> SplanchnicFlow </name>
+</var>
+
+</variables>
+
+<definitions>
+
+<block><name> Calc </name>
+
+<def>
+  <name> PeripheralFlow </name>
+  <val>
+     Bone-Flow.BloodFlow
+   + Brain-Flow.BloodFlow
+   + Fat-Flow.BloodFlow
+   + Kidney-Flow.BloodFlow
+   + LeftHeart-Flow.BloodFlow
+   + OtherTissue-Flow.BloodFlow
+   + RespiratoryMuscle-Flow.BloodFlow
+   + RightHeart-Flow.BloodFlow
+   + SkeletalMuscle-Flow.BloodFlow
+   + Skin-Flow.BloodFlow
+  </val>
+</def>
+
+<def>
+  <name> SplanchnicFlow </name>
+  <val>
+      GITract-Flow.BloodFlow
+    + HepaticArty.Flow
+  </val>
+</def>
+
+</block>
+
+</definitions>
+</structure>
+
+End

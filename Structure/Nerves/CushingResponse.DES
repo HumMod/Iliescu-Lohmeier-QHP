@@ -1,0 +1,32 @@
+QHP 2008 / CushingResponse DES
+
+Created : 21-Oct-04
+Last Modified : 24-Oct-04
+Author : Tom Coleman
+Copyright Status : In Public Domain
+Solver : QHP 2008
+Schema : 2008.0
+
+<structure><name> CushingResponse </name>
+
+<variables>
+
+<var>
+  <name> Effect </name>
+</var>
+
+</variables>
+
+<definitions>
+
+<block><name> Calc </name>
+<def>
+  <name> Effect </name>
+  <val> 0.0 </val>
+</def>
+
+</block>
+</definitions>
+</structure>
+
+End

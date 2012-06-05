@@ -1,0 +1,67 @@
+QHP 2008 / Renal Vein Pressure
+
+Created : 13-Apr-08
+Last Modified : 13-Apr-08
+Author : Tom Coleman
+Copyright : 2008-2008
+By : University of Mississippi Medical Center
+Solver : DES 2005
+Schema : 2005.0
+
+<groupbox>
+   <row> 2.0 </row>
+   <col> 1.0 </col>
+   <high> 23.8 </high>
+   <wide> 36.3 </wide>
+   <title> Pressure - GFR </title>
+
+<structurename> GlomerulusFiltrate </structurename>
+
+<showvalue>
+   <row> 1.4 </row><col> 1.0 </col>
+   <name> VP </name>
+   <format><decimal> 1 </decimal></format>
+   <label> Renal Vein Pressure - GFR</label>
+</showvalue>
+
+<showgraph>
+  <row> 2.4 </row><col> 1.0 </col><high> 9 </high><wide> 28 </wide>
+  <leftmargin> 6 </leftmargin>
+  <xaxis>
+    <name> System.X </name>
+    <label> Time </label>
+    <scale><min> 0 </min><max> 2 </max></scale>
+  </xaxis>
+  <yaxis>
+    <yvar>
+      <name> VP </name>
+      <nolabel/>
+      <linecolor> BLUE </linecolor>
+    </yvar>
+    <scale><min> 30 </min><max> 40 </max></scale>
+  </yaxis>
+</showgraph>
+
+<radiobuttons>
+  <row> 15.4 </row><col> 1.0 </col>
+  <name> GlomerulusFiltrate.Clamp </name>
+  <listname> Common.NoYes </listname>
+  <label> Clamp Vein Pressure - GFR</label>
+</radiobuttons>
+
+<slidebar>
+  <row> 17.4 </row><col> 1.0 </col>
+  <name> GlomerulusFiltrate.Set </name>
+  <listname> Common.LowPressurePump </listname>
+  <label> Renal Vein Pressure - GFR</label>
+</slidebar>
+
+<infobutton>
+  <row> 1.2 </row><col> 27.0 </col>
+  <line> Here you can change Renal Vein Pressure TO AFFECT GFR. 
+         If unchanged, its value equals Systemic Vein Pressure </line>
+</infobutton>
+
+</groupbox>
+
+End

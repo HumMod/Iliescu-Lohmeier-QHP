@@ -1,0 +1,44 @@
+QHP 2008 / Control
+
+Created : 02-Aug-08
+Last Modified : 02-Aug-08
+Author : Tom Coleman
+Copyright : 2008-2008
+By : University of Mississippi Medical Center
+Solver : DES 2008
+Schema : 2008.0
+
+<panel><name> ExerciseControl </name>
+
+<showbitmap>
+  <row> 0.3 </row>
+  <col> 1.0 </col>
+  <name> Exercise </name>
+</showbitmap>
+
+<label>
+  <row> 0.3 </row>
+  <col> 4.5 </col>
+  <text> Exercise - Control </text>
+</label>
+
+<showclock>
+  <row> 0.3 </row><col> 32.0 </col>
+  <name> System.X </name>
+  <ampm/>
+  <secs/>
+  <days/>
+</showclock>
+
+<?path Display\Lifestyle\Exercise\Control\ ?>
+
+<?include Status.DES ?>
+<?include ExerciseBike.DES ?>
+<?include Motivation.DES ?>
+<?include Metabolism.DES ?>
+<?include Treadmill.DES ?>
+
+</panel>
+
+
+End

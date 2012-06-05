@@ -1,0 +1,29 @@
+QHP 2008 / ICFV
+
+Created : 06-Apr-05
+Last Modified : 31-May-05
+Author : Tom Coleman
+Copyright Status : In Public Domain
+Solver : QHP 2008
+Schema : 2008.0
+
+<structure><name> ICFV </name>
+
+<variables>
+
+<var><name> Vol </name></var>
+<var><name> Vol(L) </name></var>
+
+</variables>
+
+<definitions>
+<block><name> CalcVol </name>
+
+<def><name> Vol </name><val> OsmBody.ICFV </val></def>
+<def><name> Vol(L) </name><val> Vol / 1000.0 </val></def>
+
+</block>
+</definitions>
+</structure>
+
+End

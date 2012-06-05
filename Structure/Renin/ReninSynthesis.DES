@@ -1,0 +1,92 @@
+QHP 2008 / ReninSynthesis
+
+Created : 22-Jun-06
+Last Modified : 11-Apr-08
+Author : Tom Coleman
+Copyright : 2006-2008
+By : University of Mississippi Medical Center
+Solver : DES 2005
+Schema : 2005.0
+
+<structure><name> ReninSynthesis </name>
+
+<variables>
+
+<var><name> TGFEffect </name></var>
+<var><name> SympsEffect </name></var>
+<parm><name> Base </name><val> 290.0 </val></parm>
+<parm><name> Tau </name><val> 60.0 </val></parm>
+<parm><name> Switch </name><val> 0.0 </val></parm>
+<parm><name> Slope </name> <val> 1.0 </val></parm>
+
+</variables>
+
+<equations>
+
+<delay>
+  <name> Rate </name>
+  <outputname> Rate </outputname>
+  <initialval> 290.0 </initialval>
+  <inputname> SteadyState </inputname>
+  <rateconstname> K </rateconstname>
+  <errorlim> 2.90 </errorlim>
+</delay>
+
+</equations>
+
+<functions>
+
+<curve>
+  <name> TGFEffect </name>
+  <point><x> 0.0 </x><y> 10.0 </y><slope> 0 </slope></point>
+  <point><x> 0.6 </x><y>  2.0 </y><slope> -4.0 </slope></point>
+  <point><x> 1.0 </x><y>  1.0 </y><slope> -1.0 </slope></point>
+  <point><x> 2.0 </x><y>  0.3 </y><slope> 0 </slope></point>
+</curve>
+
+<curve>
+  <name> SympsEffect </name>
+  <point><x> 0.0 </x><y> 0.5 </y><slope> 0 </slope></point>
+  <point><x> 1.0 </x><y> 1.0 </y><slope> 1.0 </slope></point>
+  <point><x> 2.5 </x><y> 4.0 </y><slope> 0 </slope></point>
+</curve>
+
+</functions>
+
+<definitions>
+
+<block><name> Parms </name>
+  <def><name> K </name><val> INVERT Tau </val></def>
+</block>
+
+<block><name> Dervs </name>
+
+<def><name> TGFEffect </name><val> TGFEffect [ TGF-Renin.Signal ] </val></def>
+
+<if>
+<test> ReninSynthesis.Switch </test>
+<true>
+<def><name> SympsEffect </name><val> 1.0 </val></def>
+</true>
+<false>
+<def><name> SympsEffect </name><val> Slope * SympsEffect [ Kidney-BetaReceptors.Activity ] </val></def>
+</false>
+</if>
+
+<def>
+  <name> SteadyState </name>
+  <val>
+       Base
+     * TGFEffect
+     * SympsEffect
+     * Kidney-NephronCount.Total(xNormal)
+     * Kidney-Function.Effect
+ </val>
+</def>
+
+</block>
+
+</definitions>
+</structure>
+
+End

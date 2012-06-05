@@ -1,0 +1,44 @@
+QHP 2008 / EPO
+
+Created : 21-Oct-04
+Last Modified : 20-Jun-06
+Author : Tom Coleman
+Copyright Status : In Public Domain
+Solver : QHP 2008
+Schema : 2008.0
+
+<?path Structure\EPO\ ?>
+
+<?include EPOPool.DES ?>
+<?include EPOPump.DES ?>
+<?include EPOClearance.DES ?>
+<?include EPOSecretion.DES ?>
+
+<structure><name> EPO </name>
+
+<definitions>
+
+<block><name> Parms </name>
+
+  <call> EPOPump.Parms </call>
+
+</block>
+
+<block><name> CalcConc </name>
+
+  <call> EPOPool.CalcConc </call>
+
+</block>
+
+<block><name> Dervs </name>
+
+  <call> EPOSecretion.Dervs </call>
+  <call> EPOClearance.Dervs </call>
+  <call> EPOPool.Dervs </call>
+
+</block>
+
+</definitions>
+</structure>
+
+End

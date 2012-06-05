@@ -1,0 +1,35 @@
+QHP 2008 / Renin
+
+Created : 10-Oct-08
+Last Modified : 10-Oct-08
+Author : Tom Coleman
+Copyright : 2008-2008
+By : University of Mississippi Medical Center
+Solver : DES 2008
+Schema : 2008.0
+
+<branch>
+  <name> Hormones_Renin </name>
+  <label> Renin </label>
+  <parent> Hormones </parent>
+</branch>
+
+<leaf>
+  <name> Hormones_Renin_A2 </name>
+  <label> A2 </label>
+  <parent> Hormones_Renin </parent>
+</leaf>
+
+<leaf>
+  <name> Hormones_Renin_Circulating </name>
+  <label> Circulating </label>
+  <parent> Hormones_Renin </parent>
+</leaf>
+
+<leaf>
+  <name> Hormones_Renin_Kidney </name>
+  <label> Kidney </label>
+  <parent> Hormones_Renin </parent>
+</leaf>
+
+End

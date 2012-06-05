@@ -1,0 +1,16 @@
+QHP 2008 / Morphology
+
+Created : 24-Apr-05
+Last Modified : 20-Oct-08
+Author : Tom Coleman
+Copyright : 2008-2008
+By : University of Mississippi Medical Center
+Solver : DES 2008
+Schema : 2008.0
+
+<?path Display\Clinic\Morphology\ ?>
+
+<?include Values\Values.DES ?>
+<?include Traits\Traits.DES ?>
+
+End

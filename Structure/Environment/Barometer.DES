@@ -1,0 +1,37 @@
+QHP 2008 / Barometer.DES
+
+Created : 20-Sep-08
+Last Modified : 20-Sep-08
+Author : Tom Coleman
+Copyright : 2008-2008
+By : University of Mississippi Medical Center
+Solver : DES 2008
+Schema : 2008.0
+
+<structure><name> Barometer </name>
+
+<variables>
+
+<var><name> Pressure </name></var>
+<var><name> Pressure(Atm) </name></var>
+
+</variables>
+
+<definitions>
+<block><name> Calc </name>
+
+<def>
+  <name> Pressure </name>
+  <val> 760.0 * EXP ( -4.0e-5 * Altitude.Feet ) </val>
+</def>
+
+<def>
+  <name> Pressure(Atm) </name>
+  <val> Pressure / 760.0 </val>
+</def>
+
+</block>
+</definitions>
+</structure>
+
+End

@@ -1,0 +1,39 @@
+QHP 2008 / CellH2O
+
+Created : 07-Apr-05
+Last Modified : 24-Mar-08
+Author : Tom Coleman
+Copyright : 2005-2008
+By : University of Mississippi Medical Center
+Solver : DES 2005
+Schema : 2005.0
+
+<structure><name> CellH2O </name>
+
+<variables>
+
+<var><name> Vol </name></var>
+<var><name> Vol(L) </name></var>
+
+<var><name> UT_Vol </name></var>
+<var><name> MT_Vol </name></var>
+<var><name> LT_Vol </name></var>
+
+</variables>
+
+<definitions>
+
+<block><name> Calc </name>
+
+<def><name> Vol </name><val> ICFV.Vol - RBCH2O.Vol </val></def>
+<def><name> Vol(L) </name><val> Vol / 1000.0 </val></def>
+
+<def><name> UT_Vol </name><val> 0.25 * Vol </val></def>
+<def><name> MT_Vol </name><val> 0.50 * Vol </val></def>
+<def><name> LT_Vol </name><val> 0.25 * Vol </val></def>
+
+</block>
+</definitions>
+</structure>
+
+End

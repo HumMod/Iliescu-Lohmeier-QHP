@@ -1,0 +1,31 @@
+QHP 2008 / RespiratoryMuscle
+
+Created : 21-Oct-04
+Last Modified : 05-Jun-05
+Author : Tom Coleman
+Copyright Status : In Public Domain
+Solver : QHP 2008
+Schema : 2008.0
+
+<?path Structure\RespiratoryMuscle\ ?>
+
+<?include RespiratoryMuscle-Flow.DES ?>
+<?include RespiratoryMuscle-Function.DES ?>
+<?include RespiratoryMuscle-Pressure.DES ?>
+<?include RespiratoryMuscle-ContractileProtein.DES ?>
+<?include RespiratoryMuscle-Size.DES ?>
+
+<?include RespiratoryMuscle-CO2.DES ?>
+<?include RespiratoryMuscle-Lactate.DES ?>
+<?include RespiratoryMuscle-Ph.DES ?>
+
+<?include RespiratoryMuscle-Fuel.DES ?>
+<?include RespiratoryMuscle-Metabolism.DES ?>
+<?include RespiratoryMuscle-AlphaReceptors.DES ?>
+<?include RespiratoryMuscle-Structure.DES ?>
+<?include RespiratoryMuscle-Vasculature.DES ?>
+
+<?include RespiratoryMuscle-Work.DES ?>
+<?include RespiratoryMuscle-Glycogen\RespiratoryMuscle-Glycogen.DES ?>
+
+End

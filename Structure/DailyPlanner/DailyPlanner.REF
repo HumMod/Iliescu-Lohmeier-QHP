@@ -1,0 +1,25 @@
+QHP 2008 / DailyPlanner.REF
+
+Created : 27-Feb-08
+Last Modified : 27-Feb-08
+Author : Tom Coleman
+Copyright : 2008-2008
+By : University of Mississippi Medical Center
+Solver : QHP 2008
+Schema : 2008.0
+
+Enumerated activities are
+
+   0 = Sleep
+   1 = Rest
+   2 = Work
+   3 = Aerobics
+   4 = Eat Meal
+
+Enumerated control status is
+
+   0 = Inactive
+   1 = Waiting
+   2 = Active
+
+End

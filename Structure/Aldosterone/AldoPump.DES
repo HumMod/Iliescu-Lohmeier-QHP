@@ -1,0 +1,43 @@
+QHP 2008 / AldoPump
+
+Created : 06-Jun-06
+Last Modified : 06-Jun-06
+Author : Tom Coleman
+Copyright Status : In Public Domain
+Solver : QHP 2008
+Schema : 2008.0
+
+<structure><name> AldoPump </name>
+
+<variables>
+
+<parm>
+  <name> Switch </name>
+  <val> FALSE </val>
+</parm>
+
+<parm>
+  <name> Setting </name>
+  <val> 0.0 </val>
+</parm>
+
+<var>
+  <name> Rate </name>
+</var>
+
+</variables>
+
+<definitions>
+<block><name> Dervs </name>
+
+<def>
+  <name> Rate </name>
+  <val> Switch * Setting </val>
+</def>
+
+</block>
+
+</definitions>
+</structure>
+
+End

@@ -1,0 +1,34 @@
+QHP 2008 / Tissue
+
+Created : 15-Apr-05
+Last Modified : 15-Apr-05
+Author : Tom Coleman
+Copyright Status : In Public Domain
+Solver : QHP 2008
+Schema : 2008.0
+
+<panel><name> GasAnesthesiaTissue </name>
+
+<label>
+   <row> 0.3 </row><col> 1.0 </col>
+   <text> Gas Anesthesia - Tissue </text>
+</label>
+
+<showclock>
+  <row> 0.3 </row><col> 32.0 </col>
+  <name> System.X </name>
+  <ampm/>
+  <secs/>
+  <days/>
+</showclock>
+
+<?path Display\Clinic\Anesthesia\Gas\Tissue\ ?>
+
+<?include TissueConcentrations.DES ?>
+<?include TissueUptake.DES ?>
+<?include TissueEffects.DES ?>
+<?include TissueContent.DES ?>
+
+</panel>
+
+End

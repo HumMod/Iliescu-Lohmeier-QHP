@@ -1,0 +1,66 @@
+QHP 2008
+
+Created : 20-Oct-08
+Last Modified : 20-Oct-08
+Author : Tom Coleman
+Copyright : 2008-2008
+By : University of Mississippi Medical Center
+Solver : DES 2008
+Schema : 2008.0
+
+Traits are used to scale the model. They begin with
+a single textual descriptor and are followed upon by
+some quatitative description and possibly some math.
+
+Traits can be defined (created) in any file, but it
+will be the convention to define them in the model's
+root DES file.
+
+Most traits are exclusive -- meaning that the use of
+one trait excludes the use of several others. This
+suggests that we use a two-part name for trains.
+The first part identifies the group and the second
+part identifies the attribute (examples below).
+
+(D) = Default
+
+Gender
+
+  GENDER-MALE (D)
+  GENDER-FEMALE
+
+Age
+
+  AGE-YOUNG
+  AGE-YOUNGISH
+  AGE-MIDDLEAGED (D)
+  AGE-OLD
+  AGE-VERYOLD
+
+Body Size
+
+  BODYSIZE-SMALL
+  BODYSIZE-NORMAL (D)
+  BODYSIZE-LARGE
+  BODYSIZE-EXTRALARGE
+
+Adiposity
+
+  ADIPOSITY-UNDERWEIGHT
+  ADIPOSITY-NORMALWEIGHT (D)
+  ADIPOSITY-OVERWEIGHT
+  ADIPOSITY-OBESE
+  ADIPOSITY-MORBIDLYOBESE
+
+Note that the body size and adiposity traits will have
+numerical values that depend on gender. I'm still working
+on this.
+
+Existing traits may be altered by editing the associated
+numerical values.
+
+New traits may be created by assigning the trait a name
+and inserting the numerical values at the appropriate
+model location.
+
+End

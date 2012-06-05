@@ -1,0 +1,28 @@
+QHP 2008 / Lactate
+
+Created : 08-Dec-05
+Last Modified : 24-Jun-06
+Author : Tom Coleman
+Copyright Status : In Public Domain
+Solver : QHP 2008
+Schema : 2008.0
+
+<branch>
+  <name> Lactate </name>
+  <label> Lactate </label>
+  <parent> PHYSIOLOGY </parent>
+</branch>
+
+<leaf>
+  <name> Lactate-Blood </name>
+  <label> Blood </label>
+  <parent> Lactate </parent>
+</leaf>
+
+<leaf>
+  <name> Lactate-Tissue </name>
+  <label> Tissue </label>
+  <parent> Lactate </parent>
+</leaf>
+
+End

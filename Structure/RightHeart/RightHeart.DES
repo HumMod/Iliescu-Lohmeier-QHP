@@ -1,0 +1,32 @@
+QHP 2008 / RightHeart
+
+Created : 21-Oct-04
+Last Modified : 19-Dec-05
+Author : Tom Coleman
+Copyright Status : In Public Domain
+Solver : QHP 2008
+Schema : 2008.0
+
+<?path Structure\RightHeart\ ?>
+
+<?include RightHeart-Flow.DES ?>
+<?include RightHeart-Pressure.DES ?>
+<?include RightHeart-ContractileProtein.DES ?>
+<?include RightHeart-Size.DES ?>
+<?include RightHeart-Function.DES ?>
+
+<?include RightHeart-CO2.DES ?>
+<?include RightHeart-Lactate.DES ?>
+<?include RightHeart-Ph.DES ?>
+
+<?include RightHeart-Fuel.DES ?>
+<?include RightHeart-Metabolism.DES ?>
+<?include RightHeart-AlphaReceptors.DES ?>
+<?include RightHeart-BetaReceptors.DES ?>
+<?include RightHeart-Structure.DES ?>
+<?include RightHeart-Vasculature.DES ?>
+
+<?include RightHeart-Work.DES ?>
+<?include RightHeart-Infarction.DES ?>
+
+End

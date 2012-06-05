@@ -1,0 +1,45 @@
+QHP 2008 / RespiratoryMuscle-Insulin
+
+Created : 31-Mar-08
+Last Modified : 31-Mar-08
+Author : Tom Coleman
+Copyright : 2008-2008
+By : University of Mississippi Medical Center
+Solver : DES 2005
+Schema : 2005.0
+
+<structure><name> RespiratoryMuscle-Insulin </name>
+
+<variables>
+
+<parm><name> Tau </name><val> 40.0 </val></parm>
+
+</variables>
+
+<equations>
+
+<delay>
+  <name> [InsulinDelayed] </name>
+  <outputname> [InsulinDelayed] </outputname>
+  <initialval> 20.0 </initialval>
+  <inputname> [Insulin] </inputname>
+  <rateconstname> K </rateconstname>
+  <errorlim> 0.20 </errorlim>
+</delay>
+
+</equations>
+
+<definitions>
+
+<block><name> Parms </name>
+  <def><name> K </name><val> INVERT Tau </val></def>
+</block>
+
+<block><name> Dervs </name>
+  <def><name> [Insulin] </name><val> InsulinPool.[Insulin] </val></def>
+</block>
+
+</definitions>
+</structure>
+
+End

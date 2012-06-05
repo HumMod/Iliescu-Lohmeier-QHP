@@ -1,0 +1,56 @@
+QHP 2008 / BodyH2O
+
+Created : 07-Apr-05
+Last Modified : 16-Aug-08
+Author : Tom Coleman
+Copyright : 2008-2008
+By : University of Mississippi Medical Center
+Solver : DES 2008
+Schema : 2008.0
+
+<structure><name> BodyH2O </name>
+
+<variables>
+
+<var><name> Vol </name></var>
+<var><name> Vol(L) </name></var>
+<var><name> Change </name></var>
+<var><name> Gain </name></var>
+<var><name> Loss </name></var>
+
+<var><name> IntravascularVol </name></var>
+<var><name> IntravascularVol(L) </name></var>
+<var><name> ExtravascularVol </name></var>
+<var><name> ExtravascularVol(L) </name></var>
+
+</variables>
+
+<definitions>
+<block><name> CalcTotal </name>
+
+<def><name> Vol </name><val> TissueH2O.Vol + PlasmaVol.Vol + RBCH2O.Vol </val></def>
+<def> <name> Vol(L) </name><val> Vol / 1000.0 </val></def>
+
+</block>
+
+<block><name> Dervs </name>
+
+<def><name> Gain </name><val> TissueH2O.Gain + PlasmaVol.Gain + RBCH2O.Gain </val></def>
+<def><name> Loss </name><val> TissueH2O.Loss + PlasmaVol.Loss + RBCH2O.Loss </val></def>
+<def><name> Change </name><val> Gain - Loss </val></def>
+
+</block>
+
+<block><name> Wrapup </name>
+
+  <def><name> IntravascularVol </name><val> PlasmaVol.Vol + RBCH2O.Vol </val></def>
+  <def><name> IntravascularVol(L) </name><val> IntravascularVol / 1000.0 </val></def>
+  <def><name> ExtravascularVol </name><val> InterstitialWater.Vol + CellH2O.Vol </val></def>
+  <def><name> ExtravascularVol(L) </name><val> ExtravascularVol / 1000.0 </val></def>
+
+</block>
+
+</definitions>
+</structure>
+
+End

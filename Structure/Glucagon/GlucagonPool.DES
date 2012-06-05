@@ -1,0 +1,73 @@
+QHP 2008 / GlucagonPool
+
+Created : 07-Apr-05
+Last Modified : 20-Oct-08
+Author : Tom Coleman
+Copyright : 2008-2008
+By : University of Mississippi Medical Center
+Solver : DES 2008
+Schema : 2008.0
+
+<structure><name> GlucagonPool </name>
+
+<variables>
+
+<var><name> [Glucagon] </name></var>
+<var><name> Gain </name></var>
+<var><name> Loss </name></var>
+
+<constant><name> InitialConc </name><val> 100.0 </val></constant>
+
+</variables>
+
+<equations>
+
+<diffeq>
+  <name> Mass </name>
+  <integralname> Mass </integralname>
+  <initialval> -1 </initialval>
+  <dervname> Change </dervname>
+  <errorlim> 15.0 </errorlim>
+</diffeq>
+
+</equations>
+
+<definitions>
+<block><name> Initialize </name>
+
+<def><name> Mass </name><val> InitialConc * ECFV.Vol(L) </val></def>
+
+</block>
+
+<block><name> CalcConc </name>
+
+<def>
+  <name> [Glucagon] </name>
+  <val> Mass / ECFV.Vol(L) </val>
+</def>
+
+</block>
+
+<block><name> Dervs </name>
+
+<def>
+  <name> Gain </name>
+  <val> GlucagonSecretion.Rate </val>
+</def>
+
+<def>
+  <name> Loss </name>
+  <val> GlucagonClearance.Rate </val>
+</def>
+
+<def>
+  <name> Change </name>
+  <val> Gain - Loss </val>
+</def>
+
+</block>
+
+</definitions>
+</structure>
+
+End

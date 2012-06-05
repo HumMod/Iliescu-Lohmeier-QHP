@@ -1,0 +1,16 @@
+QHP 2008 / Osmoles
+
+Created : 26-May-05
+Last Modified : 31-May-05
+Author : Tom Coleman
+Copyright Status : In Public Domain
+Solver : QHP 2008
+Schema : 2008.0
+
+<?path Structure\Osmoles\ ?>
+
+<?include OsmBody.DES ?>
+<?include OsmCell.DES ?>
+<?include OsmECFV.DES ?>
+
+End

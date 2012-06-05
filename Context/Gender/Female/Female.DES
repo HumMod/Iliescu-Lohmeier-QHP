@@ -1,0 +1,39 @@
+QHP 2008 / Female.DES
+
+Created : 20-Sep-08
+Last Modified : 20-Oct-08
+Author : Tom Coleman
+Copyright : 2008-2008
+By : University of Mississippi Medical Center
+Solver : DES 2008
+Schema : 2008.0
+
+<def><name> Gender.Trait </name><val> 1 </val></def>
+<def><name> Gender.Gender </name><val> 1 </val></def>
+<def><name> Gender.Male </name><val> FALSE </val></def>
+<def><name> Gender.Female </name><val> TRUE </val></def>
+
+<?path Context\Gender\Female\ ?>
+
+<?include BloodVolume\BloodVolume.DES ?>
+<?include Bone\Bone.DES ?>
+<?include Brain\Brain.DES ?>
+<?include Circulation\Circulation.DES ?>
+<?include Electrolytes\Electrolytes.DES ?>
+<?include Fat\Fat.DES ?>
+<?include GITract\GITract.DES ?>
+<?include Kidney\Kidney.DES ?>
+<?include LeftHeart\LeftHeart.DES ?>
+<?include LipidDeposits\LipidDeposits.DES ?>
+<?include Liver\Liver.DES ?>
+<?include Morphology\Morphology.DES ?>
+<?include Osmoles\Osmoles.DES ?>
+<?include OtherTissue\OtherTissue.DES ?>
+<?include RespiratoryMuscle\RespiratoryMuscle.DES ?>
+<?include RightHeart\RightHeart.DES ?>
+<?include SkeletalMuscle\SkeletalMuscle.DES ?>
+<?include Skin\Skin.DES ?>
+<?include TissueH2O\TissueH2O.DES ?>
+<?include VascularCompartments\VascularCompartments.DES ?>
+
+End

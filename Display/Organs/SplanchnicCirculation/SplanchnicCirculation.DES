@@ -1,0 +1,16 @@
+QHP 2008 / SplanchnicCirculation
+
+Created : 18-Apr-05
+Last Modified : 30-Jul-08
+Author : Tom Coleman
+Copyright : 2008-2008
+By : University of Mississippi Medical Center
+Solver : DES 2008
+Schema : 2008.0
+
+<?path Display\Organs\SplanchnicCirculation\ ?>
+
+<?include Summary\Summary.DES ?>
+<?include PortalVein\PortalVein.DES ?>
+
+End

@@ -1,0 +1,79 @@
+QHP 2008 / FSH-Circulating
+
+Created : 07-Apr-05
+Last Modified : 06-Jun-06
+Author : Tom Coleman
+Copyright Status : In Public Domain
+Solver : QHP 2008
+Schema : 2008.0
+
+<structure><name> FSH-Circulating </name>
+
+<variables>
+
+<var><name> Gain </name></var>
+<var><name> Loss </name></var>
+
+<var><name> Secretion </name></var>
+<var><name> Degradation </name></var>
+
+<parm><name> InitialConcFemale </name><val> 5.5 </val></parm>
+<parm><name> InitialConcMale </name><val> 8.0 </val></parm>
+
+<var><name> InitialConc </name></var>
+
+<var><name> [Conc(IU/L)] </name></var>
+
+<parm><name> PumpSwitch </name><val> FALSE </val></parm>
+<parm><name> PumpSetting </name><val> 0.0 </val></parm>
+
+<parm><name> K </name><val> 0.0009 </val></parm>
+
+</variables>
+
+<equations>
+
+<diffeq>
+  <name> Mass </name>
+  <integralname> Mass </integralname>
+  <initialval> -1 </initialval>
+  <dervname> Change </dervname>
+  <errorlim> 0.6 </errorlim>
+</diffeq>
+
+</equations>
+
+<definitions>
+
+<block><name> Initialize </name>
+
+<conditional><name> InitialConc </name>
+  <test> Gender.Female </test>
+  <true> InitialConcFemale </true>
+  <false> InitialConcMale </false>
+</conditional>
+
+<def><name> Mass </name><val> InitialConc * ECFV.Vol(L) </val></def>
+
+</block>
+
+<block><name> Conc </name>
+  <def><name> [Conc(IU/L)] </name><val> Mass / ECFV.Vol(L) </val></def>
+</block>
+
+<block><name> Dervs </name>
+
+  <def><name> Secretion </name><val> FSH-AnteriorPituitary.Secretion </val></def>
+  <def><name> Degradation </name><val> K * Mass </val></def>
+
+  <def><name> Gain </name><val> Secretion + ( PumpSetting * PumpSwitch ) </val></def>
+  <def><name> Loss </name><val> Degradation </val></def>
+
+  <def><name> Change </name><val> Gain - Loss </val></def>
+
+</block>
+
+</definitions>
+</structure>
+
+End

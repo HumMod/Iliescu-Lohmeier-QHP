@@ -1,0 +1,35 @@
+QHP 2008 / Creatinine
+
+Created : 28-Mar-08
+Last Modified : 28-Mar-08
+Author : Tom Coleman
+Copyright : 2008-2008
+By : University of Mississippi Medical Center
+Solver : DES 2005
+Schema : 2005.0
+
+<?path Structure\Creatinine\ ?>
+
+<?include CreatininePool.DES ?>
+
+<structure><name> Creatinine </name>
+
+<definitions>
+
+<block><name> Conc </name>
+
+<call> CreatininePool.Conc </call>
+
+</block>
+
+<block><name> Dervs </name>
+
+<call> CreatininePool.Dervs </call>
+
+</block>
+
+</definitions>
+</structure>
+
+End
+End

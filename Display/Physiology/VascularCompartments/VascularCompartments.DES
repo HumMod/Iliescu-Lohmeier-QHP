@@ -1,0 +1,24 @@
+QHP 2008 / VascularCompartments
+
+Created : 24-Apr-05
+Last Modified : 10-Apr-08
+Author : Tom Coleman
+Copyright : 2005-2008
+By : University of Mississippi Medical Center
+Solver : DES 2005
+Schema : 2005.0
+
+<?path Display\Physiology\VascularCompartments\ ?>
+
+<?include LeftAtrium\LeftAtrium.DES ?>
+<?include LeftVentricle\LeftVentricle.DES ?>
+<?include PulmonaryArtery\PulmonaryArtery.DES ?>
+<?include PulmonaryCapillaries\PulmonaryCapillaries.DES ?>
+<?include PulmonaryVeins\PulmonaryVeins.DES ?>
+<?include RightAtrium\RightAtrium.DES ?>
+<?include RightVentricle\RightVentricle.DES ?>
+<?include SplanchnicVeins\SplanchnicVeins.DES ?>
+<?include SystemicArteries\SystemicArteries.DES ?>
+<?include SystemicVeins\SystemicVeins.DES ?>
+
+End

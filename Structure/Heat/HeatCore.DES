@@ -1,0 +1,109 @@
+QHP 2008 / HeatCore
+
+Created : 27-Mar-05
+Last Modified : 25-Sep-08
+Author : Tom Coleman
+Copyright : 2008-2008
+By : University of Mississippi Medical Center
+Solver : DES 2008
+Schema : 2008.0
+
+<structure><name> HeatCore </name>
+
+<variables>
+
+<var><name> Temp(F) </name></var>
+<var><name> Temp(C) </name></var>
+<var><name> Temp(K) </name></var>
+<var><name> Flux </name></var>
+<var><name> Gain </name></var>
+<var><name> Loss </name></var>
+
+<parm><name> InitialTemp(K) </name><val> 310.2 </val></parm>
+
+</variables>
+
+<equations>
+
+<diffeq>
+  <name> Mass </name>
+  <integralname> Mass </integralname>
+  <initialval> -1 </initialval>
+  <dervname> Change </dervname>
+  <errorlim> 123.0 </errorlim>
+</diffeq>
+
+</equations>
+
+<definitions>
+
+<block><name> Initialize </name>
+
+<def>
+  <name> Mass </name>
+  <val> Weight.Core(kG) * SpecificHeat.Tissue * InitialTemp(K) </val>
+</def>
+
+</block>
+
+<block><name> CalcTemp </name>
+
+<def>
+  <name> Temp(K) </name>
+  <val> Mass / ( Weight.Core(kG) * SpecificHeat.Tissue ) </val>
+</def>
+
+<def>
+  <name> Temp(C) </name>
+  <val> Temp(K) - 273.15 </val>
+</def>
+
+<def>
+  <name> Temp(F) </name>
+  <val> ( 9 / 5 ) * Temp(C) + 32.0 </val>
+</def>
+
+</block>
+
+<block><name> Flux </name>
+
+<def>
+  <name> Flux </name>
+  <val>
+    ( Skin-Flow.BloodFlow / 1000.0 )
+    * ( HeatCore.Temp(K) - HeatSkin.Temp(K) )
+    * SpecificHeat.Blood
+  </val>
+</def>
+
+</block>
+
+<block><name> Dervs </name>
+
+<def>
+  <name> Gain </name>
+  <val>
+      Metabolism-CaloriesUsed.CoreHeat(kCal/Min)
+    + HeatSkeletalMuscle.Flux
+  </val>
+</def>
+
+<def>
+  <name> Loss </name>
+  <val>
+      Flux
+    + HeatInsensibleLung.Flux
+ </val>
+</def>
+
+<def>
+  <name> Change </name>
+  <val> Gain - Loss </val>
+</def>
+
+</block>
+
+</definitions>
+</structure>
+
+End

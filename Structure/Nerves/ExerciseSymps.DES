@@ -1,0 +1,53 @@
+QHP 2008 / ExerciseSymps DES
+
+Created : 21-Oct-04
+Last Modified : 25-Jul-07
+Author : Tom Coleman
+Copyright : 2006-2008
+By : University of Mississippi Medical Center
+Solver : QHP 2008
+Schema : 2008.0
+
+<structure><name> ExerciseSymps </name>
+
+<variables>
+
+<var>
+  <name> TotalEffect </name>
+</var>
+
+<var>
+  <name> RadiationEffect </name>
+</var>
+
+<var>
+  <name> MetaboreflexEffect </name>
+</var>
+
+</variables>
+
+<definitions>
+
+<block><name> Calc </name>
+
+<def>
+  <name> RadiationEffect </name>
+  <val> MotorRadiation.TotalEffect </val>
+</def>
+
+<def>
+  <name> MetaboreflexEffect </name>
+  <val> 0.32 * SkeletalMuscle-Metaboreflex.NerveActivity </val>
+</def>
+
+<def>
+  <name> TotalEffect </name>
+  <val> RadiationEffect + MetaboreflexEffect </val>
+</def>
+
+</block>
+
+</definitions>
+</structure>
+
+End

@@ -1,0 +1,18 @@
+QHP 2008 / Bone
+
+Created : 29-Sep-08
+Last Modified : 29-Sep-08
+Author : Tom Coleman
+Copyright : 2008-2008
+By : University of Mississippi Medical Center
+Solver : DES 2008
+Schema : 2008.0
+
+<?path Context\Gender\Female\Bone\ ?>
+
+<?include Bone-Flow.DES ?>
+<?include Bone-Metabolism.DES ?>
+<?include Bone-Size.DES ?>
+<?include Bone-Mineral.DES ?>
+
+End

@@ -1,0 +1,22 @@
+QHP 2008 / Pericardium-Hemorrhage
+
+Created : 29-Feb-08
+Last Modified : 29-Feb-08
+Author : Tom Coleman
+Copyright : 2008-2008
+By : University of Mississippi Medical Center
+Solver : DES 2005
+Schema : 2005.0
+
+<structure><name> Pericardium-Hemorrhage </name>
+
+<variables>
+
+<parm><name> Switch </name><val> FALSE </val></parm>
+<parm><name> Conductance </name><val> 0.0 </val></parm>
+
+</variables>
+
+</structure>
+
+End

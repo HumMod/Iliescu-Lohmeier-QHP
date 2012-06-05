@@ -1,0 +1,16 @@
+QHP 2008 / DistalTubule
+
+Created : 09-Apr-05
+Last Modified : 10-Apr-05
+Author : Tom Coleman
+Copyright Status : In Public Domain
+Solver : QHP 2008
+Schema : 2008.0
+
+<?path Structure\Nephrons\DistalTubule\ ?>
+
+<?include DT_Na.DES ?>
+<?include DT_H2O.DES ?>
+<?include DT_K.DES ?>
+
+End

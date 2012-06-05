@@ -1,0 +1,47 @@
+QHP 2008 / RelativeHumidity
+
+Created : 21-Dec-05
+Last Modified : 21-Dec-05
+Author : Tom Coleman
+Copyright Status : In Public Domain
+Solver : QHP 2008
+Schema : 2008.0
+
+<groupbox>
+   <row> 6.6 </row>
+   <col> 32.0 </col>
+   <high> 6.8 </high>
+   <wide> 30.0 </wide>
+   <title> Relative Humidity </title>
+
+<slidebar>
+  <row> 1.4 </row><col> 1.0 </col>
+  <name> RelativeHumidity.Percent </name>
+  <listname> Common.Percent </listname>
+  <label> % </label>
+</slidebar>
+
+<showvalue>
+   <row> 2.8 </row><col> 1.0 </col>
+   <name> RelativeHumidity.VaporPressure </name>
+   <format> <integer/> </format>
+   <label> Vapor Pressure </label>
+</showvalue>
+
+<showvalue>
+   <row> 3.8 </row><col> 1.0 </col>
+   <name> RelativeHumidity.SaturationPressure </name>
+   <format> <integer/> </format>
+   <label> Saturation Pressure </label>
+</showvalue>
+
+<showvalue>
+   <row> 5.2 </row><col> 1.0 </col>
+   <name> RelativeHumidity.DewPoint </name>
+   <format><decimal> 1 </decimal></format>
+   <label> Dew Point (deg C) </label>
+</showvalue>
+
+</groupbox>
+
+End

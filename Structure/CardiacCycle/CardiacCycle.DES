@@ -1,0 +1,14 @@
+QHP 2008 / CardiacCycle
+
+Created : 17-May-05
+Last Modified : 12-Dec-05
+Author : Tom Coleman
+Copyright Status : In Public Domain
+Solver : QHP 2008
+Schema : 2008.0
+
+<?path Structure\CardiacCycle\ ?>
+
+<?include DiastolicPressure.DES ?>
+
+End

@@ -1,0 +1,41 @@
+QHP 2008 / Symptoms
+
+Created : 21-May-05
+Last Modified : 21-May-05
+Author : Tom Coleman
+Copyright Status : In Public Domain
+Solver : QHP 2008
+Schema : 2008.0
+
+<structure><name> Symptoms </name>
+
+<variables>
+
+<var>
+  <name> Number </name>
+</var>
+
+</variables>
+
+<definitions>
+
+<block><name> Calc </name>
+
+<testcase>
+  <case>
+  <test> TRUE </test>
+
+  <def>
+    <name> Number </name>
+    <val> 0 </val>
+  </def>
+
+  </case>
+</testcase>
+
+</block>
+
+</definitions>
+</structure>
+
+End

@@ -1,0 +1,46 @@
+QHP 2008 / ThyroidGland
+
+Created : 21-Oct-04
+Last Modified : 21-Jun-06
+Author : Tom Coleman
+Copyright Status : In Public Domain
+Solver : QHP 2008
+Schema : 2008.0
+
+<?path Structure\ThyroidGland\ ?>
+
+<?include ThyroidPool.DES ?>
+<?include ThyroidPump.DES ?>
+<?include ThyroidClearance.DES ?>
+<?include ThyroidSecretion.DES ?>
+<?include ThyroidTSH.DES ?>
+
+<structure><name> ThyroidGland </name>
+
+<definitions>
+
+<block><name> Parms </name>
+
+  <call> ThyroidPump.Parms </call>
+
+</block>
+
+<block><name> CalcConc </name>
+
+  <call> ThyroidPool.CalcConc </call>
+
+</block>
+
+<block><name> Dervs </name>
+
+  <call> ThyroidTSH.Dervs </call>
+  <call> ThyroidSecretion.Dervs </call>
+  <call> ThyroidClearance.Dervs </call>
+  <call> ThyroidPool.Dervs </call>
+
+</block>
+
+</definitions>
+</structure>
+
+End

@@ -1,0 +1,31 @@
+QHP 2008 / PulmArty
+
+Created : 29-Sep-08
+Last Modified : 29-Sep-08
+Author : Tom Coleman
+Copyright : 2008-2008
+By : University of Mississippi Medical Center
+Solver : DES 2008
+Schema : 2008.0
+
+<def>
+  <name> PulmArty.Vol </name>
+  <val> 0.75 * PulmArty.Vol </val>
+</def>
+
+<def>
+  <name> PulmArty.V0 </name>
+  <val> 0.75 * PulmArty.V0 </val>
+</def>
+
+<def>
+  <name> PulmArty.Compliance </name>
+  <val> 0.75 * PulmArty.Compliance </val>
+</def>
+
+<def>
+  <name> PulmArty.Conductance </name>
+  <val> 0.80 * PulmArty.Conductance </val>
+</def>
+
+End

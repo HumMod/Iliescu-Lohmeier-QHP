@@ -1,0 +1,61 @@
+QHP 2008 / Heart DES
+
+Created : 21-Oct-04
+Last Modified : 26-Aug-08
+Author : Tom Coleman
+Copyright : 2008-2008
+By : University of Mississippi Medical Center
+Solver : DES 2008
+Schema : 2008.0
+
+<?path Structure\Heart\ ?>
+
+<?include Heart-Rate.DES ?>
+<?include Heart-Intervals.DES ?>
+
+<?include Heart-ECG.DES ?>
+<?include Heart-Rhythm.DES ?>
+
+<?include Heart-Asystole.DES ?>
+<?include Heart-Pacemaker.DES ?>
+<?include Heart-VFib.DES ?>
+<?include Heart-Defibrillator.DES ?>
+
+<?include SANode-Rate.DES ?>
+<?include SANode-BetaReceptors.DES ?>
+
+<?include Heart-Ventricles.DES ?>
+<?include Heart-Tachyarrhythmia.DES ?>
+
+<structure><name> Heart </name>
+
+<definitions>
+
+<block><name> Parms </name>
+  <call> Heart-Pacemaker.Parms </call>
+</block>
+
+<block><name> Calc </name>
+  <call> SANode-Rate.Calc </call>
+  <call> Heart-Ventricles.Calc </call>
+  <call> Heart-Rate.Calc </call>
+  <call> Heart-Tachyarrhythmia.Calc </call>
+  <call> Heart-Intervals.Calc </call>
+</block>
+
+<block><name> Dervs </name>
+</block>
+
+<block><name> Wrapup </name>
+  <call> Heart-Asystole.Wrapup </call>
+  <call> Heart-VFib.Wrapup </call>
+</block>
+
+<block><name> Final </name>
+  <call> Heart-ECG.Wrapup </call>
+</block>
+
+</definitions>
+</structure>
+
+End

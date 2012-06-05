@@ -1,0 +1,80 @@
+QHP 2008 / hCG
+
+Created : 05-Oct-08
+Last Modified : 05-Oct-08
+Author : Tom Coleman
+Copyright : 2008-2008
+By : University of Mississippi Medical Center
+Solver : DES 2008
+Schema : 2008.0
+
+<structure><name> hCG </name>
+
+<variables>
+
+<var><name> Gain </name></var>
+<var><name> Loss </name></var>
+
+<var><name> Secretion </name></var>
+<var><name> Degradation </name></var>
+
+<parm><name> InitialConcFemale </name><val> 1.0 </val></parm>
+<parm><name> InitialConcMale </name><val> 0.5 </val></parm>
+
+<var><name> InitialConc </name></var>
+
+<var><name> [Conc(IU/L)] </name></var>
+
+<parm><name> PumpSwitch </name><val> FALSE </val></parm>
+<parm><name> PumpSetting </name><val> 0.0 </val></parm>
+
+<parm><name> K </name><val> 0.0009 </val></parm>
+
+</variables>
+
+<equations>
+
+<diffeq>
+  <name> Mass </name>
+  <integralname> Mass </integralname>
+  <initialval> -1 </initialval>
+  <dervname> Change </dervname>
+  <errorlim> 1.0 </errorlim>
+</diffeq>
+
+</equations>
+
+<definitions>
+
+<block><name> Initialize </name>
+
+<conditional><name> InitialConc </name>
+  <test> Gender.Female </test>
+  <true> InitialConcFemale </true>
+  <false> InitialConcMale </false>
+</conditional>
+
+<def><name> Mass </name><val> InitialConc * ECFV.Vol(L) </val></def>
+
+</block>
+
+<block><name> Conc </name>
+  <def><name> [Conc(IU/L)] </name><val> Mass / ECFV.Vol(L) </val></def>
+</block>
+
+<block><name> Dervs </name>
+
+  <def><name> Secretion </name><val> 0.009 </val></def>
+  <def><name> Degradation </name><val> K * Mass </val></def>
+
+  <def><name> Gain </name><val> Secretion + ( PumpSetting * PumpSwitch ) </val></def>
+  <def><name> Loss </name><val> Degradation </val></def>
+
+  <def><name> Change </name><val> Gain - Loss </val></def>
+
+</block>
+
+</definitions>
+</structure>
+
+End

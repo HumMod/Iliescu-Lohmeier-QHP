@@ -1,0 +1,38 @@
+QHP 2008 / HeatLoss
+
+Created : 10-Jul-06
+Last Modified : 10-Jul-06
+Author : Tom Coleman
+Copyright Status : In Public Domain
+Solver : QHP 2008
+Schema : 2008.0
+
+<structure><name> HeatLoss </name>
+
+<variables>
+
+<var>
+  <name> Total </name>
+</var>
+
+</variables>
+
+<definitions>
+<block><name> Calc </name>
+
+<def>
+  <name> Total </name>
+  <val>
+      HeatRadiation.Flux
+    + HeatConduction.Flux
+    + HeatSweating.Flux
+    + HeatInsensibleSkin.Flux
+    + HeatInsensibleLung.Flux
+  </val>
+</def>
+
+</block>
+</definitions>
+</structure>
+
+End

@@ -1,0 +1,26 @@
+QHP 2008 / LeftAtrium
+
+Created : 29-Sep-08
+Last Modified : 29-Sep-08
+Author : Tom Coleman
+Copyright : 2008-2008
+By : University of Mississippi Medical Center
+Solver : DES 2008
+Schema : 2008.0
+
+<def>
+  <name> LeftAtrium.Vol </name>
+  <val> 0.75 * LeftAtrium.Vol </val>
+</def>
+
+<def>
+  <name> LeftAtrium.V0 </name>
+  <val> 0.75 * LeftAtrium.V0 </val>
+</def>
+
+<def>
+  <name> LeftAtrium.Compliance </name>
+  <val> 0.75 * LeftAtrium.Compliance </val>
+</def>
+
+End

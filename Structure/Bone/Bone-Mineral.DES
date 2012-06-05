@@ -1,0 +1,38 @@
+QHP 2008 / Bone-Mineral
+
+Created : 05-Jun-05
+Last Modified : 05-Jun-05
+Author : Tom Coleman
+Copyright Status : In Public Domain
+Solver : QHP 2008
+Schema : 2008.0
+
+<structure><name> Bone-Mineral </name>
+
+<equations>
+
+<diffeq>
+  <name> Mass </name>
+  <integralname> Mass </integralname>
+  <initialval> 5750.0 </initialval>
+  <dervname> Change </dervname>
+  <errorlim> 57.5 </errorlim>
+</diffeq>
+
+</equations>
+
+<definitions>
+
+<block><name> Dervs </name>
+
+<def>
+  <name> Change </name>
+  <val> 0.0 </val>
+</def>
+
+</block>
+
+</definitions>
+</structure>
+
+End

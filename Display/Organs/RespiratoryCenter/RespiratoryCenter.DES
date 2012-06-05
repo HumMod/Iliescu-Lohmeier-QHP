@@ -1,0 +1,17 @@
+QHP 2008 / RespiratoryCenter
+
+Created : 24-Apr-05
+Last Modified : 29-Apr-05
+Author : Tom Coleman
+Copyright Status : In Public Domain
+Solver : QHP 2008
+Schema : 2008.0
+
+<?path Display\Organs\RespiratoryCenter\ ?>
+
+<?include ChemicalDrive\ChemicalDrive.DES ?>
+<?include ExerciseDrive\ExerciseDrive.DES ?>
+<?include Integration\Integration.DES ?>
+<?include Output\Output.DES ?>
+
+End

@@ -1,0 +1,40 @@
+QHP 2008 / Scaling FEMALE.REF
+
+Created : 20-Sep-08
+Last Modified : 20-Sep-08
+Author : Tom Coleman
+Copyright : 2008-2008
+By : University of Mississippi Medical Center
+Solver : DES 2008
+Schema : 2008.0
+
+Some references used in scaling FEMALE organs and volumes are
+
+Williams, L.R. and R.W. Leggett. Reference values for resting blood flow
+to organs of man. Clin. Phys. Physiol. Meas. 10:187-217, 1989.
+
+Leggett, R.W. and L.R. Williams. A proposed blood circulation model for
+reference man. Health Phys. 69:187-201, 1995.
+
+Physiological Parameter Values for PBPK Models. International Life
+Sciences Institute. 1994.
+
+Report of the Task Group on Reference Man. ICRP Publication 23.
+Pergamon. 1975.
+
+
+Bone
+Brain
+Fat
+GI Tract
+Kidney
+Left Heart
+Liver
+Other Tissue
+Respiratory Muscle
+Right Heart
+Skeletal Muscle
+Skin
+
+
+End

@@ -1,0 +1,18 @@
+QHP 2008 / Interstitium
+
+Created : 16-Aug-08
+Last Modified : 16-Aug-08
+Author : Tom Coleman
+Copyright : 2008-2008
+By : University of Mississippi Medical Center
+Solver : DES 2008
+Schema : 2008.0
+
+<?path Display\Physiology\CircyProtein\Interstitium\ ?>
+
+<?include Summary\Summary.DES ?>
+<?include UpperTorso\UpperTorso.DES ?>
+<?include MiddleTorso\MiddleTorso.DES ?>
+<?include LowerTorso\LowerTorso.DES ?>
+
+End

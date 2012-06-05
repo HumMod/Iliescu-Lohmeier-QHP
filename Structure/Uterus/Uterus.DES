@@ -1,0 +1,34 @@
+QHP 2008 / Uterus
+
+Created : 05-Oct-08
+Last Modified : 05-Oct-08
+Author : Tom Coleman
+Copyright : 2008-2008
+By : University of Mississippi Medical Center
+Solver : DES 2008
+Schema : 2008.0
+
+<structure><name> Uterus </name>
+
+<variables>
+
+<!--
+<var><name>  </name></var>
+-->
+
+</variables>
+
+<definitions>
+
+<block><name> Dervs </name>
+
+<!--
+<def><name>  </name><val> 0.0 </val></def>
+-->
+
+</block>
+
+</definitions>
+</structure>
+
+End

@@ -1,0 +1,44 @@
+QHP 2008 / DietGoalElectrolytes
+
+Created : 07-Apr-05
+Last Modified : 20-Jun-06
+Author : Tom Coleman
+Copyright Status : In Public Domain
+Solver : QHP 2008
+Schema : 2008.0
+
+<structure><name> DietGoalElectrolytes </name>
+
+<variables>
+
+<parm>
+  <name> Na+_mEq/Day </name>
+  <val> 180.0 </val>
+</parm>
+
+<parm>
+  <name> Cl-_mEq/Day </name>
+  <val> 200.0 </val>
+</parm>
+
+<parm>
+  <name> K+_mEq/Day </name>
+  <val> 70.0 </val>
+</parm>
+
+<parm>
+  <name> PO4--mEq/Day </name>
+  <val> 30.0 </val>
+</parm>
+
+<parm>
+  <name> SO4--mEq/Day </name>
+  <val> 50.0 </val>
+</parm>
+
+
+</variables>
+
+</structure>
+
+End
